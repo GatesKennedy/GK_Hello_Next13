@@ -22,7 +22,7 @@ export default function SmallWithSocial() {
 			<Container
 				as={Stack}
 				maxW={'9xl'}
-				py={4}
+				py={2}
 				direction={{ base: 'column', md: 'row' }}
 				spacing={4}
 				justify={{ base: 'center', md: 'space-between' }}
