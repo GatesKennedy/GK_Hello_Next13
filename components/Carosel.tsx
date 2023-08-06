@@ -1,7 +1,6 @@
 'use client';
+
 import React from 'react';
-import Slider from 'react-slick';
-import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import {
 	Box,
 	IconButton,
@@ -9,10 +8,12 @@ import {
 	Stack,
 	Heading,
 	Text,
-	Center,
 	Container,
 } from '@chakra-ui/react';
-import CardWrapper from '../components/Cards/Wrapper';
+// Here we have used react-icons package for the icons
+import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
+// And react-slick as our Carousel Lib
+import Slider from 'react-slick';
 
 // Settings for the slider
 const settings = {
@@ -27,7 +28,7 @@ const settings = {
 	slidesToScroll: 1,
 };
 
-export default function Home() {
+export default function CaptionCarousel() {
 	// As we have used custom buttons, we need a reference variable to
 	// change the state
 	const [slider, setSlider] = React.useState<Slider | null>(null);
@@ -56,6 +57,7 @@ export default function Home() {
 			image: 'https://images.unsplash.com/photo-1507237998874-b4d52d1dd655?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDR8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
 		},
 	];
+
 	return (
 		<Box
 			position={'relative'}
@@ -149,7 +151,6 @@ export default function Home() {
 					</Box>
 				))}
 			</Slider>
-			<CardWrapper />
 		</Box>
 	);
 }

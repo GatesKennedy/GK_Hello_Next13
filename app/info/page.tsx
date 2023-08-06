@@ -1,7 +1,14 @@
+'use client';
+import { Box, Center } from '@chakra-ui/react';
 import React from 'react';
+import ContactForm from '../../components/Forms/Contact';
 
 function InfoPage() {
-	return <div>InfoPage</div>;
+	return (
+		<Box>
+			<ContactForm />
+		</Box>
+	);
 }
 
 export default InfoPage;
