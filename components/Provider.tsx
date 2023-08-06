@@ -1,8 +1,8 @@
 'use client';
 
-import { SessionProvider } from 'next-auth/react';
+// import { SessionProvider } from 'next-auth/react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
-import { ChildProps } from '../layout';
+import { ChildProps } from '../app/layout';
 
 const theme = extendTheme({
 	config: {
@@ -14,7 +14,8 @@ const theme = extendTheme({
 const Provider = ({ children }: ChildProps) => {
 	return (
 		<ChakraProvider theme={theme}>
-			<SessionProvider>{children}</SessionProvider>
+			{/* <SessionProvider>{children}</SessionProvider> */}
+			{children}
 		</ChakraProvider>
 	);
 };

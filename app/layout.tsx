@@ -1,7 +1,8 @@
 import { Inter } from 'next/font/google';
-import Provider from './components/Provider';
-import Header from './components/Header';
-import Footer from './components/Footer';
+import Provider from '../components/Provider';
+import Header from '../components/Header';
+import Footer from '../components/Footer';
+import NavBar from '../components/NavBar';
 
 const inter = Inter({ subsets: ['latin'] });
 
@@ -21,6 +22,7 @@ export default function RootLayout({ children }: ChildProps) {
 		>
 			<body style={{ height: '100vh' }}>
 				<Provider>
+					<NavBar />
 					<Header />
 					<main>{children}</main>
 					<Footer />
