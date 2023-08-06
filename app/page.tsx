@@ -12,7 +12,7 @@ import {
 	Center,
 	Container,
 } from '@chakra-ui/react';
-import CardWrapper from '../components/Cards/Wrapper';
+import CardWrapper from '../components/cards/Wrapper';
 
 // Settings for the slider
 const settings = {

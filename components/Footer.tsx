@@ -2,47 +2,16 @@
 
 import {
 	Box,
-	chakra,
 	Container,
 	Stack,
 	Text,
 	useColorModeValue,
-	VisuallyHidden,
 } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
-import { ReactNode } from 'react';
-
-const SocialButton = ({
-	children,
-	label,
-	href,
-}: {
-	children: ReactNode;
-	label: string;
-	href: string;
-}) => {
-	return (
-		<chakra.button
-			bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-			rounded={'full'}
-			w={8}
-			h={8}
-			cursor={'pointer'}
-			as={'a'}
-			href={href}
-			display={'inline-flex'}
-			alignItems={'center'}
-			justifyContent={'center'}
-			transition={'background 0.3s ease'}
-			_hover={{
-				bg: useColorModeValue('blackAlpha.200', 'whiteAlpha.200'),
-			}}
-		>
-			<VisuallyHidden>{label}</VisuallyHidden>
-			{children}
-		</chakra.button>
-	);
-};
+import { MdMail } from 'react-icons/md';
+import SocialButton from './buttons/SocialButton';
+import CopyButton from './buttons/CopyButton';
+import { STRINGS } from '../reference/stringConstants';
 
 export default function SmallWithSocial() {
 	return (
@@ -60,28 +29,33 @@ export default function SmallWithSocial() {
 				align={{ base: 'center', md: 'center' }}
 			>
 				<Text>© 2023 Gates Kennedy. All rights reserved</Text>
-				{/* <Text>...are you curious?</Text> */}
 				<Stack
 					direction={'row'}
 					spacing={6}
 				>
+					<CopyButton
+						label={'Email'}
+						copyText={STRINGS.EMAIL_CONOR}
+					>
+						<MdMail size={24} />
+					</CopyButton>
 					<SocialButton
 						label={'LinkedIn'}
-						href={'https://linkedin.com/in/conorgateskennedy'}
+						href={STRINGS.LINKEDIN_CONOR}
 					>
-						<FaLinkedin />
+						<FaLinkedin size={24} />
 					</SocialButton>
 					<SocialButton
 						label={'GitHub'}
-						href={'https://github.com/GatesKennedy'}
+						href={STRINGS.GITHUB_GK}
 					>
-						<FaGithub />
+						<FaGithub size={24} />
 					</SocialButton>
 					<SocialButton
 						label={'Spotify'}
-						href={'https://open.spotify.com/user/ohnodamn'}
+						href={STRINGS.SPOTIFY_ONO}
 					>
-						<FaSpotify />
+						<FaSpotify size={24} />
 					</SocialButton>
 				</Stack>
 			</Container>
