@@ -3,9 +3,9 @@ import React from 'react';
 import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
 import ContactForm from './Contact';
 import { ASSETS } from '../../reference/layoutValues';
-import styles from './info.module.css';
+import styles from './talk.module.css';
 
-function InfoPage() {
+function TalkPage() {
 	const bgShade: string = useColorModeValue(
 		'whiteAlpha.600',
 		'rgba(23, 25, 27, 0.8)',
@@ -56,4 +56,4 @@ function InfoPage() {
 	);
 }
 
-export default InfoPage;
+export default TalkPage;

@@ -21,7 +21,7 @@ const NavBar = () => {
 				>
 					<Link href={'/'}>info</Link>
 					<Link href={'/work'}>work</Link>
-					<Link href={'/info'}>talk</Link>
+					<Link href={'/talk'}>talk</Link>
 				</HStack>
 			</Center>
 		</nav>
