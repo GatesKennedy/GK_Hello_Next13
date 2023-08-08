@@ -19,13 +19,18 @@ import { BsPerson } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
 
 export default function ContactForm() {
+	const bgShade: string = useColorModeValue(
+		'gray.100',
+		'rgba(23, 25, 27, 0.8)',
+	);
+	const bgThick: string = useColorModeValue('gray.100', 'blackAlpha.900');
 	return (
 		<Flex
-			// bg={useColorModeValue('gray.100', 'gray.900')}
+			id='contact'
+			// bgGradient={`linear(to-r, ${bgShade}, ${bgThick}, ${bgShade})`}
 			align='center'
 			justify='center'
 			height={'full'}
-			id='contact'
 		>
 			<Box
 				id={'ContactBox'}

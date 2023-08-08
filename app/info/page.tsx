@@ -6,6 +6,19 @@ import { ASSETS } from '../../reference/layoutValues';
 import styles from './info.module.css';
 
 function InfoPage() {
+	const bgShade: string = useColorModeValue(
+		'gray.100',
+		'rgba(23, 25, 27, 0.8)',
+	);
+	const bgThin: string = useColorModeValue(
+		'gray.100',
+		'rgba(23, 25, 27, 0.93)',
+	);
+	const bgThick: string = useColorModeValue(
+		'gray.100',
+		// 'blackAlpha.800',
+		'rgba(23, 25, 27, 0.96)',
+	);
 	return (
 		// <Box
 		// 	position={'relative'}
@@ -34,7 +47,7 @@ function InfoPage() {
 					id={'ContactBox'}
 					top={'64px'}
 					height={'88vh'}
-					bg={useColorModeValue('gray.100', 'rgba(23, 25, 27, 0.8)')}
+					bgGradient={`linear(to-r, ${bgShade} 0%, ${bgThin} 28%, ${bgThick} 50%, ${bgThin} 72%, ${bgShade} 100%)`}
 				>
 					<ContactForm />
 				</Box>
