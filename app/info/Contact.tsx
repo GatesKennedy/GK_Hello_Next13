@@ -17,17 +17,16 @@ import {
 } from '@chakra-ui/react';
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
+import { COLOR } from '../../reference/layoutValues';
 
 export default function ContactForm() {
-	const bgShade: string = useColorModeValue(
-		'gray.100',
-		'rgba(23, 25, 27, 0.8)',
+	const bgThick: string = useColorModeValue(
+		'whiteAlpha.700',
+		'blackAlpha.200',
 	);
-	const bgThick: string = useColorModeValue('gray.100', 'blackAlpha.900');
 	return (
 		<Flex
 			id='contact'
-			// bgGradient={`linear(to-r, ${bgShade}, ${bgThick}, ${bgShade})`}
 			align='center'
 			justify='center'
 			height={'full'}
@@ -39,7 +38,7 @@ export default function ContactForm() {
 				p={{ base: 4, lg: 4 }}
 			>
 				<Box>
-					<VStack spacing={{ base: 4, md: 8, lg: 20 }}>
+					<VStack spacing={{ base: 4, md: 8, lg: 4 }}>
 						<Heading
 							fontSize={{
 								base: '4xl',
@@ -50,8 +49,10 @@ export default function ContactForm() {
 						</Heading>
 
 						<Stack
-							spacing={{ base: 4, md: 8, lg: 20 }}
+							spacing={{ base: 4, md: 8, lg: 12 }}
 							direction={{ base: 'column', md: 'row' }}
+							bg={bgThick}
+							borderRadius={'lg'}
 						>
 							<Box
 								// bg={useColorModeValue('white', 'gray.700')}
@@ -63,7 +64,10 @@ export default function ContactForm() {
 								)}
 								shadow='base'
 							>
-								<VStack spacing={5}>
+								<VStack
+									id={'Contact-VStack'}
+									spacing={4}
+								>
 									<FormControl isRequired>
 										<FormLabel>Name</FormLabel>
 

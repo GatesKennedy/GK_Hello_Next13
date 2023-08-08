@@ -19,9 +19,9 @@ const NavBar = () => {
 					spacing={12}
 					mb={1}
 				>
-					<Link href={'/'}>home</Link>
+					<Link href={'/'}>info</Link>
 					<Link href={'/work'}>work</Link>
-					<Link href={'/info'}>info</Link>
+					<Link href={'/info'}>talk</Link>
 				</HStack>
 			</Center>
 		</nav>

@@ -1,8 +1,12 @@
 export enum LAYOUT {
 	headerHeight = 64,
 	footerHeight = 64,
-
 }
+export const COLOR = {
+	Gray100Alpha04: 'rgba(237,242,247,0.5)'
+}
+
+//================================
  type Asset = {
 	credit: string,
 	href: string
@@ -37,18 +41,3 @@ export const ASSETS: {[key: string]: Asset}  = {
 		href: 'https://images.unsplash.com/photo-1677448940100-9abd726fcc88?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2574&q=80'
 	},
 }
-
-const cards = [
-
-	{
-		title: 'Gates Kennedy',
-		text: 'Only perspective sorts problem from puzzle.',
-		image: ASSETS.palmLeafPattern.href,
-	},
-
-	{
-		title: 'Gates Kennedy',
-		text: 'Only perspective sorts problem from puzzle.',
-		image: ASSETS.palmLeafPattern.href,
-	},
-];

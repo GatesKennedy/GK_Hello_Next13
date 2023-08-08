@@ -29,7 +29,7 @@ export default function SmallWithSocial() {
 				py={2}
 				direction={{ base: 'column', md: 'row' }}
 				spacing={4}
-				justify={{ base: 'center', md: 'right' }}
+				justify={{ base: 'center', md: 'center' }}
 				align={{ base: 'center', md: 'center' }}
 			>
 				{/* <Text>© 2023 Gates Kennedy. All rights reserved</Text> */}

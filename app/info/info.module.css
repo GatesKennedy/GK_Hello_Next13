@@ -1,15 +1,4 @@
 
-#contactBox {
-	/* position: absolute;
-	width: 100%;
-	height: 100.3%;
-	background-image: linear-gradient(to right, red, red);
-	background-size: 100% 100%, 100%;
-	z-index: 22; */
-}
-
-
-
 .centerShade:before {
 	content: '';
 	position: absolute;
@@ -17,7 +6,7 @@
 	bottom: 0;
 	width: 100%;
 	height: 100.3%;
-	background-color: rgba(23, 25, 27, 0.8);
+	background-color: inherit;
 	background-blend-mode: normal;
 	mask-image: linear-gradient(to top, red, red),
 		radial-gradient(farthest-side at left, green 99%, transparent 100%);
@@ -26,7 +15,7 @@
 	mask-repeat: no-repeat, repeat;
 	mask-composite: subtract;
 }
-
+/*
 .centerShade:after {
 	content: '';
 	position: absolute;
@@ -34,7 +23,7 @@
 	bottom: 0;
 	width: 100%;
 	height: 100.3%;
-	background-color: rgba(23, 25, 27, 0.8);
+	background-color: inherit;
 	background-blend-mode: normal;
 	mask-image: linear-gradient(to top, red, red),
 		radial-gradient(farthest-side at right, green 99%, transparent 100%);
@@ -42,5 +31,5 @@
 	mask-position: center left, center;
 	mask-repeat: no-repeat, repeat;
 	mask-composite: subtract;
-}
+} */
 

@@ -1,30 +1,25 @@
 'use client';
-import { Box, Container, Flex, useColorModeValue } from '@chakra-ui/react';
 import React from 'react';
-import ContactForm from '../../components/forms/Contact';
+import { Box, Flex, useColorModeValue } from '@chakra-ui/react';
+import ContactForm from './Contact';
 import { ASSETS } from '../../reference/layoutValues';
 import styles from './info.module.css';
 
 function InfoPage() {
 	const bgShade: string = useColorModeValue(
-		'gray.100',
+		'whiteAlpha.600',
 		'rgba(23, 25, 27, 0.8)',
 	);
 	const bgThin: string = useColorModeValue(
-		'gray.100',
-		'rgba(23, 25, 27, 0.93)',
+		'whiteAlpha.500',
+		'rgba(23, 25, 27, 0.55)',
 	);
 	const bgThick: string = useColorModeValue(
-		'gray.100',
+		'whiteAlpha.700',
 		// 'blackAlpha.800',
-		'rgba(23, 25, 27, 0.96)',
+		'rgba(23, 25, 27, 0.8)',
 	);
 	return (
-		// <Box
-		// 	position={'relative'}
-		// 	width={'full'}
-		// 	overflow={'hidden'}
-		// >
 		<Box
 			height={'6xl'}
 			position='relative'
@@ -33,27 +28,31 @@ function InfoPage() {
 			backgroundSize='auto'
 			backgroundImage={`url(${ASSETS.lightHillsRolling.href})`}
 		>
-			{/* This is the block you need to change, to customize the caption */}
-			<Container
-				size='container.lg'
+			<Flex
+				// size='container.lg'
 				position='relative'
 				id={'Container'}
 				width={'100%'}
 				minHeight={'88vh'}
 				padding={0}
+				alignContent={'center'}
+				flexDir={'row-reverse'}
 			>
+				<Box> </Box>
 				<Box
 					className={styles.centerShade}
 					id={'ContactBox'}
-					top={'64px'}
+					position={'absolute'}
 					height={'88vh'}
-					bgGradient={`linear(to-r, ${bgShade} 0%, ${bgThin} 28%, ${bgThick} 50%, ${bgThin} 72%, ${bgShade} 100%)`}
+					width={'50vw'}
+					backgroundColor={bgShade}
+					bgGradient={`linear(to-r, transparent 0%, ${bgThin} 21%, ${bgThick} 45%, ${bgThick} 55%,${bgThin} 79%, transparent 100%)`}
 				>
 					<ContactForm />
 				</Box>
-			</Container>
+				<Box> </Box>
+			</Flex>
 		</Box>
-		// </Box>
 	);
 }
 
