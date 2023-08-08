@@ -14,6 +14,7 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
+import { ASSETS } from '../reference/layoutValues';
 
 // Settings for the slider
 const settings = {
@@ -44,7 +45,7 @@ export default function CaptionCarousel() {
 		{
 			title: 'Design Projects 1',
 			text: "The project board is an exclusive resource for contract work. It's perfect for freelancers, agencies, and moonlighters.",
-			image: 'https://images.unsplash.com/photo-1516796181074-bf453fbfa3e6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1yZWxhdGVkfDV8fHxlbnwwfHx8fA%3D%3D&auto=format&fit=crop&w=900&q=60',
+			image: ASSETS.peoleOnBeach.href,
 		},
 		{
 			title: 'Design Projects 2',

@@ -16,6 +16,10 @@ import { STRINGS } from '../reference/stringConstants';
 export default function SmallWithSocial() {
 	return (
 		<Box
+			position={'fixed'}
+			bottom={0}
+			left={0}
+			width={'full'}
 			bg={useColorModeValue('gray.50', 'gray.900')}
 			color={useColorModeValue('gray.700', 'gray.200')}
 		>
@@ -25,10 +29,10 @@ export default function SmallWithSocial() {
 				py={2}
 				direction={{ base: 'column', md: 'row' }}
 				spacing={4}
-				justify={{ base: 'center', md: 'space-between' }}
+				justify={{ base: 'center', md: 'right' }}
 				align={{ base: 'center', md: 'center' }}
 			>
-				<Text>© 2023 Gates Kennedy. All rights reserved</Text>
+				{/* <Text>© 2023 Gates Kennedy. All rights reserved</Text> */}
 				<Stack
 					direction={'row'}
 					spacing={6}

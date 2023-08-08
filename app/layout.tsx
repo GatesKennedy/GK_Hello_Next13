@@ -23,7 +23,15 @@ export default function RootLayout({ children }: ChildProps) {
 			<body style={{ height: '100vh', margin: 0, padding: 0 }}>
 				<Provider>
 					<Header />
-					<main style={{ minHeight: '87%' }}>{children}</main>
+					<main
+						style={{
+							minHeight: '87%',
+							position: 'relative',
+							top: '64px',
+						}}
+					>
+						{children}
+					</main>
 					<Footer />
 				</Provider>
 			</body>
