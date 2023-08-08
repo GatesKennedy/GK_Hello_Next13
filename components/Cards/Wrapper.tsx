@@ -35,6 +35,7 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
 			borderWidth='1px'
 			borderRadius='lg'
 			overflow='hidden'
+			bg={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
 			p={5}
 		>
 			<Stack
@@ -86,15 +87,13 @@ export default function CardWrapper() {
 					fontSize={{ base: '2xl', sm: '4xl' }}
 					fontWeight={'bold'}
 				>
-					Short heading
+					Gates_Kennedy
 				</Heading>
 				<Text
 					color={'gray.600'}
 					fontSize={{ base: 'sm', sm: 'lg' }}
 				>
-					Lorem ipsum dolor sit amet consectetur adipisicing elit.
-					Reiciendis obcaecati ut cupiditate pariatur, dignissimos,
-					placeat amet officiis.
+					Only perspective sorts problem from puzzle.
 				</Text>
 			</Stack>
 
@@ -108,7 +107,7 @@ export default function CardWrapper() {
 					justify='center'
 				>
 					<Card
-						heading={'Heading'}
+						heading={'Application Development'}
 						icon={
 							<Icon
 								as={FcAssistant}
@@ -117,12 +116,12 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
+							'Data-driven solutions for good people that make them feel good and strong and stuff'
 						}
 						href={'#'}
 					/>
 					<Card
-						heading={'Heading'}
+						heading={'Project Managment'}
 						icon={
 							<Icon
 								as={FcCollaboration}
@@ -131,12 +130,12 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
+							"Some people are better than others and that's ok when the best of them is telling them what to do!"
 						}
 						href={'#'}
 					/>
 					<Card
-						heading={'Heading'}
+						heading={'Creativity'}
 						icon={
 							<Icon
 								as={FcDonate}
@@ -145,12 +144,12 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
+							"Look at the design of this website. Isn't it Unique? I made this look like this because I too am unique and special. Hire me."
 						}
 						href={'#'}
 					/>
 					<Card
-						heading={'Heading'}
+						heading={'Full-Stack'}
 						icon={
 							<Icon
 								as={FcManager}
@@ -159,12 +158,12 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
+							'I know lots of things about building software and my knowledge is for sale in the form of monthly payments for challenging tasks.'
 						}
 						href={'#'}
 					/>
 					<Card
-						heading={'Heading'}
+						heading={'Bachelors of Science: Mechanical Engineering'}
 						icon={
 							<Icon
 								as={FcAbout}
@@ -173,7 +172,7 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							'Lorem ipsum dolor sit amet catetur, adipisicing elit.'
+							'I am currently single but that is unrelated to the degree I earned in mechanical engineering.'
 						}
 						href={'#'}
 					/>

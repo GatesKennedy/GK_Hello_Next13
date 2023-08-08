@@ -2,6 +2,7 @@
 import { Center, Divider, HStack, StackDivider } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
+import NavButton from './buttons/NavButton';
 
 const NavBar = () => {
 	return (
@@ -19,9 +20,15 @@ const NavBar = () => {
 					spacing={12}
 					mb={1}
 				>
-					<Link href={'/'}>info</Link>
-					<Link href={'/work'}>work</Link>
-					<Link href={'/talk'}>talk</Link>
+					<Link href={'/'}>
+						<NavButton btnText={'info'} />
+					</Link>
+					<Link href={'/work'}>
+						<NavButton btnText={'work'} />
+					</Link>
+					<Link href={'/talk'}>
+						<NavButton btnText={'talk'} />
+					</Link>
 				</HStack>
 			</Center>
 		</nav>
