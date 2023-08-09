@@ -28,8 +28,9 @@ export default function ContactForm() {
 		<Flex
 			id='contact'
 			align='center'
-			justify='center'
+			justify='left'
 			height={'full'}
+			margin-bottom={'64px'}
 		>
 			<Box
 				id={'ContactBox'}
@@ -45,7 +46,7 @@ export default function ContactForm() {
 								md: '5xl',
 							}}
 						>
-							Get in Touch
+							email me
 						</Heading>
 
 						<Stack
@@ -69,7 +70,7 @@ export default function ContactForm() {
 									spacing={4}
 								>
 									<FormControl isRequired>
-										<FormLabel>Name</FormLabel>
+										<FormLabel>name</FormLabel>
 
 										<InputGroup>
 											<InputLeftElement>
@@ -84,7 +85,7 @@ export default function ContactForm() {
 									</FormControl>
 
 									<FormControl isRequired>
-										<FormLabel>Email</FormLabel>
+										<FormLabel>email</FormLabel>
 
 										<InputGroup>
 											<InputLeftElement>
@@ -99,7 +100,7 @@ export default function ContactForm() {
 									</FormControl>
 
 									<FormControl isRequired>
-										<FormLabel>Message</FormLabel>
+										<FormLabel>words</FormLabel>
 
 										<Textarea
 											name='message'
