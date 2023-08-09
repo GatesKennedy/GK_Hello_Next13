@@ -19,6 +19,11 @@ function TalkPage() {
 		// 'blackAlpha.800',
 		'rgba(23, 25, 27, 0.8)',
 	);
+	const bgSolid: string = useColorModeValue(
+		'whiteAlpha.900',
+		// 'blackAlpha.800',
+		'rgba(3, 5, 7, 0.96)',
+	);
 	return (
 		<Box
 			height={'6xl'}
@@ -46,7 +51,8 @@ function TalkPage() {
 					height={'88vh'}
 					width={'50vw'}
 					backgroundColor={bgShade}
-					bgGradient={`linear(to-r, transparent 0%, ${bgThin} 21%, ${bgThick} 45%, ${bgThick} 55%,${bgThin} 79%, transparent 100%)`}
+					bgGradient={`linear(to-r, transparent 0%, ${bgThin} 21%, ${bgThick} 45%, ${bgSolid} 100%)`}
+					// bgGradient={`linear(to-r, transparent 0%, ${bgThin} 21%, ${bgThick} 45%, ${bgThick} 55%,${bgThin} 79%, transparent 100%)`}
 				>
 					<ContactForm />
 				</Box>

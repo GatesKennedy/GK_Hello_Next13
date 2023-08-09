@@ -28,7 +28,7 @@ export default function ContactForm() {
 		<Flex
 			id='contact'
 			align='center'
-			justify='left'
+			justify='center'
 			height={'full'}
 			margin-bottom={'64px'}
 		>

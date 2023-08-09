@@ -87,7 +87,7 @@ export default function CardWrapper() {
 					fontSize={{ base: '2xl', sm: '4xl' }}
 					fontWeight={'bold'}
 				>
-					Gates_Kennedy
+					Tool Belt
 				</Heading>
 				<Text
 					color={'gray.600'}
