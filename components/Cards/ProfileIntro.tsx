@@ -51,12 +51,17 @@ export default function ProfileIntro() {
 		<Container
 			maxW={'5xl'}
 			py={12}
+			bgColor={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')}
+			borderTopRadius={'lg'}
 		>
 			<SimpleGrid
 				columns={{ base: 1, md: 2 }}
 				spacing={10}
 			>
-				<Stack spacing={4}>
+				<Stack
+					spacing={4}
+					px={8}
+				>
 					<Text
 						textTransform={'uppercase'}
 						color={'blue.400'}
@@ -133,7 +138,7 @@ export default function ProfileIntro() {
 						/>
 					</Stack>
 				</Stack>
-				<Flex>
+				<Flex px={8}>
 					<Image
 						rounded={'full'}
 						alt={'feature image'}

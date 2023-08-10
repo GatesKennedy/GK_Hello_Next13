@@ -3,13 +3,7 @@
 // import { SessionProvider } from 'next-auth/react';
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import { ChildProps } from '../app/layout';
-
-const theme = extendTheme({
-	config: {
-		useSystemColorMode: false,
-		initialColorMode: 'dark',
-	},
-});
+import theme from '../config/theme';
 
 const Provider = ({ children }: ChildProps) => {
 	return (

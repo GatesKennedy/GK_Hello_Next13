@@ -35,7 +35,7 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
 			borderWidth='1px'
 			borderRadius='lg'
 			overflow='hidden'
-			bg={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
+			bg={useColorModeValue('whiteAlpha.900', 'blackAlpha.900')}
 			p={5}
 		>
 			<Stack
@@ -76,30 +76,43 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
 
 export default function CardWrapper() {
 	return (
-		<Box p={4}>
+		<Container
+			maxW={'5xl'}
+			p={4}
+			bgColor={useColorModeValue('whiteAlpha.800', 'blackAlpha.800')}
+			borderBottomRadius={'xl'}
+		>
 			<Stack
 				spacing={4}
 				as={Container}
 				maxW={'3xl'}
 				textAlign={'center'}
+				py={4}
 			>
 				<Heading
 					fontSize={{ base: '2xl', sm: '4xl' }}
 					fontWeight={'bold'}
 				>
-					Tool Belt
+					Soft Skills
 				</Heading>
 				<Text
-					color={'gray.600'}
+					color={'gray.100'}
 					fontSize={{ base: 'sm', sm: 'lg' }}
 				>
-					Only perspective sorts problem from puzzle.
+					Interests &nbsp;|&nbsp; Personality &nbsp;|&nbsp; History
+					&nbsp;|&nbsp; Attributes &nbsp;|&nbsp; Weaknesses
+				</Text>
+				<Text
+					color={'gray.400'}
+					fontSize={{ base: 'sm', sm: 'md' }}
+				>
+					Sorted by experience and interest in descending order.
 				</Text>
 			</Stack>
 
 			<Container
 				maxW={'5xl'}
-				mt={12}
+				pb={8}
 			>
 				<Flex
 					flexWrap='wrap'
@@ -178,6 +191,6 @@ export default function CardWrapper() {
 					/>
 				</Flex>
 			</Container>
-		</Box>
+		</Container>
 	);
 }
