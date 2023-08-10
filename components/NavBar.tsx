@@ -7,14 +7,6 @@ import NavButton from './buttons/NavButton';
 const NavBar = () => {
 	return (
 		<nav>
-			{/* <Center m={2}>
-				<Image
-					src='/aoe.png'
-					width={40}
-					height={40}
-					alt='aoe'
-				/>
-			</Center> */}
 			<Center>
 				<HStack
 					spacing={12}

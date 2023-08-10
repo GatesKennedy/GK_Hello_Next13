@@ -10,12 +10,13 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 import { ASSETS } from '../reference/layoutValues';
-import CardWrapper from '../components/cards/CardWrapper';
-import ProfileIntro from '../components/cards/ProfileIntro';
+
+import { FcAssistant } from 'react-icons/fc';
+import CardWrapper from '../components/Cards/CardWrapper';
 import InfoColumns, {
 	SkillSectionProps,
 } from '../components/cards/InfoColumns';
-import { FcAssistant } from 'react-icons/fc';
+import ProfileIntro from '../components/cards/ProfileIntro';
 
 const skillColumns: SkillSectionProps[] = [
 	{
@@ -63,6 +64,8 @@ const skillColumns: SkillSectionProps[] = [
 		),
 	},
 ];
+
+//	~ MAIN ~
 export default function Home() {
 	const { colorMode, toggleColorMode } = useColorMode();
 	return (

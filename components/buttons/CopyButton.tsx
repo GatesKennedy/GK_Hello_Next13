@@ -1,4 +1,5 @@
 import {
+	Button,
 	chakra,
 	Tooltip,
 	useClipboard,
@@ -24,27 +25,28 @@ const CopyButton = ({
 			closeOnClick={false}
 			hasArrow
 		>
-			<chakra.button
+			<Button
 				aria-label={label}
-				bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+				bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
 				rounded={'full'}
 				w={12}
 				h={12}
-				cursor={'pointer'}
-				as={'a'}
-				display={'inline-flex'}
-				alignItems={'center'}
-				justifyContent={'center'}
-				transition={'background 0.3s ease'}
-				_hover={{
-					bg: 'blue.500',
-					color: useColorModeValue('white', 'gray.700'),
-				}}
+				p={0}
+				// cursor={'pointer'}
+				// as={'a'}
+				// display={'inline-flex'}
+				// alignItems={'center'}
+				// justifyContent={'center'}
+				// transition={'background 0.3s ease'}
+				// _hover={{
+				// 	bg: 'blue.500',
+				// 	color: useColorModeValue('white', 'gray.700'),
+				// }}
 				onClick={onCopy}
 			>
 				<VisuallyHidden>{label}</VisuallyHidden>
 				{children}
-			</chakra.button>
+			</Button>
 		</Tooltip>
 	);
 };

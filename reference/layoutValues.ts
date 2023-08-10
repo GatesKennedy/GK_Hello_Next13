@@ -3,7 +3,9 @@ export enum LAYOUT {
 	footerHeight = 64,
 }
 export const COLOR = {
-	Gray100Alpha04: 'rgba(237,242,247,0.5)'
+	light100Alpha05: 'rgba(237,242,247,0.5)',
+
+	dark100Alpha05: 'BlackAlpha100'
 }
 
 //================================

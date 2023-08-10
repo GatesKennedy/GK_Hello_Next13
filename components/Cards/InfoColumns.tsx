@@ -64,7 +64,7 @@ export default function InfoColumns(props: {
 	return (
 		<Container
 			maxW={'5xl'}
-			bgColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
+			bgColor={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')}
 			backdropInvert={colorMode === 'light' ? '80%' : '50%'}
 			py={4}
 		>

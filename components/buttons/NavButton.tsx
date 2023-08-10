@@ -6,8 +6,8 @@ export default function NavButton({ btnText }: { btnText: string }) {
 	return (
 		<Button
 			px={8}
-			bg={useColorModeValue('#151f21', 'gray.900')}
-			color={'white'}
+			bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
+			color={useColorModeValue('black', 'white')}
 			rounded={'md'}
 			_hover={{
 				transform: 'translateY(-2px)',

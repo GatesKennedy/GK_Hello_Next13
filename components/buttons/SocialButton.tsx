@@ -13,7 +13,7 @@ const SocialButton = ({
 	return (
 		<chakra.button
 			aria-label={label}
-			bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+			bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
 			rounded={'full'}
 			w={12}
 			h={12}
@@ -27,6 +27,8 @@ const SocialButton = ({
 			_hover={{
 				bg: 'blue.500',
 				color: useColorModeValue('white', 'gray.700'),
+				transform: 'translateY(-2px)',
+				boxShadow: 'lg',
 			}}
 		>
 			<VisuallyHidden>{label}</VisuallyHidden>

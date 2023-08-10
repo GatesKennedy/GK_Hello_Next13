@@ -8,6 +8,7 @@ import {
 	useDisclosure,
 	useColorModeValue,
 	useColorMode,
+	Center,
 } from '@chakra-ui/react';
 import { MoonIcon, SunIcon } from '@chakra-ui/icons';
 import NavBar from './NavBar';
@@ -33,7 +34,23 @@ export default function Header() {
 						alignItems={'center'}
 						width={{ base: 12, md: 24 }}
 					>
-						<Text>G_K</Text>
+						{' '}
+						<Center
+							h={'40px'}
+							w={'48px'}
+							borderRadius={'lg'}
+							bg={useColorModeValue(
+								'blackAlpha.200',
+								'whiteAlpha.200',
+							)}
+						>
+							<Text
+								textAlign={'center'}
+								color={useColorModeValue('black', 'white')}
+							>
+								G_K
+							</Text>
+						</Center>
 					</Flex>
 
 					<NavBar />
@@ -42,7 +59,14 @@ export default function Header() {
 						alignItems={'center'}
 						width={{ base: 12, md: 24 }}
 					>
-						<Button onClick={toggleColorMode}>
+						<Button
+							onClick={toggleColorMode}
+							transition={'background 0.3s ease'}
+							bg={useColorModeValue(
+								'blackAlpha.200',
+								'whiteAlpha.200',
+							)}
+						>
 							{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 						</Button>
 					</Flex>
