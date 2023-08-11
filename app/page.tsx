@@ -4,7 +4,6 @@ import {
 	Box,
 	Flex,
 	Icon,
-	Stack,
 	VStack,
 	useColorMode,
 	useColorModeValue,
@@ -12,11 +11,9 @@ import {
 import { ASSETS } from '../reference/layoutValues';
 
 import {
-	FcAssistant,
 	FcDataConfiguration,
 	FcMultipleDevices,
 	FcParallelTasks,
-	FcSettings,
 	FcSupport,
 } from 'react-icons/fc';
 import CardWrapper from '../components/Cards/CardWrapper';

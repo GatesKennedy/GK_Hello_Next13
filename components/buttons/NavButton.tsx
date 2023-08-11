@@ -12,6 +12,7 @@ export default function NavButton({ btnText }: { btnText: string }) {
 			_hover={{
 				transform: 'translateY(-2px)',
 				boxShadow: 'lg',
+				bg: useColorModeValue('blackAlpha.300', 'whiteAlpha.300'),
 			}}
 		>
 			{btnText}

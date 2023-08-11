@@ -13,13 +13,13 @@ const NavBar = () => {
 					mb={1}
 				>
 					<Link href={'/'}>
-						<NavButton btnText={'info'} />
+						<NavButton btnText={'Info'} />
 					</Link>
 					<Link href={'/work'}>
-						<NavButton btnText={'work'} />
+						<NavButton btnText={'Work'} />
 					</Link>
 					<Link href={'/talk'}>
-						<NavButton btnText={'talk'} />
+						<NavButton btnText={'Talk'} />
 					</Link>
 				</HStack>
 			</Center>

@@ -1,12 +1,6 @@
 'use client';
 
-import {
-	Box,
-	Container,
-	Stack,
-	Text,
-	useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Container, Stack, useColorModeValue } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
 import SocialButton from './buttons/SocialButton';

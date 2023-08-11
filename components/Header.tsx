@@ -5,7 +5,6 @@ import {
 	Flex,
 	Text,
 	Button,
-	useDisclosure,
 	useColorModeValue,
 	useColorMode,
 	Center,
@@ -66,6 +65,12 @@ export default function Header() {
 								'blackAlpha.200',
 								'whiteAlpha.200',
 							)}
+							_hover={{
+								bg: useColorModeValue(
+									'blackAlpha.300',
+									'whiteAlpha.300',
+								),
+							}}
 						>
 							{colorMode === 'light' ? <MoonIcon /> : <SunIcon />}
 						</Button>

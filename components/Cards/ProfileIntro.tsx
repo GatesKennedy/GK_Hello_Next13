@@ -12,20 +12,13 @@ import {
 	Icon,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import {
-	IoAnalyticsSharp,
-	IoLogoBitcoin,
-	IoSearchSharp,
-} from 'react-icons/io5';
 import { ReactElement } from 'react';
 import {
 	MdComputer,
 	MdGroups,
-	MdOutlineManageHistory,
 	MdOutlineSchool,
 	MdSchedule,
 } from 'react-icons/md';
-import { GrPlan } from 'react-icons/gr';
 
 interface AttributeProps {
 	text: string;

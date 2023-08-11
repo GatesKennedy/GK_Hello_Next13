@@ -4,18 +4,15 @@ import { ReactElement } from 'react';
 import {
 	Box,
 	SimpleGrid,
-	Icon,
 	Text,
 	Stack,
 	Flex,
 	Container,
-	Center,
 	useColorModeValue,
 	Heading,
 	useColorMode,
 	HStack,
 } from '@chakra-ui/react';
-import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
 
 export interface SkillSectionProps {
 	icon: ReactElement;
