@@ -11,7 +11,14 @@ import {
 } from '@chakra-ui/react';
 import { ASSETS } from '../reference/layoutValues';
 
-import { FcAssistant } from 'react-icons/fc';
+import {
+	FcAssistant,
+	FcDataConfiguration,
+	FcMultipleDevices,
+	FcParallelTasks,
+	FcSettings,
+	FcSupport,
+} from 'react-icons/fc';
 import CardWrapper from '../components/Cards/CardWrapper';
 import InfoColumns, {
 	SkillSectionProps,
@@ -24,44 +31,68 @@ const skillColumns: SkillSectionProps[] = [
 		text: 'Client-side Tools',
 		icon: (
 			<Icon
-				as={FcAssistant}
+				as={FcMultipleDevices}
 				w={10}
 				h={10}
 			/>
 		),
+		items: [
+			'ReactJS (TS)',
+			'NextJS (TS)',
+			'ChartJS (TS)',
+			'MaterialUI',
+			'ChakraUI',
+		],
 	},
 	{
 		title: 'Server',
 		text: 'Server-side Tools',
 		icon: (
 			<Icon
-				as={FcAssistant}
+				as={FcParallelTasks}
 				w={10}
 				h={10}
 			/>
 		),
+		items: [
+			'Node.js (TS)',
+			'NextJS (TS)',
+			'AWS Lambda (Python)',
+			'ExpressJS (TS)',
+			'Nodemailer',
+			'Prisma ORM',
+			'GraphQL',
+		],
 	},
 	{
 		title: 'Data',
 		text: 'Data Storage Tools',
 		icon: (
 			<Icon
-				as={FcAssistant}
+				as={FcDataConfiguration}
 				w={10}
 				h={10}
 			/>
 		),
+		items: ['PostgreSQL', 'MySQL', 'MongoDB', 'GraphQL', 'ChakraUI'],
 	},
 	{
-		title: 'Utils',
+		title: 'Utility',
 		text: 'Other Tools',
 		icon: (
 			<Icon
-				as={FcAssistant}
+				as={FcSupport}
 				w={10}
 				h={10}
 			/>
 		),
+		items: [
+			'ReactJS (TS)',
+			'NextJS (TS)',
+			'ChartJS (TS)',
+			'MaterialUI',
+			'ChakraUI',
+		],
 	},
 ];
 

@@ -15,9 +15,14 @@ import { ReactElement } from 'react';
 import {
 	FcAbout,
 	FcAssistant,
+	FcBiotech,
+	FcCloseUpMode,
 	FcCollaboration,
 	FcDonate,
+	FcGraduationCap,
 	FcManager,
+	FcMindMap,
+	FcTodoList,
 } from 'react-icons/fc';
 
 interface CardProps {
@@ -96,14 +101,14 @@ export default function CardWrapper() {
 					Soft Skills
 				</Heading>
 				<Text
-					color={'gray.100'}
+					color={useColorModeValue('gray.800', 'gray.200')}
 					fontSize={{ base: 'sm', sm: 'lg' }}
 				>
 					Interests &nbsp;|&nbsp; Personality &nbsp;|&nbsp; History
 					&nbsp;|&nbsp; Attributes &nbsp;|&nbsp; Weaknesses
 				</Text>
 				<Text
-					color={'gray.400'}
+					color={useColorModeValue('gray.600', 'gray.400')}
 					fontSize={{ base: 'sm', sm: 'md' }}
 				>
 					Sorted by experience and interest in descending order.
@@ -120,16 +125,30 @@ export default function CardWrapper() {
 					justify='center'
 				>
 					<Card
-						heading={'Application Development'}
+						heading={'Exceedingly Curious'}
 						icon={
 							<Icon
-								as={FcAssistant}
+								as={FcBiotech}
 								w={10}
 								h={10}
 							/>
 						}
 						description={
 							'Data-driven solutions for good people that make them feel good and strong and stuff'
+						}
+						href={'#'}
+					/>
+					<Card
+						heading={'B.S Mechanical Engineering'}
+						icon={
+							<Icon
+								as={FcGraduationCap}
+								w={10}
+								h={10}
+							/>
+						}
+						description={
+							'I am currently single but that is unrelated to the degree I earned in mechanical engineering.'
 						}
 						href={'#'}
 					/>
@@ -151,7 +170,7 @@ export default function CardWrapper() {
 						heading={'Creativity'}
 						icon={
 							<Icon
-								as={FcDonate}
+								as={FcCloseUpMode}
 								w={10}
 								h={10}
 							/>
@@ -165,27 +184,13 @@ export default function CardWrapper() {
 						heading={'Full-Stack'}
 						icon={
 							<Icon
-								as={FcManager}
+								as={FcMindMap}
 								w={10}
 								h={10}
 							/>
 						}
 						description={
 							'I know lots of things about building software and my knowledge is for sale in the form of monthly payments for challenging tasks.'
-						}
-						href={'#'}
-					/>
-					<Card
-						heading={'Bachelors of Science: Mechanical Engineering'}
-						icon={
-							<Icon
-								as={FcAbout}
-								w={10}
-								h={10}
-							/>
-						}
-						description={
-							'I am currently single but that is unrelated to the degree I earned in mechanical engineering.'
 						}
 						href={'#'}
 					/>

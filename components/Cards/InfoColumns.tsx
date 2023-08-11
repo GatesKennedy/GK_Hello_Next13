@@ -13,16 +13,18 @@ import {
 	useColorModeValue,
 	Heading,
 	useColorMode,
+	HStack,
 } from '@chakra-ui/react';
 import { FcAssistant, FcDonate, FcInTransit } from 'react-icons/fc';
 
 export interface SkillSectionProps {
+	icon: ReactElement;
 	title: string;
 	text: string;
-	icon: ReactElement;
+	items: string[];
 }
 
-const SkillSection = ({ title, text, icon }: SkillSectionProps) => {
+const SkillSection = ({ title, text, icon, items }: SkillSectionProps) => {
 	return (
 		<Box
 			maxW={{ base: 'full', md: '275px' }}
@@ -37,20 +39,40 @@ const SkillSection = ({ title, text, icon }: SkillSectionProps) => {
 				align={'start'}
 				spacing={2}
 			>
-				<Flex
-					w={16}
-					h={16}
-					align={'center'}
-					justify={'center'}
-					color={'white'}
-					rounded={'full'}
-					bg={'gray.100'}
-					mb={1}
+				<HStack w={'full'}>
+					<Flex
+						w={16}
+						h={16}
+						align={'center'}
+						justify={'center'}
+						color={'white'}
+						rounded={'full'}
+						bg={'gray.100'}
+						mb={1}
+					>
+						{icon}
+					</Flex>
+					<Box w={'50%'}>
+						<Text
+							color={useColorModeValue('black', 'white')}
+							fontSize={{ base: '2xl' }}
+							fontWeight={600}
+							textAlign={'center'}
+						>
+							{title}
+						</Text>
+					</Box>
+				</HStack>
+				<Text
+					fontStyle={'oblique'}
+					fontWeight={'bold'}
+					color={useColorModeValue('gray.600', 'gray.400')}
 				>
-					{icon}
-				</Flex>
-				<Text fontWeight={600}>{title}</Text>
-				<Text color={'gray.600'}>{text}</Text>
+					{text}
+				</Text>
+				{items.map((item, index) => {
+					return <Text key={index}>{item}</Text>;
+				})}
 			</Stack>
 		</Box>
 	);
@@ -64,7 +86,7 @@ export default function InfoColumns(props: {
 	return (
 		<Container
 			maxW={'5xl'}
-			bgColor={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')}
+			bgColor={useColorModeValue('whiteAlpha.700', 'blackAlpha.700')}
 			backdropInvert={colorMode === 'light' ? '80%' : '50%'}
 			py={4}
 		>
@@ -82,14 +104,14 @@ export default function InfoColumns(props: {
 					Tool Belt
 				</Heading>
 				<Text
-					color={'gray.100'}
+					color={useColorModeValue('gray.800', 'gray.200')}
 					fontSize={{ base: 'sm', sm: 'lg' }}
 				>
 					Languages &nbsp;|&nbsp; Concepts &nbsp;|&nbsp; Frameworks
 					&nbsp;|&nbsp; Libraries &nbsp;|&nbsp; Platforms
 				</Text>
 				<Text
-					color={'gray.400'}
+					color={useColorModeValue('gray.600', 'gray.400')}
 					fontSize={{ base: 'sm', sm: 'md' }}
 				>
 					Sorted by experience and interest in descending order.
@@ -104,17 +126,15 @@ export default function InfoColumns(props: {
 					columns={{ base: 1, md: 4 }}
 					spacing={10}
 				>
-					{columnsData.map((column) => {
-						const key = columnsData.indexOf(column);
-						return (
-							<SkillSection
-								key={key}
-								icon={column.icon}
-								title={column.title}
-								text={column.text}
-							/>
-						);
-					})}
+					{columnsData.map((column, index) => (
+						<SkillSection
+							key={index}
+							icon={column.icon}
+							title={column.title}
+							text={column.text}
+							items={column.items}
+						/>
+					))}
 				</SimpleGrid>
 			</Container>
 		</Container>

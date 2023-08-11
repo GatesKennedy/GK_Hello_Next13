@@ -18,6 +18,14 @@ import {
 	IoSearchSharp,
 } from 'react-icons/io5';
 import { ReactElement } from 'react';
+import {
+	MdComputer,
+	MdGroups,
+	MdOutlineManageHistory,
+	MdOutlineSchool,
+	MdSchedule,
+} from 'react-icons/md';
+import { GrPlan } from 'react-icons/gr';
 
 interface AttributeProps {
 	text: string;
@@ -76,7 +84,7 @@ export default function ProfileIntro() {
 					</Text>
 					<Heading>Conor Gates Kennedy</Heading>
 					<Text
-						color={'gray.500'}
+						color={useColorModeValue('gray.700', 'gray.300')}
 						fontSize={'lg'}
 					>
 						Full-stack App Developer comfortable building
@@ -97,34 +105,7 @@ export default function ProfileIntro() {
 						<Attribute
 							icon={
 								<Icon
-									as={IoAnalyticsSharp}
-									color={'yellow.500'}
-									w={5}
-									h={5}
-								/>
-							}
-							iconBg={useColorModeValue(
-								'yellow.100',
-								'yellow.900',
-							)}
-							text={'Full-stack Application Developer'}
-						/>
-						<Attribute
-							icon={
-								<Icon
-									as={IoLogoBitcoin}
-									color={'green.500'}
-									w={5}
-									h={5}
-								/>
-							}
-							iconBg={useColorModeValue('green.100', 'green.900')}
-							text={'Experienced Project Manager'}
-						/>
-						<Attribute
-							icon={
-								<Icon
-									as={IoSearchSharp}
+									as={MdComputer}
 									color={'purple.500'}
 									w={5}
 									h={5}
@@ -134,8 +115,47 @@ export default function ProfileIntro() {
 								'purple.100',
 								'purple.900',
 							)}
-							text={'Resilient Solution Collaborator'}
+							text={'Full-stack Application Developer'}
 						/>
+						<Attribute
+							icon={
+								<Icon
+									as={MdGroups}
+									color={'green.500'}
+									w={5}
+									h={5}
+								/>
+							}
+							iconBg={useColorModeValue('green.100', 'green.900')}
+							text={'Effective Solution Collaborator'}
+						/>
+						<Attribute
+							icon={
+								<Icon
+									as={MdSchedule}
+									color={'blue.500'}
+									w={5}
+									h={5}
+								/>
+							}
+							iconBg={useColorModeValue('blue.100', 'blue.900')}
+							text={'Resilient Project Manager'}
+						/>
+						{/* <Attribute
+							icon={
+								<Icon
+									as={MdOutlineSchool}
+									color={'yellow.500'}
+									w={5}
+									h={5}
+								/>
+							}
+							iconBg={useColorModeValue(
+								'yellow.100',
+								'yellow.900',
+							)}
+							text={'B.S. Mechanical Engineering'}
+						/> */}
 					</Stack>
 				</Stack>
 				<Flex px={8}>
