@@ -46,7 +46,7 @@ export default function ContactForm() {
 								md: '5xl',
 							}}
 						>
-							email me
+							Email Me
 						</Heading>
 
 						<Stack
@@ -70,7 +70,7 @@ export default function ContactForm() {
 									spacing={4}
 								>
 									<FormControl isRequired>
-										<FormLabel>name</FormLabel>
+										<FormLabel>Name</FormLabel>
 
 										<InputGroup>
 											<InputLeftElement>
@@ -85,7 +85,7 @@ export default function ContactForm() {
 									</FormControl>
 
 									<FormControl isRequired>
-										<FormLabel>email</FormLabel>
+										<FormLabel>Email</FormLabel>
 
 										<InputGroup>
 											<InputLeftElement>
@@ -100,7 +100,7 @@ export default function ContactForm() {
 									</FormControl>
 
 									<FormControl isRequired>
-										<FormLabel>words</FormLabel>
+										<FormLabel>Words</FormLabel>
 
 										<Textarea
 											name='message'
