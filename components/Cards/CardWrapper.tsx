@@ -15,6 +15,7 @@ import { ReactElement } from 'react';
 import {
 	FcAbout,
 	FcAssistant,
+	FcBinoculars,
 	FcBiotech,
 	FcCloseUpMode,
 	FcCollaboration,
@@ -40,7 +41,10 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
 			borderWidth='1px'
 			borderRadius='lg'
 			overflow='hidden'
-			bg={useColorModeValue('whiteAlpha.900', 'blackAlpha.900')}
+			bg={useColorModeValue(
+				'RGBA(255, 255, 255, 0.98)',
+				'blackAlpha.900',
+			)}
 			p={5}
 		>
 			<Stack
@@ -54,7 +58,7 @@ const Card = ({ heading, description, icon, href }: CardProps) => {
 					justify={'center'}
 					color={'white'}
 					rounded={'full'}
-					bg={useColorModeValue('gray.100', 'gray.700')}
+					bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.200')}
 				>
 					{icon}
 				</Flex>
@@ -128,7 +132,7 @@ export default function CardWrapper() {
 						heading={'Exceedingly Curious'}
 						icon={
 							<Icon
-								as={FcBiotech}
+								as={FcBinoculars}
 								w={10}
 								h={10}
 							/>

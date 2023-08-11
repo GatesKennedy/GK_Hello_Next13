@@ -87,7 +87,7 @@ export default function ProfileIntro() {
 						color={useColorModeValue('gray.700', 'gray.300')}
 						fontSize={'lg'}
 					>
-						Full-stack App Developer comfortable building
+						Full-stack Web Developer comfortable building
 						data-driven web applications and interested solving
 						challenging problems.
 					</Text>
@@ -141,7 +141,7 @@ export default function ProfileIntro() {
 							iconBg={useColorModeValue('blue.100', 'blue.900')}
 							text={'Resilient Project Manager'}
 						/>
-						{/* <Attribute
+						<Attribute
 							icon={
 								<Icon
 									as={MdOutlineSchool}
@@ -155,7 +155,7 @@ export default function ProfileIntro() {
 								'yellow.900',
 							)}
 							text={'B.S. Mechanical Engineering'}
-						/> */}
+						/>
 					</Stack>
 				</Stack>
 				<Flex px={8}>

@@ -32,22 +32,25 @@ const SkillSection = ({ title, text, icon, items }: SkillSectionProps) => {
 			borderWidth='1px'
 			borderRadius='lg'
 			overflow='hidden'
-			bg={useColorModeValue('whiteAlpha.900', 'blackAlpha.900')}
+			bg={useColorModeValue('whiteAlpha.700', 'blackAlpha.900')}
 			p={5}
 		>
 			<Stack
 				align={'start'}
 				spacing={2}
 			>
-				<HStack w={'full'}>
+				<HStack
+					bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
+					borderRadius={'lg'}
+					w={'full'}
+				>
 					<Flex
 						w={16}
 						h={16}
 						align={'center'}
-						justify={'center'}
+						justify={'right'}
 						color={'white'}
 						rounded={'full'}
-						bg={'gray.100'}
 						mb={1}
 					>
 						{icon}
@@ -57,7 +60,7 @@ const SkillSection = ({ title, text, icon, items }: SkillSectionProps) => {
 							color={useColorModeValue('black', 'white')}
 							fontSize={{ base: '2xl' }}
 							fontWeight={600}
-							textAlign={'center'}
+							textAlign={'left'}
 						>
 							{title}
 						</Text>
