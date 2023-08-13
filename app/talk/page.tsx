@@ -16,12 +16,10 @@ function TalkPage() {
 	);
 	const bgThick: string = useColorModeValue(
 		'whiteAlpha.700',
-		// 'blackAlpha.800',
 		'rgba(23, 25, 27, 0.8)',
 	);
 	const bgSolid: string = useColorModeValue(
 		'whiteAlpha.900',
-		// 'blackAlpha.800',
 		'rgba(3, 5, 7, 0.96)',
 	);
 	return (
@@ -34,11 +32,10 @@ function TalkPage() {
 			backgroundImage={`url(${ASSETS.lightHillsRolling.href})`}
 		>
 			<Flex
-				// size='container.lg'
-				position='relative'
+				position='fixed'
 				id={'Container'}
 				width={'100%'}
-				minHeight={'88vh'}
+				minHeight={'84vh'}
 				padding={0}
 				alignContent={'center'}
 				flexDir={'row-reverse'}
@@ -49,10 +46,9 @@ function TalkPage() {
 					id={'ContactBox'}
 					position={'absolute'}
 					height={'88vh'}
-					width={'50vw'}
+					width={{ base: '75vw', md: '50vw' }}
 					backgroundColor={bgShade}
 					bgGradient={`linear(to-r, transparent 0%, ${bgThin} 21%, ${bgThick} 45%, ${bgSolid} 100%)`}
-					// bgGradient={`linear(to-r, transparent 0%, ${bgThin} 21%, ${bgThick} 45%, ${bgThick} 55%,${bgThin} 79%, transparent 100%)`}
 				>
 					<ContactForm />
 				</Box>

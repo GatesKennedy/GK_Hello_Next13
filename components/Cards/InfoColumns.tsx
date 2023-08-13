@@ -12,6 +12,7 @@ import {
 	Heading,
 	useColorMode,
 	HStack,
+	Center,
 } from '@chakra-ui/react';
 
 export interface SkillSectionProps {
@@ -35,43 +36,61 @@ const SkillSection = ({ title, text, icon, items }: SkillSectionProps) => {
 			<Stack
 				align={'start'}
 				spacing={2}
+				w={'full'}
 			>
-				<HStack
-					bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
-					borderRadius={'lg'}
-					w={'full'}
-				>
-					<Flex
-						w={16}
-						h={16}
+				<Center w={'full'}>
+					<HStack
 						align={'center'}
-						justify={'right'}
-						color={'white'}
-						rounded={'full'}
-						mb={1}
+						justify={'center'}
+						w={'full'}
+						m={'auto'}
+						bg={useColorModeValue(
+							'blackAlpha.100',
+							'whiteAlpha.100',
+						)}
+						borderRadius={'lg'}
 					>
-						{icon}
-					</Flex>
-					<Box w={'50%'}>
-						<Text
-							color={useColorModeValue('black', 'white')}
-							fontSize={{ base: '2xl' }}
-							fontWeight={600}
-							textAlign={'left'}
+						<Flex
+							h={16}
+							align={'center'}
+							justify={'right'}
+							color={'white'}
+							rounded={'full'}
+							mb={1}
+							ml={4}
 						>
-							{title}
-						</Text>
-					</Box>
-				</HStack>
+							{icon}
+						</Flex>
+						<Box>
+							<Text
+								color={useColorModeValue('black', 'white')}
+								fontSize={{ base: '2xl' }}
+								fontWeight={600}
+								textAlign={'left'}
+								mr={6}
+							>
+								{title}
+							</Text>
+						</Box>
+					</HStack>
+				</Center>
 				<Text
 					fontStyle={'oblique'}
 					fontWeight={'bold'}
 					color={useColorModeValue('gray.600', 'gray.400')}
+					px={{ base: 4, md: 4, lg: 2 }}
 				>
 					{text}
 				</Text>
 				{items.map((item, index) => {
-					return <Text key={index}>{item}</Text>;
+					return (
+						<Text
+							key={index}
+							px={{ base: 8, md: 8, lg: 2 }}
+						>
+							{item}
+						</Text>
+					);
 				})}
 			</Stack>
 		</Box>
@@ -123,7 +142,8 @@ export default function InfoColumns(props: {
 				py={8}
 			>
 				<SimpleGrid
-					columns={{ base: 1, md: 4 }}
+					justifyContent={'center'}
+					columns={{ base: 1, md: 2, lg: 4 }}
 					spacing={10}
 				>
 					{columnsData.map((column, index) => (

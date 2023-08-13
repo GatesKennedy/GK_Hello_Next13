@@ -11,7 +11,6 @@ import {
 	StackDivider,
 	Icon,
 	useColorModeValue,
-	Circle,
 } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 import {
@@ -52,17 +51,19 @@ export default function ProfileIntro() {
 	return (
 		<Container
 			maxW={'5xl'}
-			py={{ base: 8, lg: 12 }}
+			py={12}
 			bgColor={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')}
 			borderTopRadius={'lg'}
 		>
 			<SimpleGrid
+				id={'StaxNSnax'}
 				columns={{ base: 1, md: 2 }}
-				spacing={{ base: 4, lg: 10 }}
+				spacing={{ base: 1, sm: 2, md: 8 }}
 			>
 				<Stack
-					spacing={4}
-					px={{ base: 2, md: 2, lg: 8 }}
+					id={'StaxNSnax'}
+					spacing={{ base: 1, md: 4 }}
+					px={{ base: 1, md: 4, lg: 8 }}
 				>
 					<Text
 						textTransform={'uppercase'}
@@ -76,7 +77,7 @@ export default function ProfileIntro() {
 					>
 						Hello
 					</Text>
-					<Heading fontSize={{ base: '2xl', md: '3xl', lg: '4xl' }}>
+					<Heading fontSize={{ base: 'xl', md: '3xl', lg: '4xl' }}>
 						Conor Gates Kennedy
 					</Heading>
 					<Text
@@ -88,7 +89,7 @@ export default function ProfileIntro() {
 						challenging problems.
 					</Text>
 					<Stack
-						spacing={{ base: 2, lg: 3 }}
+						spacing={4}
 						divider={
 							<StackDivider
 								borderColor={useColorModeValue(
@@ -154,18 +155,13 @@ export default function ProfileIntro() {
 						/>
 					</Stack>
 				</Stack>
-				<Flex px={{ base: 2, md: 2, lg: 8 }}>
-					<Circle
-						maxWidth={'full'}
-						overflow={'hidden'}
-					>
-						<Image
-							rounded={'full'}
-							alt={'feature image'}
-							src={'/HeadShot-square.png'}
-							objectFit={'cover'}
-						/>
-					</Circle>
+				<Flex px={{ base: 1, sm: 2, lg: 8 }}>
+					<Image
+						rounded={'full'}
+						alt={'feature image'}
+						src={'/HeadShot-square.png'}
+						objectFit={'cover'}
+					/>
 				</Flex>
 			</SimpleGrid>
 		</Container>

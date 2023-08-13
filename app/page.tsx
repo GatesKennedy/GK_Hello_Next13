@@ -125,10 +125,11 @@ export default function Home() {
 					zIndex={2}
 				>
 					<VStack
-						width={{ base: 'full', md: '60vw' }}
+						width={{ base: 'full', lg: '60vw' }}
 						align={'center'}
 						justify={'center'}
-						pt={4}
+						pt={{ base: 4, lg: 4 }}
+						px={{ base: 2, md: 4 }}
 					>
 						<ProfileIntro />
 						<InfoColumns columnsData={skillColumns} />

@@ -38,10 +38,15 @@ export default function Header() {
 							h={'40px'}
 							w={'48px'}
 							borderRadius={'lg'}
-							bg={useColorModeValue(
+							borderWidth={2}
+							borderColor={useColorModeValue(
 								'blackAlpha.200',
 								'whiteAlpha.200',
 							)}
+							// bg={useColorModeValue(
+							// 	'blackAlpha.100',
+							// 	'whiteAlpha.100',
+							// )}
 						>
 							<Text
 								textAlign={'center'}

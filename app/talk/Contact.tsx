@@ -17,7 +17,6 @@ import {
 } from '@chakra-ui/react';
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
-import { COLOR } from '../../reference/layoutValues';
 
 export default function ContactForm() {
 	const bgThick: string = useColorModeValue(
@@ -29,7 +28,7 @@ export default function ContactForm() {
 			id='contact'
 			align='center'
 			justify='center'
-			height={'full'}
+			height={'87vh'}
 			margin-bottom={'64px'}
 		>
 			<Box
@@ -56,9 +55,8 @@ export default function ContactForm() {
 							borderRadius={'lg'}
 						>
 							<Box
-								// bg={useColorModeValue('white', 'gray.700')}
 								borderRadius='lg'
-								p={8}
+								p={{ base: 4 }}
 								color={useColorModeValue(
 									'gray.700',
 									'whiteAlpha.900',

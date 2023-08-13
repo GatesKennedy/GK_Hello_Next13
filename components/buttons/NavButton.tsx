@@ -5,7 +5,7 @@ import { Button, useColorModeValue } from '@chakra-ui/react';
 export default function NavButton({ btnText }: { btnText: string }) {
 	return (
 		<Button
-			px={8}
+			px={{ base: 4, md: 8 }}
 			bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
 			color={useColorModeValue('black', 'white')}
 			rounded={'md'}

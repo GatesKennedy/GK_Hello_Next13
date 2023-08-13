@@ -9,8 +9,8 @@ const NavBar = () => {
 		<nav>
 			<Center>
 				<HStack
-					spacing={12}
-					mb={1}
+					spacing={{ base: 4, md: 12 }}
+					// mb={{ base: 0, md: 1 }}
 				>
 					<Link href={'/'}>
 						<NavButton btnText={'Info'} />
