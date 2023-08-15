@@ -1,5 +1,6 @@
 'use client';
 
+import { CheckIcon } from '@chakra-ui/icons';
 import {
 	Container,
 	SimpleGrid,
@@ -11,6 +12,9 @@ import {
 	StackDivider,
 	Icon,
 	useColorModeValue,
+	HStack,
+	Box,
+	VStack,
 } from '@chakra-ui/react';
 import { ReactElement } from 'react';
 import {
@@ -20,13 +24,19 @@ import {
 	MdSchedule,
 } from 'react-icons/md';
 
-interface AttributeProps {
-	text: string;
+export enum ATTRIBUTE_TITLE {
+	TIME = 'Time: ',
+	TECH = 'Tech: ',
+	DUTY = 'Duty: ',
+}
+export interface ProjectAttributeProps {
+	title: string;
+	text: string[];
 	iconBg: string;
 	icon?: ReactElement;
 }
 
-const Attribute = ({ text, icon, iconBg }: AttributeProps) => {
+const ProjectAttribute = ({ text, icon, iconBg }: ProjectAttributeProps) => {
 	return (
 		<Stack
 			direction={'row'}
@@ -42,118 +52,63 @@ const Attribute = ({ text, icon, iconBg }: AttributeProps) => {
 			>
 				{icon}
 			</Flex>
-			<Text fontWeight={600}>{text}</Text>
+			<Text fontWeight={600}>{text.map((t) => t + ' ')}</Text>
 		</Stack>
 	);
 };
 
-export default function ProfileIntro() {
+// Replace test data with your own
+const features = Array.apply(null, Array(8)).map(function (x, i) {
+	return {
+		id: i,
+		title: 'Lorem ipsum dolor sit amet',
+		text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.',
+	};
+});
+
+export interface ProjectProps {
+	title: string;
+	description: string;
+	image: string | null;
+	attributes: ProjectAttributeProps[];
+	tags?: string[];
+}
+
+export default function ProjectCard({
+	title,
+	description,
+	attributes,
+	image,
+	tags,
+}: ProjectProps) {
 	return (
 		<Container
-			maxW={'5xl'}
+			maxW={'full'}
 			py={12}
 			bgColor={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')}
-			borderTopRadius={'lg'}
+			borderRadius={'xl'}
 		>
 			<SimpleGrid
 				id={'StaxNSnax'}
-				columns={{ base: 1, md: 2 }}
+				columns={{ base: 1, md: 2, lg: 3 }}
 				spacing={{ base: 1, sm: 2, md: 8 }}
+				pb={12}
 			>
 				<Stack
 					id={'StaxNSnax'}
+					m={'auto'}
 					spacing={{ base: 1, md: 4 }}
 					px={{ base: 1, md: 4, lg: 8 }}
 				>
-					<Text
-						textTransform={'uppercase'}
-						color={'blue.400'}
-						fontWeight={600}
-						fontSize={'sm'}
-						bg={useColorModeValue('blue.50', 'blue.900')}
-						p={2}
-						alignSelf={'flex-start'}
-						rounded={'md'}
-					>
-						Hello
-					</Text>
 					<Heading fontSize={{ base: 'xl', md: '3xl', lg: '4xl' }}>
-						Conor Gates Kennedy
+						{title}
 					</Heading>
 					<Text
 						color={useColorModeValue('gray.700', 'gray.300')}
 						fontSize={'lg'}
 					>
-						Full-stack Web Developer comfortable building
-						data-driven web applications and interested solving
-						challenging problems.
+						{description}
 					</Text>
-					<Stack
-						spacing={4}
-						divider={
-							<StackDivider
-								borderColor={useColorModeValue(
-									'gray.100',
-									'gray.700',
-								)}
-							/>
-						}
-					>
-						<Attribute
-							icon={
-								<Icon
-									as={MdComputer}
-									color={'purple.500'}
-									w={5}
-									h={5}
-								/>
-							}
-							iconBg={useColorModeValue(
-								'purple.100',
-								'purple.900',
-							)}
-							text={'Full-stack Application Developer'}
-						/>
-						<Attribute
-							icon={
-								<Icon
-									as={MdGroups}
-									color={'green.500'}
-									w={5}
-									h={5}
-								/>
-							}
-							iconBg={useColorModeValue('green.100', 'green.900')}
-							text={'Effective Solution Collaborator'}
-						/>
-						<Attribute
-							icon={
-								<Icon
-									as={MdSchedule}
-									color={'blue.500'}
-									w={5}
-									h={5}
-								/>
-							}
-							iconBg={useColorModeValue('blue.100', 'blue.900')}
-							text={'Resilient Project Manager'}
-						/>
-						<Attribute
-							icon={
-								<Icon
-									as={MdOutlineSchool}
-									color={'yellow.500'}
-									w={5}
-									h={5}
-								/>
-							}
-							iconBg={useColorModeValue(
-								'yellow.100',
-								'yellow.900',
-							)}
-							text={'B.S. Mechanical Engineering'}
-						/>
-					</Stack>
 				</Stack>
 				<Flex px={{ base: 1, sm: 2, lg: 8 }}>
 					<Image
@@ -163,7 +118,55 @@ export default function ProfileIntro() {
 						objectFit={'cover'}
 					/>
 				</Flex>
+				<Stack
+					spacing={4}
+					divider={
+						<StackDivider
+							borderColor={useColorModeValue(
+								'gray.100',
+								'gray.700',
+							)}
+						/>
+					}
+				>
+					{attributes.map((attr, index) => (
+						<ProjectAttribute
+							key={index}
+							title={attr.title}
+							icon={attr.icon}
+							iconBg={attr.iconBg}
+							text={attr.text}
+						/>
+					))}
+				</Stack>
 			</SimpleGrid>
+			<Container
+				maxW={'6xl'}
+				my={'auto'}
+			>
+				<SimpleGrid
+					columns={{ base: 1, md: 2, lg: 4 }}
+					spacing={10}
+				>
+					{features.map((feature) => (
+						<HStack
+							key={feature.id}
+							align={'top'}
+						>
+							<Box
+								color={'green.400'}
+								px={2}
+							>
+								<Icon as={CheckIcon} />
+							</Box>
+							<VStack align={'start'}>
+								<Text fontWeight={600}>{feature.title}</Text>
+								<Text color={'gray.600'}>{feature.text}</Text>
+							</VStack>
+						</HStack>
+					))}
+				</SimpleGrid>
+			</Container>
 		</Container>
 	);
 }
