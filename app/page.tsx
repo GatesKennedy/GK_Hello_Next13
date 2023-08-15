@@ -19,8 +19,8 @@ import {
 import CardWrapper from '../components/Cards/CardWrapper';
 import InfoColumns, {
 	SkillSectionProps,
-} from '../components/cards/InfoColumns';
-import ProfileIntro from '../components/cards/ProfileIntro';
+} from '../components/Cards/InfoColumns';
+import ProfileIntro from '../components/Cards/ProfileIntro';
 
 const skillColumns: SkillSectionProps[] = [
 	{
