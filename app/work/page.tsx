@@ -125,16 +125,17 @@ const WorkPage = () => {
 				as={Container}
 				maxW={'3xl'}
 				textAlign={'center'}
+				my={8}
 			>
 				<Heading fontSize={'3xl'}>Project History</Heading>
 				<Text
 					color={'gray.600'}
 					fontSize={'xl'}
 				>
-					A highlighted list of my work
+					A highlighted list of work
 				</Text>
 			</Stack>
-			<Stack>
+			<Stack mx={2}>
 				{projectsData.map((project, index) => (
 					<ProjectCard
 						key={index}

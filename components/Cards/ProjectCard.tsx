@@ -110,7 +110,10 @@ export default function ProjectCard({
 						{description}
 					</Text>
 				</Stack>
-				<Flex px={{ base: 1, sm: 2, lg: 8 }}>
+				<Flex
+					px={{ base: 1, sm: 2, lg: 8 }}
+					my={{ base: 4, sm: 8, lg: 4 }}
+				>
 					<Image
 						rounded={'full'}
 						alt={'feature image'}
