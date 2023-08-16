@@ -16,27 +16,21 @@ import {
 	Box,
 	VStack,
 } from '@chakra-ui/react';
+import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
 import { ReactElement } from 'react';
-import {
-	MdComputer,
-	MdGroups,
-	MdOutlineSchool,
-	MdSchedule,
-} from 'react-icons/md';
+import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
 
-export enum ATTRIBUTE_TITLE {
-	TIME = 'Time: ',
-	TECH = 'Tech: ',
-	DUTY = 'Duty: ',
+export interface TimeProps {
+	start: string;
+	end: string;
 }
 export interface ProjectAttributeProps {
-	title: string;
-	text: string[];
-	iconBg: string;
-	icon?: ReactElement;
+	time: TimeProps;
+	status: STATUS_TYPE;
+	tags: TAG[];
 }
 
-const ProjectAttribute = ({ text, icon, iconBg }: ProjectAttributeProps) => {
+const TimeAttribute = ({ start, end }: TimeProps) => {
 	return (
 		<Stack
 			direction={'row'}
@@ -48,11 +42,70 @@ const ProjectAttribute = ({ text, icon, iconBg }: ProjectAttributeProps) => {
 				align={'center'}
 				justify={'center'}
 				rounded={'full'}
-				bg={iconBg}
+				bg={useColorModeValue('blue.100', 'blue.900')}
 			>
-				{icon}
+				<Icon
+					as={MdSchedule}
+					color={'blue.500'}
+					w={5}
+					h={5}
+				/>
 			</Flex>
-			<Text fontWeight={600}>{text.map((t) => t + ' ')}</Text>
+			<Text fontWeight={600}>{`${start} - ${end}`}</Text>
+		</Stack>
+	);
+};
+const StatusAttribute = (props: { status: STATUS_TYPE }) => {
+	return (
+		<Stack
+			direction={'row'}
+			align={'center'}
+		>
+			<Flex
+				w={8}
+				h={8}
+				align={'center'}
+				justify={'center'}
+				rounded={'full'}
+				bg={useColorModeValue('purple.100', 'purple.900')}
+			>
+				<Icon
+					as={MdDescription}
+					color={'purple.500'}
+					w={5}
+					h={5}
+				/>
+			</Flex>
+			<Text fontWeight={600}>{props.status.toString()}</Text>
+		</Stack>
+	);
+};
+const TagAttribute = (props: { tags: TAG[] }) => {
+	return (
+		<Stack
+			direction={'row'}
+			align={'center'}
+		>
+			<Flex
+				w={8}
+				h={8}
+				align={'center'}
+				justify={'center'}
+				rounded={'full'}
+				bg={useColorModeValue('green.100', 'green.900')}
+			>
+				<Icon
+					as={MdComputer}
+					color={'green.500'}
+					w={5}
+					h={5}
+				/>
+			</Flex>
+			<Box fontWeight={600}>
+				{props.tags.map((tag, index) => {
+					return <Text key={index}>{tag}</Text>;
+				})}
+			</Box>
 		</Stack>
 	);
 };
@@ -69,17 +122,15 @@ const features = Array.apply(null, Array(8)).map(function (x, i) {
 export interface ProjectProps {
 	title: string;
 	description: string;
-	image: string | null;
-	attributes: ProjectAttributeProps[];
-	tags?: string[];
+	attributes: ProjectAttributeProps;
+	images: string[];
 }
 
 export default function ProjectCard({
 	title,
 	description,
 	attributes,
-	image,
-	tags,
+	images,
 }: ProjectProps) {
 	return (
 		<Container
@@ -132,15 +183,14 @@ export default function ProjectCard({
 						/>
 					}
 				>
-					{attributes.map((attr, index) => (
-						<ProjectAttribute
-							key={index}
-							title={attr.title}
-							icon={attr.icon}
-							iconBg={attr.iconBg}
-							text={attr.text}
-						/>
-					))}
+					<TimeAttribute
+						start={attributes.time.start}
+						end={attributes.time.end}
+					/>
+					<StatusAttribute
+						status={attributes.status as STATUS_TYPE}
+					/>
+					<TagAttribute tags={attributes.tags} />
 				</Stack>
 			</SimpleGrid>
 			<Container

@@ -8,14 +8,15 @@ import {
 	Stack,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import React, { ReactElement } from 'react';
-import GridList from '../../components/GridList';
-import ProjectCard, {
-	ATTRIBUTE_TITLE,
-	ProjectProps,
-} from '../../components/Cards/ProjectCard';
+import React from 'react';
+import ProjectCard, { ProjectProps } from '../../components/Cards/ProjectCard';
 import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
 import { describe } from 'node:test';
+import {
+	ATTRIBUTE_TITLE,
+	STATUS_TYPE,
+	TAG,
+} from '../../reference/stringConstants';
 
 const WorkPage = () => {
 	//	Projects Data
@@ -23,94 +24,42 @@ const WorkPage = () => {
 		{
 			title: 'Mimir Dashboard',
 			description: 'Business dasbhoard for dental practices',
-			image: null,
-			attributes: [
-				{
-					title: ATTRIBUTE_TITLE.TIME,
-					text: ['August 2022', ' - ', 'July 2023'],
-					iconBg: useColorModeValue('purple.100', 'purple.900'),
-					icon: (
-						<Icon
-							as={MdSchedule}
-							color={'purple.500'}
-							w={5}
-							h={5}
-						/>
-					),
-				},
-				{
-					title: ATTRIBUTE_TITLE.TECH,
-					text: ['NodeTS', 'NextTS', 'PostgreSQL'],
-					iconBg: useColorModeValue('purple.100', 'purple.900'),
-					icon: (
-						<Icon
-							as={MdComputer}
-							color={'purple.500'}
-							w={5}
-							h={5}
-						/>
-					),
-				},
-				{
-					title: ATTRIBUTE_TITLE.DUTY,
-					text: ['Displays KPI to admin'],
-					iconBg: useColorModeValue('purple.100', 'purple.900'),
-					icon: (
-						<Icon
-							as={MdComputer}
-							color={'purple.500'}
-							w={5}
-							h={5}
-						/>
-					),
-				},
-			],
+			images: [''],
+			attributes: {
+				time: { start: "August '22", end: "June '23" },
+				status: STATUS_TYPE.COMPLETE,
+				tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
+			},
 		},
 		{
-			title: 'Mimir Dashboard',
+			title: 'Dental Intake',
 			description: 'Business dasbhoard for dental practices',
-			image: null,
-			attributes: [
-				{
-					title: ATTRIBUTE_TITLE.TIME,
-					text: ['August 2022', ' - ', 'July 2023'],
-					iconBg: useColorModeValue('purple.100', 'purple.900'),
-					icon: (
-						<Icon
-							as={MdSchedule}
-							color={'purple.500'}
-							w={5}
-							h={5}
-						/>
-					),
-				},
-				{
-					title: ATTRIBUTE_TITLE.TECH,
-					text: ['NodeTS', 'NextTS', 'PostgreSQL'],
-					iconBg: useColorModeValue('purple.100', 'purple.900'),
-					icon: (
-						<Icon
-							as={MdComputer}
-							color={'purple.500'}
-							w={5}
-							h={5}
-						/>
-					),
-				},
-				{
-					title: ATTRIBUTE_TITLE.DUTY,
-					text: ['Displays KPI to admin'],
-					iconBg: useColorModeValue('purple.100', 'purple.900'),
-					icon: (
-						<Icon
-							as={MdComputer}
-							color={'purple.500'}
-							w={5}
-							h={5}
-						/>
-					),
-				},
-			],
+			images: [''],
+			attributes: {
+				time: { start: "August '22", end: "June '23" },
+				status: STATUS_TYPE.COMPLETE,
+				tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
+			},
+		},
+		{
+			title: 'New West Technologies',
+			description: 'Business dasbhoard for dental practices',
+			images: [''],
+			attributes: {
+				time: { start: "August '22", end: "June '23" },
+				status: STATUS_TYPE.COMPLETE,
+				tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
+			},
+		},
+		{
+			title: 'GK Hello',
+			description: 'Business dasbhoard for dental practices',
+			images: [''],
+			attributes: {
+				time: { start: "August '22", end: "June '23" },
+				status: STATUS_TYPE.COMPLETE,
+				tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
+			},
 		},
 	];
 
@@ -141,7 +90,7 @@ const WorkPage = () => {
 						key={index}
 						title={project.title}
 						description={project.description}
-						image={project.image}
+						images={project.images}
 						attributes={project.attributes}
 					/>
 				))}
