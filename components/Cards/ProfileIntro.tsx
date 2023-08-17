@@ -162,7 +162,7 @@ export default function ProfileIntro() {
 						<Image
 							rounded={'full'}
 							alt={'feature image'}
-							src={'/HeadShot-square.png'}
+							src={'/public/img/HeadShot-square.png'}
 							objectFit={'cover'}
 						/>
 					</Circle>

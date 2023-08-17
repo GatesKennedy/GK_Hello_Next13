@@ -77,6 +77,7 @@ export enum TAG {
 	POSTGRES='PostgreSQL',
 	POSTMAN='Postman',
 	PRISMA='PrismaORM',
+	PWA='Progressive Web App',
 	PYTHON='Python',
 
 	REACT='ReactTS',

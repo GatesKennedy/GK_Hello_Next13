@@ -1,22 +1,8 @@
 'use client';
-import {
-	Box,
-	Text,
-	Container,
-	Heading,
-	Icon,
-	Stack,
-	useColorModeValue,
-} from '@chakra-ui/react';
+import { Box, Text, Container, Heading, Stack } from '@chakra-ui/react';
 import React from 'react';
 import ProjectCard, { ProjectProps } from '../../components/Cards/ProjectCard';
-import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
-import { describe } from 'node:test';
-import {
-	ATTRIBUTE_TITLE,
-	STATUS_TYPE,
-	TAG,
-} from '../../reference/stringConstants';
+import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
 
 const WorkPage = () => {
 	//	Projects Data
@@ -33,7 +19,8 @@ const WorkPage = () => {
 		},
 		{
 			title: 'Dental Intake',
-			description: 'Business dasbhoard for dental practices',
+			description:
+				"New Patient intake form for dentists to collect and provide information about a patient's potential risks related to their dental health.",
 			images: [''],
 			attributes: {
 				time: { start: "August '22", end: "June '23" },
