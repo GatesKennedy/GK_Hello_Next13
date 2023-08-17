@@ -16,11 +16,11 @@ import {
 	FcParallelTasks,
 	FcSupport,
 } from 'react-icons/fc';
-import CardWrapper from '../components/Cards/CardWrapper';
+import CardWrapper from '../components/cards/CardWrapper';
 import InfoColumns, {
 	SkillSectionProps,
-} from '../components/Cards/InfoColumns';
-import ProfileIntro from '../components/Cards/ProfileIntro';
+} from '../components/cards/InfoColumns';
+import ProfileIntro from '../components/cards/ProfileIntro';
 
 const skillColumns: SkillSectionProps[] = [
 	{

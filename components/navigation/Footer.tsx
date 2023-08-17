@@ -3,9 +3,9 @@
 import { Box, Container, Stack, useColorModeValue } from '@chakra-ui/react';
 import { FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
-import SocialButton from './buttons/SocialButton';
-import CopyButton from './buttons/CopyButton';
-import { STRINGS } from '../reference/stringConstants';
+import SocialButton from '../buttons/SocialButton';
+import CopyButton from '../buttons/CopyButton';
+import { STRINGS } from '../../reference/stringConstants';
 
 export default function SmallWithSocial() {
 	return (

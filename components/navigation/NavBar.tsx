@@ -2,7 +2,7 @@
 import { Center, Divider, HStack, StackDivider } from '@chakra-ui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import NavButton from './buttons/NavButton';
+import NavButton from '../buttons/NavButton';
 
 const NavBar = () => {
 	return (

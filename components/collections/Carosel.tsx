@@ -14,7 +14,7 @@ import {
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 // And react-slick as our Carousel Lib
 import Slider from 'react-slick';
-import { ASSETS } from '../reference/layoutValues';
+import { ASSETS } from '../../reference/layoutValues';
 
 // Settings for the slider
 const settings = {
