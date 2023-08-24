@@ -3,6 +3,7 @@ import { Box, Text, Container, Heading, Stack } from '@chakra-ui/react';
 import React from 'react';
 import ProjectCard, { ProjectProps } from '../../components/cards/ProjectCard';
 import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
+import headShotImage from '../../public/HeadShot-square.png';
 
 const WorkPage = () => {
 	//	Projects Data
@@ -10,7 +11,12 @@ const WorkPage = () => {
 		{
 			title: 'Mimir Dashboard',
 			description: 'Business dasbhoard for dental practices',
-			images: [''],
+			images: [
+				{ title: 'one', desc: 'about one', src: headShotImage },
+				{ title: 'two', desc: 'about two', src: headShotImage },
+				{ title: 'three', desc: 'about three', src: headShotImage },
+				{ title: 'four', desc: 'about four', src: headShotImage },
+			],
 			attributes: {
 				time: { start: "August '22", end: "June '23" },
 				status: STATUS_TYPE.COMPLETE,
@@ -21,7 +27,12 @@ const WorkPage = () => {
 			title: 'Dental Intake',
 			description:
 				"New Patient intake form for dentists to collect and provide information about a patient's potential risks related to their dental health.",
-			images: [''],
+			images: [
+				{ title: 'one', desc: 'about one', src: headShotImage },
+				{ title: 'two', desc: 'about two', src: headShotImage },
+				{ title: 'three', desc: 'about three', src: headShotImage },
+				{ title: 'four', desc: 'about four', src: headShotImage },
+			],
 			attributes: {
 				time: { start: "August '22", end: "June '23" },
 				status: STATUS_TYPE.COMPLETE,
@@ -31,7 +42,12 @@ const WorkPage = () => {
 		{
 			title: 'New West Technologies',
 			description: 'Business dasbhoard for dental practices',
-			images: [''],
+			images: [
+				{ title: 'one', desc: 'about one', src: headShotImage },
+				{ title: 'two', desc: 'about two', src: headShotImage },
+				{ title: 'three', desc: 'about three', src: headShotImage },
+				{ title: 'four', desc: 'about four', src: headShotImage },
+			],
 			attributes: {
 				time: { start: "August '22", end: "June '23" },
 				status: STATUS_TYPE.COMPLETE,
@@ -41,7 +57,12 @@ const WorkPage = () => {
 		{
 			title: 'GK Hello',
 			description: 'Business dasbhoard for dental practices',
-			images: [''],
+			images: [
+				{ title: 'one', desc: 'about one', src: headShotImage },
+				{ title: 'two', desc: 'about two', src: headShotImage },
+				{ title: 'three', desc: 'about three', src: headShotImage },
+				{ title: 'four', desc: 'about four', src: headShotImage },
+			],
 			attributes: {
 				time: { start: "August '22", end: "June '23" },
 				status: STATUS_TYPE.COMPLETE,

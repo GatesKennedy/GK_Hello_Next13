@@ -4,7 +4,6 @@ import { CheckIcon } from '@chakra-ui/icons';
 import {
 	Container,
 	SimpleGrid,
-	Image,
 	Flex,
 	Heading,
 	Text,
@@ -19,6 +18,8 @@ import {
 import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
 import { ReactElement } from 'react';
 import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
+import ModalCarosel from '../modal/Modal';
+import { StaticImageData } from 'next/image';
 
 export interface TimeProps {
 	start: string;
@@ -28,6 +29,19 @@ export interface ProjectAttributeProps {
 	time: TimeProps;
 	status: STATUS_TYPE;
 	tags: TAG[];
+}
+
+export interface ListImage {
+	title: string;
+	desc: string;
+	src: StaticImageData;
+}
+
+export interface ProjectProps {
+	title: string;
+	description: string;
+	attributes: ProjectAttributeProps;
+	images: ListImage[];
 }
 
 const TimeAttribute = ({ start, end }: TimeProps) => {
@@ -119,13 +133,6 @@ const features = Array.apply(null, Array(8)).map(function (x, i) {
 	};
 });
 
-export interface ProjectProps {
-	title: string;
-	description: string;
-	attributes: ProjectAttributeProps;
-	images: string[];
-}
-
 export default function ProjectCard({
 	title,
 	description,
@@ -165,12 +172,7 @@ export default function ProjectCard({
 					px={{ base: 1, sm: 2, lg: 8 }}
 					my={{ base: 4, sm: 8, lg: 4 }}
 				>
-					<Image
-						rounded={'full'}
-						alt={'feature image'}
-						src={'/HeadShot-square.png'}
-						objectFit={'cover'}
-					/>
+					<ModalCarosel imageList={images} />
 				</Flex>
 				<Stack
 					spacing={4}
