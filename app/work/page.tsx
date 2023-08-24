@@ -1,10 +1,10 @@
 'use client';
 import React from 'react';
 import { Box, Text, Container, Heading, Stack } from '@chakra-ui/react';
-import ProjectCard, { ProjectProps } from '@/components/cards/ProjectCard';
 
 import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
 import headShotImage from '../../public/HeadShot-square.png';
+import ProjectCard, { ProjectProps } from '../../components/cards/ProjectCard';
 
 const WorkPage = () => {
 	//	Projects Data

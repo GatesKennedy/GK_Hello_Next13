@@ -9,16 +9,17 @@ import {
 	useColorModeValue,
 } from '@chakra-ui/react';
 import { ASSETS } from '../reference/layoutValues';
-
 import {
 	FcDataConfiguration,
 	FcMultipleDevices,
 	FcParallelTasks,
 	FcSupport,
 } from 'react-icons/fc';
-import CardWrapper from '@/components/cards/CardWrapper';
-import InfoColumns, { SkillSectionProps } from '@/components/cards/InfoColumns';
-import ProfileIntro from '@/components/cards/ProfileIntro';
+import CardWrapper from '../components/cards/CardWrapper';
+import InfoColumns, {
+	SkillSectionProps,
+} from '../components/cards/InfoColumns';
+import ProfileIntro from '../components/cards/ProfileIntro';
 
 const skillColumns: SkillSectionProps[] = [
 	{
