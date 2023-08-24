@@ -21,80 +21,81 @@ import InfoColumns, {
 } from '../components/cards/InfoColumns';
 import ProfileIntro from '../components/cards/ProfileIntro';
 
-const skillColumns: SkillSectionProps[] = [
-	{
-		title: 'Client',
-		text: 'Client-side Tools',
-		icon: (
-			<Icon
-				as={FcMultipleDevices}
-				w={10}
-				h={10}
-			/>
-		),
-		items: [
-			'ReactJS (TS)',
-			'NextJS (TS)',
-			'ChartJS (TS)',
-			'MaterialUI',
-			'ChakraUI',
-		],
-	},
-	{
-		title: 'Server',
-		text: 'Server-side Tools',
-		icon: (
-			<Icon
-				as={FcParallelTasks}
-				w={10}
-				h={10}
-			/>
-		),
-		items: [
-			'Node.js (TS)',
-			'NextJS (TS)',
-			'AWS Lambda (Python)',
-			'ExpressJS (TS)',
-			'Nodemailer',
-			'Prisma ORM',
-			'GraphQL',
-		],
-	},
-	{
-		title: 'Data',
-		text: 'Data Storage Tools',
-		icon: (
-			<Icon
-				as={FcDataConfiguration}
-				w={10}
-				h={10}
-			/>
-		),
-		items: ['PostgreSQL', 'MySQL', 'MongoDB', 'GraphQL', 'ChakraUI'],
-	},
-	{
-		title: 'Utility',
-		text: 'Other Tools',
-		icon: (
-			<Icon
-				as={FcSupport}
-				w={10}
-				h={10}
-			/>
-		),
-		items: [
-			'ReactJS (TS)',
-			'NextJS (TS)',
-			'ChartJS (TS)',
-			'MaterialUI',
-			'ChakraUI',
-		],
-	},
-];
-
 //	~ MAIN ~
 export default function Home() {
 	const { colorMode, toggleColorMode } = useColorMode();
+
+	const skillColumns: SkillSectionProps[] = [
+		{
+			title: 'Client',
+			text: 'Client-side Tools',
+			icon: (
+				<Icon
+					as={FcMultipleDevices}
+					w={10}
+					h={10}
+				/>
+			),
+			items: [
+				'ReactJS (TS)',
+				'NextJS (TS)',
+				'ChartJS (TS)',
+				'MaterialUI',
+				'ChakraUI',
+			],
+		},
+		{
+			title: 'Server',
+			text: 'Server-side Tools',
+			icon: (
+				<Icon
+					as={FcParallelTasks}
+					w={10}
+					h={10}
+				/>
+			),
+			items: [
+				'Node.js (TS)',
+				'NextJS (TS)',
+				'AWS Lambda (Python)',
+				'ExpressJS (TS)',
+				'Nodemailer',
+				'Prisma ORM',
+				'GraphQL',
+			],
+		},
+		{
+			title: 'Data',
+			text: 'Data Storage Tools',
+			icon: (
+				<Icon
+					as={FcDataConfiguration}
+					w={10}
+					h={10}
+				/>
+			),
+			items: ['PostgreSQL', 'MySQL', 'MongoDB', 'GraphQL', 'ChakraUI'],
+		},
+		{
+			title: 'Utility',
+			text: 'Other Tools',
+			icon: (
+				<Icon
+					as={FcSupport}
+					w={10}
+					h={10}
+				/>
+			),
+			items: [
+				'ReactJS (TS)',
+				'NextJS (TS)',
+				'ChartJS (TS)',
+				'MaterialUI',
+				'ChakraUI',
+			],
+		},
+	];
+
 	return (
 		<Box
 			width={'full'}
