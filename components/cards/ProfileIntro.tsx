@@ -84,7 +84,7 @@ export default function ProfileIntro() {
 						fontSize={'lg'}
 					>
 						Full-stack Web Developer comfortable building
-						data-driven web applications and interested solving
+						data-driven web applications and interested in solving
 						challenging problems.
 					</Text>
 					<Stack

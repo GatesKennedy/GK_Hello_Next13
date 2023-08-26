@@ -19,6 +19,7 @@ const SocialButton = ({
 			h={12}
 			cursor={'pointer'}
 			as={'a'}
+			target={'_blank'}
 			href={href}
 			display={'inline-flex'}
 			alignItems={'center'}

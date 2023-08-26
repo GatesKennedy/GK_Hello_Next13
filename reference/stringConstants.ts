@@ -43,7 +43,7 @@ export enum TAG {
 	DOT_NET='.NET',
 
 	ESLINT='ESLint',
-	EXPRESS='Express.ts',
+	EXPRESS='Express.js',
 
 	GIT='GIT',
 	GIT_HUB='GIT_HUB',
@@ -64,7 +64,7 @@ export enum TAG {
 	MOCHA='MochaJS',
 	MY_SQL='MySQL',
 
-	NEXT='Next.ts',
+	NEXT='Next.js',
 	NGINX='NGINX',
 	NGROK='NGROK',
 	NODE='Node.ts',
@@ -80,7 +80,7 @@ export enum TAG {
 	PWA='Progressive Web App',
 	PYTHON='Python',
 
-	REACT='ReactTS',
+	REACT='ReactJS',
 	REST='RESTful API',
 	REDUX='Redux',
 	RAILWAY='Railway',
