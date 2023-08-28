@@ -17,12 +17,32 @@ import {
 } from '@chakra-ui/react';
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
+import { SubmitHandler, useForm } from 'react-hook-form';
 
 export default function ContactForm() {
+	type FormValues = {
+		name: string;
+		email: string;
+		message: string;
+	};
+
+	const {
+		register,
+		handleSubmit,
+		formState: { errors },
+	} = useForm<FormValues>();
+
+	const onSubmit: SubmitHandler<FormValues> = (data) => {
+		// TODO: Fetch API to nodemailer endpoint
+		console.log('data: ', data);
+		console.log('errors: ', errors);
+	};
+
 	const bgThick: string = useColorModeValue(
 		'whiteAlpha.700',
 		'blackAlpha.200',
 	);
+
 	return (
 		<Flex
 			id='contact'
@@ -66,6 +86,8 @@ export default function ContactForm() {
 								<VStack
 									id={'Contact-VStack'}
 									spacing={4}
+									as={'form'}
+									onSubmit={handleSubmit(onSubmit)}
 								>
 									<FormControl isRequired>
 										<FormLabel>Name</FormLabel>
@@ -76,8 +98,14 @@ export default function ContactForm() {
 											</InputLeftElement>
 											<Input
 												type='text'
-												name='name'
+												// name='name'
 												placeholder='Your Name'
+												{...register('name', {
+													required:
+														'Please enter your name...',
+													minLength: 3,
+													maxLength: 36,
+												})}
 											/>
 										</InputGroup>
 									</FormControl>
@@ -91,8 +119,13 @@ export default function ContactForm() {
 											</InputLeftElement>
 											<Input
 												type='email'
-												name='email'
 												placeholder='Your Email'
+												// name='email'
+												{...register('email', {
+													required:
+														'Please provide an email address...',
+													pattern: /^\S+@\S+$/i,
+												})}
 											/>
 										</InputGroup>
 									</FormControl>
@@ -101,14 +134,20 @@ export default function ContactForm() {
 										<FormLabel>Words</FormLabel>
 
 										<Textarea
-											name='message'
+											// name='message'
 											placeholder='Your Message'
 											rows={6}
 											resize='none'
+											{...register('message', {
+												required: true,
+												min: 2,
+												maxLength: 120,
+											})}
 										/>
 									</FormControl>
 
 									<Button
+										type={'submit'}
 										colorScheme='blue'
 										bg='blue.400'
 										color='white'
