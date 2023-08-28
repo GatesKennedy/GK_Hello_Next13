@@ -18,24 +18,27 @@ import {
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
 import { SubmitHandler, useForm } from 'react-hook-form';
+export type FormValues = {
+	name: string;
+	email: string;
+	message: string;
+};
 
 export default function ContactForm() {
-	type FormValues = {
-		name: string;
-		email: string;
-		message: string;
-	};
-
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	} = useForm<FormValues>();
 
-	const onSubmit: SubmitHandler<FormValues> = (data) => {
+	const sendEmail: SubmitHandler<FormValues> = async (data) => {
 		// TODO: Fetch API to nodemailer endpoint
 		console.log('data: ', data);
 		console.log('errors: ', errors);
+		await fetch('api/email', {
+			method: 'POST',
+			body: JSON.stringify(data),
+		});
 	};
 
 	const bgThick: string = useColorModeValue(
@@ -87,7 +90,7 @@ export default function ContactForm() {
 									id={'Contact-VStack'}
 									spacing={4}
 									as={'form'}
-									onSubmit={handleSubmit(onSubmit)}
+									onSubmit={handleSubmit(sendEmail)}
 								>
 									<FormControl isRequired>
 										<FormLabel>Name</FormLabel>

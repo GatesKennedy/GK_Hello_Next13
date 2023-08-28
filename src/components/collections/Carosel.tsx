@@ -12,7 +12,7 @@ import {
 } from '@chakra-ui/react';
 import { BiLeftArrowAlt, BiRightArrowAlt } from 'react-icons/bi';
 import Slider from 'react-slick';
-import imgHeadshot from '../../public/HeadShot-square.png';
+import imgHeadshot from '../../../public/HeadShot-square.png';
 import Image from 'next/image';
 import { ListImage } from '../cards/ProjectCard';
 
