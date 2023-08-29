@@ -20,6 +20,7 @@
     "eslint-config-next": "13.4.3",
     "framer-motion": "^10.12.12",
     "next": "13.4.3",
+    "nodemailer": "^6.9.4",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.45.4",
@@ -29,6 +30,7 @@
     "typescript": "5.0.4"
   },
   "devDependencies": {
+    "@types/nodemailer": "^6.4.9",
     "@types/react-slick": "^0.23.10"
   }
 }
