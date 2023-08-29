@@ -34,16 +34,14 @@ transporter.verify(function (error, success) {
 export async function POST(req:Request) {
 	try {
 		const body: FormValues = await req.json() as FormValues
-		console.log('FormValues > body: ', body)
 
 		const message = {
 			from: process.env.MAIL_USER,
 			to: ["Conor@GatesKennedy.com", body.email],
 			subject: "Hello from Gates Kennedy",
 			text: `Message: ${body.message}`,
-			html: `<div><h3>Message from '${body.name}': </h3><p>${body.email}</p></div>`
+			html: `<div><h3>Message from '${body.name}': </h3><p>${body.message}</p></div>`
 		};
-		console.log('message: ', message)
 
 		transporter.sendMail(message, function(error, info) {
 			console.log('enter sendMail() callback')
