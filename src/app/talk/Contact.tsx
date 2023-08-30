@@ -28,14 +28,13 @@ export type FormValues = {
 };
 
 export default function ContactForm() {
+	const [formViz, setFormViz] = useState(true);
+	const [spinnerViz, setSpinnerViz] = useState(false);
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	} = useForm<FormValues>();
-
-	const [formViz, setFormViz] = useState(true);
-	const [spinnerViz, setSpinnerViz] = useState(false);
 
 	const sendEmail: SubmitHandler<FormValues> = async (data) => {
 		setSpinnerViz(true);

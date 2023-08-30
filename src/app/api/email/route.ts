@@ -7,7 +7,7 @@ export async function POST(req: Request): Promise<Response> {
 		const body: FormValues = await req.json() as FormValues
 
 		const smtpResponse = await sendEmail({
-			to: body.email,
+			to: [body.email, String(process.env.SMTP_USER) ],
 			subject: "Hello from Gates Kennedy",
 			text: `Message: ${body.message}`,
 			html: `<div style="background-color:black;color:ivory;border-radius: 12px; padding: 24px;"><h3>Auto-Engagment from Gates_Kennedy </h3><ul>
