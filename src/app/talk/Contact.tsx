@@ -146,7 +146,7 @@ export default function ContactForm() {
 										<FormLabel>Words</FormLabel>
 										<Textarea
 											placeholder='Your Message'
-											rows={6}
+											rows={4}
 											resize='none'
 											{...register('message', {
 												required: true,
