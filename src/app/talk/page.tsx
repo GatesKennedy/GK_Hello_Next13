@@ -24,34 +24,34 @@ function TalkPage() {
 	);
 	return (
 		<Box
-			height={'6xl'}
+			id={'talk-root'}
+			height={'full'}
 			position='relative'
 			backgroundPosition='bottom'
 			backgroundRepeat='no-repeat'
-			backgroundSize='auto'
+			backgroundSize='4xl'
 			backgroundImage={`url(${ASSETS.lightHillsRolling.href})`}
 		>
 			<Flex
-				position='fixed'
-				id={'Container'}
-				width={'100%'}
-				minHeight={'84vh'}
+				id={'flex-cont'}
+				width={'full'}
+				height={'full'}
 				padding={0}
-				alignContent={'center'}
 				flexDir={'row-reverse'}
 			>
 				<Box> </Box>
-				<Box
-					className={styles.centerShade}
+				<Flex
 					id={'ContactBox'}
+					className={styles.centerShade}
 					position={'absolute'}
-					height={'88vh'}
+					height={'full'}
 					width={{ base: '75vw', md: '50vw' }}
+					pl={{ base: 0, sm: '12vw', md: '6vw', lg: '12vw' }}
 					backgroundColor={bgShade}
 					bgGradient={`linear(to-r, transparent 0%, ${bgThin} 21%, ${bgThick} 45%, ${bgSolid} 100%)`}
 				>
 					<ContactForm />
-				</Box>
+				</Flex>
 				<Box> </Box>
 			</Flex>
 		</Box>

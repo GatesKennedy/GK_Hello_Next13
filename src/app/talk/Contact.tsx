@@ -14,7 +14,6 @@ import {
 	Stack,
 	Textarea,
 	useColorModeValue,
-	useToast,
 	VStack,
 } from '@chakra-ui/react';
 import { BsPerson } from 'react-icons/bs';
@@ -35,6 +34,10 @@ export default function ContactForm() {
 		handleSubmit,
 		formState: { errors },
 	} = useForm<FormValues>();
+	const bgThick: string = useColorModeValue(
+		'whiteAlpha.700',
+		'blackAlpha.200',
+	);
 
 	const sendEmail: SubmitHandler<FormValues> = async (data) => {
 		setSpinnerViz(true);
@@ -52,30 +55,27 @@ export default function ContactForm() {
 		setSpinnerViz(false);
 	};
 
-	const bgThick: string = useColorModeValue(
-		'whiteAlpha.700',
-		'blackAlpha.200',
-	);
-
 	return (
 		<Flex
-			id='contact'
+			id='contactFlex'
 			align='center'
 			justify='center'
-			height={'87vh'}
-			margin-bottom={'64px'}
+			height='full'
 		>
 			<Box
 				id={'ContactBox'}
 				borderRadius='lg'
-				m={{ base: 4, md: 4, lg: 4 }}
-				p={{ base: 4, lg: 4 }}
+				mx={{ base: 4, md: 4, lg: 4 }}
+				p={{ base: 2, lg: 4 }}
 			>
 				<Box>
-					<VStack spacing={{ base: 4, md: 8, lg: 4 }}>
+					<VStack
+						id={'contact-stack'}
+						spacing={{ base: 2, md: 8, lg: 4 }}
+					>
 						<Heading
 							fontSize={{
-								base: '4xl',
+								base: '3xl',
 								md: '5xl',
 							}}
 						>
@@ -83,7 +83,8 @@ export default function ContactForm() {
 						</Heading>
 
 						<Stack
-							spacing={{ base: 4, md: 8, lg: 12 }}
+							id={'form-stack'}
+							spacing={{ base: 0, md: 8, lg: 12 }}
 							direction={{ base: 'column', md: 'row' }}
 							bg={bgThick}
 							borderRadius={'lg'}
@@ -106,14 +107,12 @@ export default function ContactForm() {
 								>
 									<FormControl isRequired>
 										<FormLabel>Name</FormLabel>
-
 										<InputGroup>
 											<InputLeftElement>
 												<BsPerson />
 											</InputLeftElement>
 											<Input
 												type='text'
-												// name='name'
 												placeholder='Your Name'
 												{...register('name', {
 													required:
@@ -127,7 +126,6 @@ export default function ContactForm() {
 
 									<FormControl isRequired>
 										<FormLabel>Email</FormLabel>
-
 										<InputGroup>
 											<InputLeftElement>
 												<MdOutlineEmail />
@@ -135,7 +133,6 @@ export default function ContactForm() {
 											<Input
 												type='email'
 												placeholder='Your Email'
-												// name='email'
 												{...register('email', {
 													required:
 														'Please provide an email address...',
@@ -147,9 +144,7 @@ export default function ContactForm() {
 
 									<FormControl isRequired>
 										<FormLabel>Words</FormLabel>
-
 										<Textarea
-											// name='message'
 											placeholder='Your Message'
 											rows={6}
 											resize='none'

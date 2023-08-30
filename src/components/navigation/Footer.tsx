@@ -10,6 +10,7 @@ import { STRINGS } from '../../reference/stringConstants';
 export default function SmallWithSocial() {
 	return (
 		<Box
+			as={'footer'}
 			position={'fixed'}
 			bottom={0}
 			left={0}
