@@ -1,8 +1,6 @@
 'use client';
 
 import {
-	Box,
-	Button,
 	Container,
 	Flex,
 	Heading,
@@ -11,7 +9,6 @@ import {
 	Text,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import { ReactElement } from 'react';
 import {
 	FcBinoculars,
 	FcCloseUpMode,
@@ -19,63 +16,7 @@ import {
 	FcGraduationCap,
 	FcMindMap,
 } from 'react-icons/fc';
-
-interface CardProps {
-	heading: string;
-	description: string;
-	icon: ReactElement;
-	href: string;
-}
-
-const Card = ({ heading, description, icon, href }: CardProps) => {
-	return (
-		<Box
-			maxW={{ base: 'full', md: '275px' }}
-			w={'full'}
-			borderWidth='1px'
-			borderRadius='lg'
-			overflow='hidden'
-			bg={useColorModeValue(
-				'RGBA(255, 255, 255, 0.98)',
-				'blackAlpha.900',
-			)}
-			p={5}
-		>
-			<Stack
-				align={'start'}
-				spacing={2}
-			>
-				<Flex
-					w={16}
-					h={16}
-					align={'center'}
-					justify={'center'}
-					color={'white'}
-					rounded={'full'}
-					bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.200')}
-				>
-					{icon}
-				</Flex>
-				<Box mt={2}>
-					<Heading size='md'>{heading}</Heading>
-					<Text
-						mt={1}
-						fontSize={'sm'}
-					>
-						{description}
-					</Text>
-				</Box>
-				<Button
-					variant={'link'}
-					colorScheme={'blue'}
-					size={'sm'}
-				>
-					Learn more
-				</Button>
-			</Stack>
-		</Box>
-	);
-};
+import { AttributeCard } from '../cards/AttributeCard';
 
 export default function CardWrapper() {
 	return (
@@ -122,7 +63,7 @@ export default function CardWrapper() {
 					gridGap={6}
 					justify='center'
 				>
-					<Card
+					<AttributeCard
 						heading={'Exceedingly Curious'}
 						icon={
 							<Icon
@@ -134,9 +75,9 @@ export default function CardWrapper() {
 						description={
 							'Data-driven solutions for good people that make them feel good and strong and stuff'
 						}
-						href={'#'}
+						href={'/work'}
 					/>
-					<Card
+					<AttributeCard
 						heading={'B.S Mechanical Engineering'}
 						icon={
 							<Icon
@@ -148,9 +89,9 @@ export default function CardWrapper() {
 						description={
 							'I am currently single but that is unrelated to the degree I earned in mechanical engineering.'
 						}
-						href={'#'}
+						href={'/work'}
 					/>
-					<Card
+					<AttributeCard
 						heading={'Project Managment'}
 						icon={
 							<Icon
@@ -162,9 +103,9 @@ export default function CardWrapper() {
 						description={
 							"Some people are better than others and that's ok when the best of them is telling them what to do!"
 						}
-						href={'#'}
+						href={'/work'}
 					/>
-					<Card
+					<AttributeCard
 						heading={'Creativity'}
 						icon={
 							<Icon
@@ -176,9 +117,9 @@ export default function CardWrapper() {
 						description={
 							"Look at the design of this website. Isn't it Unique? I made this look like this because I too am unique and special. Hire me."
 						}
-						href={'#'}
+						href={'/work'}
 					/>
-					<Card
+					<AttributeCard
 						heading={'Full-Stack'}
 						icon={
 							<Icon
@@ -190,7 +131,7 @@ export default function CardWrapper() {
 						description={
 							'I know lots of things about building software and my knowledge is for sale in the form of monthly payments for challenging tasks.'
 						}
-						href={'#'}
+						href={'/work'}
 					/>
 				</Flex>
 			</Container>

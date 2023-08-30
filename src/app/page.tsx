@@ -15,7 +15,7 @@ import {
 	FcParallelTasks,
 	FcSupport,
 } from 'react-icons/fc';
-import CardWrapper from '../components/cards/CardWrapper';
+import FlexCards from '../components/collections/FlexCards';
 import InfoColumns, {
 	SkillSectionProps,
 } from '../components/cards/InfoColumns';
@@ -133,7 +133,7 @@ export default function Home() {
 					>
 						<ProfileIntro />
 						<InfoColumns columnsData={skillColumns} />
-						<CardWrapper />
+						<FlexCards />
 					</VStack>
 				</Flex>
 			</Box>

@@ -68,115 +68,110 @@ export default function ContactForm() {
 				mx={{ base: 4, md: 4, lg: 4 }}
 				p={{ base: 2, lg: 4 }}
 			>
-				<Box>
-					<VStack
-						id={'contact-stack'}
-						spacing={{ base: 2, md: 8, lg: 4 }}
+				<VStack
+					id={'contact-stack'}
+					spacing={{ base: 1, md: 4, lg: 8 }}
+				>
+					<Heading
+						fontSize={{
+							base: '2xl',
+							md: '5xl',
+						}}
 					>
-						<Heading
-							fontSize={{
-								base: '3xl',
-								md: '5xl',
-							}}
-						>
-							{formViz ? 'Email Me' : 'Talk Soon...'}
-						</Heading>
+						{formViz ? 'Email Me' : 'Talk Soon...'}
+					</Heading>
 
-						<Stack
-							id={'form-stack'}
-							spacing={{ base: 0, md: 8, lg: 12 }}
-							direction={{ base: 'column', md: 'row' }}
-							bg={bgThick}
-							borderRadius={'lg'}
+					<Stack
+						id={'form-stack'}
+						spacing={{ base: 1, md: 8, lg: 12 }}
+						direction={{ base: 'column', md: 'row' }}
+						bg={bgThick}
+						borderRadius={'lg'}
+					>
+						<Box
+							borderRadius='lg'
+							py={{ base: 2, md: 4 }}
+							px={4}
+							color={useColorModeValue(
+								'gray.700',
+								'whiteAlpha.900',
+							)}
+							shadow='base'
+							hidden={!formViz}
 						>
-							<Box
-								borderRadius='lg'
-								p={{ base: 4 }}
-								color={useColorModeValue(
-									'gray.700',
-									'whiteAlpha.900',
-								)}
-								shadow='base'
-								hidden={!formViz}
+							<VStack
+								id={'Contact-VStack'}
+								spacing={{ base: 1, md: 4 }}
+								as={'form'}
+								onSubmit={handleSubmit(sendEmail)}
 							>
-								<VStack
-									id={'Contact-VStack'}
-									spacing={4}
-									as={'form'}
-									onSubmit={handleSubmit(sendEmail)}
-								>
-									<FormControl isRequired>
-										<FormLabel>Name</FormLabel>
-										<InputGroup>
-											<InputLeftElement>
-												<BsPerson />
-											</InputLeftElement>
-											<Input
-												type='text'
-												placeholder='Your Name'
-												{...register('name', {
-													required:
-														'Please enter your name...',
-													minLength: 3,
-													maxLength: 36,
-												})}
-											/>
-										</InputGroup>
-									</FormControl>
-
-									<FormControl isRequired>
-										<FormLabel>Email</FormLabel>
-										<InputGroup>
-											<InputLeftElement>
-												<MdOutlineEmail />
-											</InputLeftElement>
-											<Input
-												type='email'
-												placeholder='Your Email'
-												{...register('email', {
-													required:
-														'Please provide an email address...',
-													pattern: /^\S+@\S+$/i,
-												})}
-											/>
-										</InputGroup>
-									</FormControl>
-
-									<FormControl isRequired>
-										<FormLabel>Words</FormLabel>
-										<Textarea
-											placeholder='Your Message'
-											rows={4}
-											resize='none'
-											{...register('message', {
-												required: true,
-												min: 2,
-												maxLength: 120,
+								<FormControl isRequired>
+									<FormLabel>Name</FormLabel>
+									<InputGroup>
+										<InputLeftElement>
+											<BsPerson />
+										</InputLeftElement>
+										<Input
+											type='text'
+											placeholder='Your Name'
+											{...register('name', {
+												required:
+													'Please enter your name...',
+												minLength: 3,
+												maxLength: 36,
 											})}
 										/>
-									</FormControl>
+									</InputGroup>
+								</FormControl>
 
-									<Button
-										type={'submit'}
-										colorScheme='blue'
-										bg='blue.400'
-										color='white'
-										_hover={{
-											bg: 'blue.500',
-										}}
-										width='full'
-									>
-										{spinnerViz ? (
-											<Spinner />
-										) : (
-											'Send Message'
-										)}
-									</Button>
-								</VStack>
-							</Box>
-						</Stack>
-					</VStack>
-				</Box>
+								<FormControl isRequired>
+									<FormLabel>Email</FormLabel>
+									<InputGroup>
+										<InputLeftElement>
+											<MdOutlineEmail />
+										</InputLeftElement>
+										<Input
+											type='email'
+											placeholder='Your Email'
+											{...register('email', {
+												required:
+													'Please provide an email address...',
+												pattern: /^\S+@\S+$/i,
+											})}
+										/>
+									</InputGroup>
+								</FormControl>
+
+								<FormControl isRequired>
+									<FormLabel>Words</FormLabel>
+									<Textarea
+										placeholder='Your Message'
+										rows={4}
+										resize='none'
+										{...register('message', {
+											required: true,
+											min: 2,
+											maxLength: 120,
+										})}
+									/>
+								</FormControl>
+
+								<Button
+									type={'submit'}
+									colorScheme='blue'
+									bg='blue.400'
+									color='white'
+									_hover={{
+										bg: 'blue.500',
+									}}
+									width='full'
+								>
+									{spinnerViz ? <Spinner /> : 'Send Message'}
+								</Button>
+							</VStack>
+						</Box>
+					</Stack>
+				</VStack>
 			</Box>
 		</Flex>
 	);
