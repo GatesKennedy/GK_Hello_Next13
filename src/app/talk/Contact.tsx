@@ -10,6 +10,7 @@ import {
 	Input,
 	InputGroup,
 	InputLeftElement,
+	Spinner,
 	Stack,
 	Textarea,
 	useColorModeValue,
@@ -33,9 +34,11 @@ export default function ContactForm() {
 		formState: { errors },
 	} = useForm<FormValues>();
 
-	const [formVisibility, setFormVisibility] = useState(true);
+	const [formViz, setFormViz] = useState(true);
+	const [spinnerViz, setSpinnerViz] = useState(false);
 
 	const sendEmail: SubmitHandler<FormValues> = async (data) => {
+		setSpinnerViz(true);
 		const apiResponse = await fetch('api/email', {
 			method: 'POST',
 			body: JSON.stringify(data),
@@ -43,10 +46,11 @@ export default function ContactForm() {
 
 		if (apiResponse.ok) {
 			console.log('\nSENT SUCCESS\n');
-			setFormVisibility(false);
+			setFormViz(false);
 		} else {
 			console.log('\nSEND FAILURE\n');
 		}
+		setSpinnerViz(false);
 	};
 
 	const bgThick: string = useColorModeValue(
@@ -76,7 +80,7 @@ export default function ContactForm() {
 								md: '5xl',
 							}}
 						>
-							{formVisibility ? 'Email Me' : 'Talk Soon...'}
+							{formViz ? 'Email Me' : 'Talk Soon...'}
 						</Heading>
 
 						<Stack
@@ -93,7 +97,7 @@ export default function ContactForm() {
 									'whiteAlpha.900',
 								)}
 								shadow='base'
-								hidden={!formVisibility}
+								hidden={!formViz}
 							>
 								<VStack
 									id={'Contact-VStack'}
@@ -168,7 +172,11 @@ export default function ContactForm() {
 										}}
 										width='full'
 									>
-										Send Message
+										{spinnerViz ? (
+											<Spinner />
+										) : (
+											'Send Message'
+										)}
 									</Button>
 								</VStack>
 							</Box>
