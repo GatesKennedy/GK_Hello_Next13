@@ -13,11 +13,13 @@ import {
 	Stack,
 	Textarea,
 	useColorModeValue,
+	useToast,
 	VStack,
 } from '@chakra-ui/react';
 import { BsPerson } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
 import { SubmitHandler, useForm } from 'react-hook-form';
+import { useState } from 'react';
 export type FormValues = {
 	name: string;
 	email: string;
@@ -31,14 +33,24 @@ export default function ContactForm() {
 		formState: { errors },
 	} = useForm<FormValues>();
 
+	const [formVisibility, setFormVisibility] = useState(true);
+
 	const sendEmail: SubmitHandler<FormValues> = async (data) => {
 		// TODO: Fetch API to nodemailer endpoint
 		console.log('data: ', data);
 		console.log('errors: ', errors);
-		await fetch('api/email', {
+		const apiResponse = await fetch('api/email', {
 			method: 'POST',
 			body: JSON.stringify(data),
 		});
+
+		console.log('apiResponse: ', apiResponse);
+		if (apiResponse.ok) {
+			console.log('\nSENT SUCCESS\n');
+			setFormVisibility(false);
+		} else {
+			console.log('\nSEND FAILURE\n');
+		}
 	};
 
 	const bgThick: string = useColorModeValue(
@@ -68,7 +80,7 @@ export default function ContactForm() {
 								md: '5xl',
 							}}
 						>
-							Email Me
+							{formVisibility ? 'Email Me' : 'Talk Soon...'}
 						</Heading>
 
 						<Stack
@@ -85,6 +97,7 @@ export default function ContactForm() {
 									'whiteAlpha.900',
 								)}
 								shadow='base'
+								hidden={!formVisibility}
 							>
 								<VStack
 									id={'Contact-VStack'}

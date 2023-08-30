@@ -1,61 +1,40 @@
 import { FormValues } from '@/app/talk/Contact'
-import nodemailer from 'nodemailer'
-
-const transporter = nodemailer.createTransport({
-  pool: true,
-  host: String(process.env.MAIL_HOST),
-  port: Number(process.env.MAIL_PORT),
-  secure: true, // use TLS
-  auth: {
-    user: String(process.env.MAIL_USER),
-    pass: String(process.env.MAIL_PASS),
-  },
-});
-
-// verify connection configuration
-transporter.verify(function (error, success) {
-  if (error) {
-    console.log(error);
-  } else {
-    console.log("Server is ready to take messages");
-  }
-});
-
-// verify connection configuration
-transporter.verify(function (error, success) {
-	if (error) {
-		console.log(error);
-	} else {
-		console.log("Server is ready to take messages");
-	}
-});
+import { sendEmail } from '../../../../lib/email'
 
 
-export async function POST(req:Request) {
+export async function POST(req: Request): Promise<Response> {
 	try {
 		const body: FormValues = await req.json() as FormValues
 
-		const message = {
-			from: process.env.MAIL_USER,
-			to: ["Conor@GatesKennedy.com", body.email],
+		const smtpResponse = await sendEmail({
+			to: body.email,
 			subject: "Hello from Gates Kennedy",
 			text: `Message: ${body.message}`,
-			html: `<div><h3>Message from '${body.name}': </h3><p>${body.message}</p></div>`
-		};
+			html: `<div style="background-color:black;color:ivory;border-radius: 12px; padding: 24px;"><h3>Auto-Engagment from Gates_Kennedy </h3><ul>
+			<li>Sender: ${body.name}</li>
+			<li>Message: ${body.message}</li>
+			</ul></div>`
+		})
 
-		transporter.sendMail(message, function(error, info) {
-			console.log('enter sendMail() callback')
-			if (error) {
-				console.log(error);
-			} else {
-				console.log('Email sent: ' + info.response);
-			}
-		});
+		console.log('smtpResponse: ', smtpResponse) //!!!
 
-		return new Response('Email Sent')
+		return new Response(JSON.stringify(smtpResponse))
 
 	} catch (error: any) {
 		console.log('ERR: ', error)
 		return error
 	}
 }
+
+//======REF======
+
+// interface SentMessageInfo {
+// 			/** includes the envelope object for the message */
+// 		envelope: MimeNode.Envelope;
+// 			/** most transports should return the final Message-Id value used with this property */
+// 		messageId: string;
+// 		accepted: Array<string | Mail.Address>;
+// 		rejected: Array<string | Mail.Address>;
+// 		pending: Array<string | Mail.Address>;
+// 		response: string;
+// }
