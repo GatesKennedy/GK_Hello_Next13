@@ -36,15 +36,11 @@ export default function ContactForm() {
 	const [formVisibility, setFormVisibility] = useState(true);
 
 	const sendEmail: SubmitHandler<FormValues> = async (data) => {
-		// TODO: Fetch API to nodemailer endpoint
-		console.log('data: ', data);
-		console.log('errors: ', errors);
 		const apiResponse = await fetch('api/email', {
 			method: 'POST',
 			body: JSON.stringify(data),
 		});
 
-		console.log('apiResponse: ', apiResponse);
 		if (apiResponse.ok) {
 			console.log('\nSENT SUCCESS\n');
 			setFormVisibility(false);
