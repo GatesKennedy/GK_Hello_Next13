@@ -73,7 +73,7 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							'Data-driven solutions for good people that make them feel good and strong and stuff'
+							'Fundamentally passionate about learning and understanding systems of all kinds.'
 						}
 						href={'/work'}
 					/>
@@ -87,7 +87,7 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							'I am currently single but that is unrelated to the degree I earned in mechanical engineering.'
+							'I attended Washington State University From 2006 to 2011 and earned a bachelors of science in mechanical engineering.'
 						}
 						href={'/work'}
 					/>
@@ -101,7 +101,7 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							"Some people are better than others and that's ok when the best of them is telling them what to do!"
+							'As a co-founder of an design and fabrication company for large events. I have experience leading teams through structural fabrication and installations.'
 						}
 						href={'/work'}
 					/>
@@ -115,7 +115,7 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							"Look at the design of this website. Isn't it Unique? I made this look like this because I too am unique and special. Hire me."
+							"Look at the design of this website. Isn't it Unique? I made this look like this because I too am unique and cool. Hire me."
 						}
 						href={'/work'}
 					/>
@@ -129,7 +129,7 @@ export default function CardWrapper() {
 							/>
 						}
 						description={
-							'I know lots of things about building software and my knowledge is for sale in the form of monthly payments for challenging tasks.'
+							'I know lots of things about building application software and my knowledge is for sale in the form of monthly payments for challenging tasks.'
 						}
 						href={'/work'}
 					/>

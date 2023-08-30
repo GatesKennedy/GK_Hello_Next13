@@ -13,9 +13,8 @@ import {
 	Square,
 } from '@chakra-ui/react';
 import Image from 'next/image';
+import { ListImage } from '@/app/work/projectData';
 import CaptionCarousel from '../collections/Carosel';
-import imgHeadshot from '../../public/HeadShot-square.png';
-import { ListImage } from '../cards/ProjectCard';
 
 function ModalCarosel(props: { imageList: ListImage[] }) {
 	const { isOpen, onOpen, onClose } = useDisclosure();

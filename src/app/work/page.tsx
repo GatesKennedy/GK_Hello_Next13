@@ -1,77 +1,11 @@
 'use client';
+
 import React from 'react';
 import { Box, Text, Container, Heading, Stack } from '@chakra-ui/react';
-
-import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
-import headShotImage from '../../../public/HeadShot-square.png';
-import ProjectCard, { ProjectProps } from '../../components/cards/ProjectCard';
+import ProjectCard from '../../components/cards/ProjectCard';
+import { projectsData } from './projectData';
 
 const WorkPage = () => {
-	//	Projects Data
-	const projectsData: ProjectProps[] = [
-		{
-			title: 'Mimir Dashboard',
-			description: 'Business dasbhoard for dental practices',
-			images: [
-				{ title: 'one', desc: 'about one', src: headShotImage },
-				{ title: 'two', desc: 'about two', src: headShotImage },
-				{ title: 'three', desc: 'about three', src: headShotImage },
-				{ title: 'four', desc: 'about four', src: headShotImage },
-			],
-			attributes: {
-				time: { start: "August '22", end: "June '23" },
-				status: STATUS_TYPE.COMPLETE,
-				tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
-			},
-		},
-		{
-			title: 'Dental Intake',
-			description:
-				"New Patient intake form for dentists to collect and provide information about a patient's potential risks related to their dental health.",
-			images: [
-				{ title: 'one', desc: 'about one', src: headShotImage },
-				{ title: 'two', desc: 'about two', src: headShotImage },
-				{ title: 'three', desc: 'about three', src: headShotImage },
-				{ title: 'four', desc: 'about four', src: headShotImage },
-			],
-			attributes: {
-				time: { start: "August '22", end: "June '23" },
-				status: STATUS_TYPE.COMPLETE,
-				tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
-			},
-		},
-		{
-			title: 'New West Technologies',
-			description: 'Business dasbhoard for dental practices',
-			images: [
-				{ title: 'one', desc: 'about one', src: headShotImage },
-				{ title: 'two', desc: 'about two', src: headShotImage },
-				{ title: 'three', desc: 'about three', src: headShotImage },
-				{ title: 'four', desc: 'about four', src: headShotImage },
-			],
-			attributes: {
-				time: { start: "August '22", end: "June '23" },
-				status: STATUS_TYPE.COMPLETE,
-				tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
-			},
-		},
-		{
-			title: 'GK Hello',
-			description: 'Business dasbhoard for dental practices',
-			images: [
-				{ title: 'one', desc: 'about one', src: headShotImage },
-				{ title: 'two', desc: 'about two', src: headShotImage },
-				{ title: 'three', desc: 'about three', src: headShotImage },
-				{ title: 'four', desc: 'about four', src: headShotImage },
-			],
-			attributes: {
-				time: { start: "August '22", end: "June '23" },
-				status: STATUS_TYPE.COMPLETE,
-				tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
-			},
-		},
-	];
-
 	return (
 		<Box
 			maxW={'8xl'}
@@ -101,6 +35,7 @@ const WorkPage = () => {
 						description={project.description}
 						images={project.images}
 						attributes={project.attributes}
+						features={project.features}
 					/>
 				))}
 			</Stack>

@@ -16,33 +16,9 @@ import {
 	VStack,
 } from '@chakra-ui/react';
 import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
-import { ReactElement } from 'react';
 import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
 import ModalCarosel from '../modal/Modal';
-import { StaticImageData } from 'next/image';
-
-export interface TimeProps {
-	start: string;
-	end: string;
-}
-export interface ProjectAttributeProps {
-	time: TimeProps;
-	status: STATUS_TYPE;
-	tags: TAG[];
-}
-
-export interface ListImage {
-	title: string;
-	desc: string;
-	src: StaticImageData;
-}
-
-export interface ProjectProps {
-	title: string;
-	description: string;
-	attributes: ProjectAttributeProps;
-	images: ListImage[];
-}
+import { TimeProps, ProjectProps } from '@/app/work/projectData';
 
 const TimeAttribute = ({ start, end }: TimeProps) => {
 	return (
@@ -124,20 +100,12 @@ const TagAttribute = (props: { tags: TAG[] }) => {
 	);
 };
 
-// Replace test data with your own
-const features = Array.apply(null, Array(8)).map(function (x, i) {
-	return {
-		id: i,
-		title: 'Lorem ipsum dolor sit amet',
-		text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.',
-	};
-});
-
 export default function ProjectCard({
 	title,
 	description,
 	attributes,
 	images,
+	features,
 }: ProjectProps) {
 	return (
 		<Container
@@ -203,9 +171,9 @@ export default function ProjectCard({
 					columns={{ base: 1, md: 2, lg: 4 }}
 					spacing={10}
 				>
-					{features.map((feature) => (
+					{features.map((feature, index) => (
 						<HStack
-							key={feature.id}
+							key={index}
 							align={'top'}
 						>
 							<Box
@@ -216,7 +184,7 @@ export default function ProjectCard({
 							</Box>
 							<VStack align={'start'}>
 								<Text fontWeight={600}>{feature.title}</Text>
-								<Text color={'gray.600'}>{feature.text}</Text>
+								<Text color={'gray.600'}>{feature.desc}</Text>
 							</VStack>
 						</HStack>
 					))}
@@ -225,3 +193,16 @@ export default function ProjectCard({
 		</Container>
 	);
 }
+
+// !!!    SO COOL    !!!
+// !!!    SO COOL    !!!
+// !!!    SO COOL    !!!
+// Replace test data with your own
+
+// const features = Array.apply(null, Array(8)).map(function (x, i) {
+// 	return {
+// 		id: i,
+// 		title: 'Lorem ipsum dolor sit amet',
+// 		text: 'Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam.',
+// 	};
+// });
