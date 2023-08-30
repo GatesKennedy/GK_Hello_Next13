@@ -16,8 +16,6 @@ export async function POST(req: Request): Promise<Response> {
 			</ul></div>`
 		})
 
-		console.log('smtpResponse: ', smtpResponse) //!!!
-
 		return new Response(JSON.stringify(smtpResponse))
 
 	} catch (error: any) {
