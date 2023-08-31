@@ -20,6 +20,8 @@ export enum STATUS_TYPE {
 }
 
 export enum TAG {
+	AGILE='Agile Methodology',
+	ATLASSIAN='Jira & Confluence',
 	AWS = 'AWS',
 	AWS_LAMBDA = 'AWS Lambda',
 	AWS_S3 = 'AWS S3 Buckets',
@@ -58,7 +60,7 @@ export enum TAG {
 
 	JIRA='Jira',
 	JWT='JSON Web Tokens',
-	LINUX='Linux',
+	LINUX='Linux (Red Hat)',
 	LLAMA='LLaMA 2',
 
 	MUI='MaterialUI',
@@ -92,6 +94,7 @@ export enum TAG {
 	RAILWAY='Railway',
 
 	SASS='SASS',
+	SCRUM='Scrum Methodology',
 	SEQUELIZE='SequelizeORM',
 	SOCKET_IO='SocketIO',
 	SSL='Secure Socket Layer (SSL)',

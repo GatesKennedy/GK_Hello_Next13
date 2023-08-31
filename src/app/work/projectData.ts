@@ -3,6 +3,7 @@ import { StaticImageData } from 'next/image'
 
 import headShotImage from '../../../public/HeadShot-square.png';
 import mimir_arch from '../../../public/mimir_arch.png';
+import hello_info from '../../../public/hello_info.png'
 
 export interface ListImage {
 	title: string;
@@ -36,7 +37,7 @@ export const projectsData: ProjectProps[] = [
 		title: 'G_K Hello',
 		description: 'This. A portfolio site for my work.',
 		images: [
-			{ title: 'one', desc: 'about one', src: headShotImage },
+			{ title: 'Hello', desc: 'Info Page', src: hello_info },
 			{ title: 'two', desc: 'about two', src: headShotImage },
 		],
 		attributes: {
