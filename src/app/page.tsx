@@ -20,6 +20,7 @@ import InfoColumns, {
 	SkillSectionProps,
 } from '../components/cards/InfoColumns';
 import ProfileIntro from '../components/cards/ProfileIntro';
+import { TAG } from '@/reference/stringConstants';
 
 //	~ MAIN ~
 export default function Home() {
@@ -37,11 +38,19 @@ export default function Home() {
 				/>
 			),
 			items: [
-				'ReactJS (TS)',
-				'NextJS (TS)',
-				'ChartJS (TS)',
-				'MaterialUI',
-				'ChakraUI',
+				TAG.REACT,
+				TAG.NEXT,
+				TAG.CHAKRA,
+				TAG.MUI,
+				TAG.CHART_JS,
+				TAG.AXIOS,
+				TAG.CSS,
+				TAG.HTML,
+				TAG.NEXTAUTH,
+				TAG.NIVO,
+				TAG.REACTHOOKFORM,
+				TAG.REDUX,
+				TAG.SASS,
 			],
 		},
 		{
@@ -55,13 +64,19 @@ export default function Home() {
 				/>
 			),
 			items: [
-				'Node.js (TS)',
-				'NextJS (TS)',
-				'AWS Lambda (Python)',
-				'ExpressJS (TS)',
-				'Nodemailer',
-				'Prisma ORM',
-				'GraphQL',
+				TAG.NODE,
+				TAG.AWS_LAMBDA,
+				TAG.AWS_S3,
+				TAG.CORS,
+				TAG.EXPRESS,
+				TAG.NODEMAILER,
+				TAG.NODE_POSTGRES,
+				TAG.PRISMA,
+				TAG.SEQUELIZE,
+				TAG.GRAPH_QL,
+				TAG.LLAMA,
+				TAG.POSTMAN,
+				TAG.REST,
 			],
 		},
 		{
@@ -74,7 +89,16 @@ export default function Home() {
 					h={10}
 				/>
 			),
-			items: ['PostgreSQL', 'MySQL', 'MongoDB', 'GraphQL', 'ChakraUI'],
+			items: [
+				TAG.POSTGRES,
+				TAG.MY_SQL,
+				TAG.SQL_SERVER,
+				TAG.MONGO,
+				TAG.GRAPH_QL,
+				TAG.AWS_S3,
+				TAG.AWS_RDS,
+				// TAG.REDIS,
+			],
 		},
 		{
 			title: 'Utility',
@@ -87,11 +111,18 @@ export default function Home() {
 				/>
 			),
 			items: [
-				'ReactJS (TS)',
-				'NextJS (TS)',
-				'ChartJS (TS)',
-				'MaterialUI',
-				'ChakraUI',
+				TAG.BASH,
+				TAG.GIT,
+				TAG.SMTP,
+				TAG.HTTPS,
+				TAG.DOCKER,
+				TAG.DOCKER_COMPOSE,
+				TAG.LINUX,
+				TAG.NGROK,
+				TAG.WEB_SOCKETS,
+				TAG.OPENSSL,
+				TAG.VIM,
+				TAG.ZSH,
 			],
 		},
 	];

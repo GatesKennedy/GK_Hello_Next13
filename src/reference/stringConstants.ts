@@ -14,7 +14,8 @@ export enum ATTRIBUTE_TITLE {
 
 export enum STATUS_TYPE {
 	IN_PROGRESS = 'In Progress',
-	COMPLETE = 'Completed',
+	OPEN = 'Open (ongoing)',
+	CLOSED = 'Closed',
 	INCOMPLETE = 'Abandoned',
 }
 
@@ -45,14 +46,15 @@ export enum TAG {
 	ESLINT='ESLint',
 	EXPRESS='Express.js',
 
-	GIT='GIT',
-	GIT_HUB='GIT_HUB',
+	GIT='Git',
+	GIT_HUB='GitHub',
 	GIT_LAB='GitLab',
 	GO='GoLang',
 	GRAPH_QL='GraphQL',
 
 	HEROKU='Heroku',
 	HTML='HTML',
+	HTTPS='HTTPS',
 
 	JIRA='Jira',
 	JWT='JSON Web Tokens',
@@ -65,9 +67,11 @@ export enum TAG {
 	MY_SQL='MySQL',
 
 	NEXT='Next.js',
+	NEXTAUTH='NextAuth.js',
 	NGINX='NGINX',
 	NGROK='NGROK',
 	NODE='Node.ts',
+	NODEMAILER='Nodemailer',
 	NODE_POSTGRES='Node-Postgres',
 	NIVO='Nivo Charts',
 
@@ -81,8 +85,10 @@ export enum TAG {
 	PYTHON='Python',
 
 	REACT='ReactJS',
-	REST='RESTful API',
+	REACTHOOKFORM='React Hook Form',
+	REDIS='Redis',
 	REDUX='Redux',
+	REST='RESTful API',
 	RAILWAY='Railway',
 
 	SASS='SASS',
@@ -90,6 +96,7 @@ export enum TAG {
 	SOCKET_IO='SocketIO',
 	SSL='Secure Socket Layer (SSL)',
 	SQL_SERVER='SQL Server',
+	SMTP='SMTP',
 
 	TS='TypeScript',
 	VIM='Vim',
