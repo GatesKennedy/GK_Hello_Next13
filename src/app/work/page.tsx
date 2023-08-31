@@ -2,8 +2,8 @@
 
 import React from 'react';
 import { Box, Text, Container, Heading, Stack } from '@chakra-ui/react';
-import ProjectCard from '../../components/cards/ProjectCard';
-import { projectsData } from './projectData';
+import { projectsData } from '@/data/workPageData';
+import ProjectCard from '@/components/cards/ProjectCard';
 
 const WorkPage = () => {
 	return (

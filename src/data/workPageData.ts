@@ -1,9 +1,9 @@
 import { STATUS_TYPE, TAG } from '@/reference/stringConstants'
 import { StaticImageData } from 'next/image'
 
-import headShotImage from '../../../public/HeadShot-square.png';
-import mimir_arch from '../../../public/mimir_arch.png';
-import hello_info from '../../../public/hello_info.png'
+import info_headShot from '../../public/HeadShot-square.png'
+import mimir_arch from '../../public/mimir_arch.png';
+import hello_info from '../../public/hello_info.png'
 
 export interface ListImage {
 	title: string;
@@ -35,18 +35,18 @@ export interface ProjectProps {
 export const projectsData: ProjectProps[] = [
 	{
 		title: 'G_K Hello',
-		description: 'This. A portfolio site for my work.',
+		description: 'This. A portfolio site of recent work.',
 		images: [
 			{ title: 'Hello', desc: 'Info Page', src: hello_info },
-			{ title: 'two', desc: 'about two', src: headShotImage },
+			{ title: 'two', desc: 'about two', src: info_headShot },
 		],
 		attributes: {
 			time: { start: "August '23", end: "August '23" },
-			status: STATUS_TYPE.OPEN,
+			status: STATUS_TYPE.IN_PROGRESS,
 			tags: [TAG.TS, TAG.NEXT, TAG.NODEMAILER, TAG.CHAKRA],
 		},
 		features: [
-			{title: 'Light/Dark Mode', desc:'Having a Light/Dark mode option instantly makes your website \"super cool\" and most modern UI libraries make it straight forward to implement.'},
+			{title: 'Light/Dark Mode', desc:'Having a Light/Dark mode option instantly makes your website \"super cool\" and modern UI libraries make it straight forward to implement.'},
 			{title: 'Auto Engagement', desc:'Upon submission of this form, nodemailer uses my SMTP server to send you and I an email to begin a conversation.'},
 		],
 	},
@@ -59,9 +59,9 @@ export const projectsData: ProjectProps[] = [
 				desc: 'Argos Software Architecture',
 				src: mimir_arch,
 			},
-			{ title: 'two', desc: 'about two', src: headShotImage },
-			{ title: 'three', desc: 'about three', src: headShotImage },
-			{ title: 'four', desc: 'about four', src: headShotImage },
+			{ title: 'two', desc: 'about two', src: info_headShot },
+			{ title: 'three', desc: 'about three', src: info_headShot },
+			{ title: 'four', desc: 'about four', src: info_headShot },
 		],
 		attributes: {
 			time: { start: "August '22", end: "June '23" },
@@ -82,8 +82,8 @@ export const projectsData: ProjectProps[] = [
 		description:
 			"New Patient intake form for dentists to collect and provide information about a patient's potential risks related to their dental health.",
 		images: [
-			{ title: 'one', desc: 'about one', src: headShotImage },
-			{ title: 'two', desc: 'about two', src: headShotImage },
+			{ title: 'one', desc: 'about one', src: info_headShot },
+			{ title: 'two', desc: 'about two', src: info_headShot },
 
 		],
 		attributes: {
@@ -100,10 +100,10 @@ export const projectsData: ProjectProps[] = [
 		title: 'New West Technologies',
 		description: 'Business dasbhoard for dental practices',
 		images: [
-			{ title: 'one', desc: 'about one', src: headShotImage },
-			{ title: 'two', desc: 'about two', src: headShotImage },
-			{ title: 'three', desc: 'about three', src: headShotImage },
-			{ title: 'four', desc: 'about four', src: headShotImage },
+			{ title: 'one', desc: 'about one', src: info_headShot },
+			{ title: 'two', desc: 'about two', src: info_headShot },
+			{ title: 'three', desc: 'about three', src: info_headShot },
+			{ title: 'four', desc: 'about four', src: info_headShot },
 		],
 		attributes: {
 			time: { start: "Feb '21", end: "April '22" },

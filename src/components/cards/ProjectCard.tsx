@@ -18,7 +18,7 @@ import {
 import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
 import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
 import ModalCarosel from '../modal/Modal';
-import { TimeProps, ProjectProps } from '@/app/work/projectData';
+import { TimeProps, ProjectProps } from '@/data/workPageData';
 
 const TimeAttribute = ({ start, end }: TimeProps) => {
 	return (

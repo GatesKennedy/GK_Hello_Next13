@@ -13,7 +13,7 @@ import {
 	Square,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import { ListImage } from '@/app/work/projectData';
+import { ListImage } from '@/data/workPageData';
 import CaptionCarousel from '../collections/Carosel';
 
 function ModalCarosel(props: { imageList: ListImage[] }) {

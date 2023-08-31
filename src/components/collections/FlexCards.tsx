@@ -4,21 +4,15 @@ import {
 	Container,
 	Flex,
 	Heading,
-	Icon,
 	Stack,
 	Text,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import {
-	FcBinoculars,
-	FcCloseUpMode,
-	FcCollaboration,
-	FcGraduationCap,
-	FcMindMap,
-} from 'react-icons/fc';
-import { AttributeCard } from '../cards/AttributeCard';
+import AttributeCard, { AttributeProps } from '../cards/AttributeCard';
 
-export default function CardWrapper() {
+export default function CardWrapper(props: {
+	attributeData: AttributeProps[];
+}) {
 	return (
 		<Container
 			maxW={'5xl'}
@@ -63,76 +57,15 @@ export default function CardWrapper() {
 					gridGap={6}
 					justify='center'
 				>
-					<AttributeCard
-						heading={'Exceedingly Curious'}
-						icon={
-							<Icon
-								as={FcBinoculars}
-								w={10}
-								h={10}
-							/>
-						}
-						description={
-							'Fundamentally passionate about learning and understanding systems of all kinds.'
-						}
-						href={'/work'}
-					/>
-					<AttributeCard
-						heading={'B.S Mechanical Engineering'}
-						icon={
-							<Icon
-								as={FcGraduationCap}
-								w={10}
-								h={10}
-							/>
-						}
-						description={
-							'I attended Washington State University From 2006 to 2011 and earned a bachelors of science in mechanical engineering.'
-						}
-						href={'/work'}
-					/>
-					<AttributeCard
-						heading={'Project Managment'}
-						icon={
-							<Icon
-								as={FcCollaboration}
-								w={10}
-								h={10}
-							/>
-						}
-						description={
-							'As a co-founder of an design and fabrication company for large events. I have experience leading teams through structural fabrication and installations.'
-						}
-						href={'/work'}
-					/>
-					<AttributeCard
-						heading={'Creativity'}
-						icon={
-							<Icon
-								as={FcCloseUpMode}
-								w={10}
-								h={10}
-							/>
-						}
-						description={
-							"Look at the design of this website. Isn't it Unique? I made this look like this because I too am unique and cool. Hire me."
-						}
-						href={'/work'}
-					/>
-					<AttributeCard
-						heading={'Full-Stack'}
-						icon={
-							<Icon
-								as={FcMindMap}
-								w={10}
-								h={10}
-							/>
-						}
-						description={
-							'I know lots of things about building application software and my knowledge is for sale in the form of monthly payments for challenging tasks.'
-						}
-						href={'/work'}
-					/>
+					{props.attributeData.map((card, index) => (
+						<AttributeCard
+							key={index}
+							heading={card.heading}
+							description={card.description}
+							icon={card.icon}
+							href={card.href}
+						/>
+					))}
 				</Flex>
 			</Container>
 		</Container>

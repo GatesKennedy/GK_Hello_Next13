@@ -46,7 +46,7 @@ export enum TAG {
 	DOT_NET='.NET',
 
 	ESLINT='ESLint',
-	EXPRESS='Express.js',
+	EXPRESS='Express.js (TS)',
 
 	GIT='Git',
 	GIT_HUB='GitHub',
@@ -63,16 +63,16 @@ export enum TAG {
 	LINUX='Linux (Red Hat)',
 	LLAMA='LLaMA 2',
 
-	MUI='MaterialUI',
+	MUI='Material UI',
 	MONGO='MongoDB',
 	MOCHA='MochaJS',
 	MY_SQL='MySQL',
 
-	NEXT='Next.js',
-	NEXTAUTH='NextAuth.js',
+	NEXT='Next.js (TS)',
+	NEXTAUTH='NextAuth.js (TS)',
 	NGINX='NGINX',
 	NGROK='NGROK',
-	NODE='Node.ts',
+	NODE='Node.js (TS)',
 	NODEMAILER='Nodemailer',
 	NODE_POSTGRES='Node-Postgres',
 	NIVO='Nivo Charts',
@@ -86,7 +86,7 @@ export enum TAG {
 	PWA='Progressive Web App',
 	PYTHON='Python',
 
-	REACT='ReactJS',
+	REACT='ReactJS (TS)',
 	REACTHOOKFORM='React Hook Form',
 	REDIS='Redis',
 	REDUX='Redux',

@@ -11,19 +11,19 @@ import {
 import Link from 'next/link';
 import { ReactElement } from 'react';
 
-interface CardProps {
+export interface AttributeProps {
 	heading: string;
 	description: string;
 	icon: ReactElement;
 	href: string;
 }
 
-export const AttributeCard = ({
+const AttributeCard = ({
 	heading,
 	description,
 	icon,
 	href,
-}: CardProps) => {
+}: AttributeProps) => {
 	return (
 		<Box
 			maxW={{ base: 'full', md: '275px' }}
@@ -72,3 +72,5 @@ export const AttributeCard = ({
 		</Box>
 	);
 };
+
+export default AttributeCard;
