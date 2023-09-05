@@ -3,7 +3,13 @@ import { StaticImageData } from 'next/image'
 
 import info_headShot from '../../public/HeadShot-square.png'
 import mimir_arch from '../../public/mimir_arch.png';
-import hello_info from '../../public/hello_info.png'
+import hello_info from '../../public/hello_info-min.png'
+// import hello_talk from '../../public/hello_talk-min.png'
+import hello_talk from '../../public/hello_talk.webp'
+import hello_light from '../../public/hello_light.webp'
+import hello_dark from '../../public/hello_dark.webp'
+import dentalRisk_demo from '../../public/DentalRisk_demo.gif'
+
 
 export interface ListImage {
 	title: string;
@@ -37,8 +43,9 @@ export const projectsData: ProjectProps[] = [
 		title: 'G_K Hello',
 		description: 'This. A portfolio site of recent work.',
 		images: [
-			{ title: 'Hello', desc: 'Info Page', src: hello_info },
-			{ title: 'two', desc: 'about two', src: info_headShot },
+			{ title: 'Hello', desc: 'Dark Mode', src: hello_dark },
+			{ title: 'Auto-engagement', desc: 'hmu...', src: hello_talk },
+			// { title: 'Hello', desc: 'Light Mode', src: hello_light },
 		],
 		attributes: {
 			time: { start: "August '23", end: "August '23" },
@@ -82,14 +89,14 @@ export const projectsData: ProjectProps[] = [
 		description:
 			"New Patient intake form for dentists to collect and provide information about a patient's potential risks related to their dental health.",
 		images: [
-			{ title: 'one', desc: 'about one', src: info_headShot },
+			{ title: 'one', desc: 'about one', src: dentalRisk_demo },
 			{ title: 'two', desc: 'about two', src: info_headShot },
 
 		],
 		attributes: {
 			time: { start: "Feb '23", end: "March '23" },
 			status: STATUS_TYPE.CLOSED,
-			tags: [TAG.TS, TAG.NEXT, TAG.CHAKRA, TAG.NODEMAILER],
+			tags: [TAG.TS, TAG.NEXT, TAG.CHAKRA, TAG.REACTHOOKFORM, TAG.NODEMAILER],
 		},
 		features: [
 			{title: 'Data Warehouse', desc:'Data is regularly collected from multiple APIs, processed into easily consumable metrics and stored as historical records'},
@@ -97,8 +104,8 @@ export const projectsData: ProjectProps[] = [
 		],
 	},
 	{
-		title: 'New West Technologies',
-		description: 'Business dasbhoard for dental practices',
+		title: 'Modern Suite for RMH',
+		description: 'New West Technologies',
 		images: [
 			{ title: 'one', desc: 'about one', src: info_headShot },
 			{ title: 'two', desc: 'about two', src: info_headShot },
@@ -108,7 +115,7 @@ export const projectsData: ProjectProps[] = [
 		attributes: {
 			time: { start: "Feb '21", end: "April '22" },
 			status: STATUS_TYPE.CLOSED,
-			tags: [TAG.AWS_LAMBDA, TAG.NEXT, TAG.NODE],
+			tags: [TAG.NODE, TAG.DOT_NET, TAG.SQL_SERVER, TAG.SEQUELIZE, TAG.GIT_LAB, TAG.PM2, TAG.ATLASSIAN, TAG.LINUX, TAG.VIM ],
 		},
 		features: [],
 	},

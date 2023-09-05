@@ -4,11 +4,9 @@ import Provider from '../components/util/Provider';
 
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
-		<Provider>
-			<Layout>
-				<Component {...pageProps} />
-			</Layout>
-		</Provider>
+		<Layout>
+			<Component {...pageProps} />
+		</Layout>
 	);
 }
 

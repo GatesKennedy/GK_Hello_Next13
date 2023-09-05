@@ -109,19 +109,20 @@ export default function ProjectCard({
 }: ProjectProps) {
 	return (
 		<Container
+			id={'projectCard-root'}
 			maxW={'full'}
 			py={12}
 			bgColor={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')}
 			borderRadius={'xl'}
 		>
 			<SimpleGrid
-				id={'StaxNSnax'}
+				id={'projectCard-grid-root'}
 				columns={{ base: 1, md: 2, lg: 3 }}
 				spacing={{ base: 1, sm: 2, md: 8 }}
 				pb={12}
 			>
 				<Stack
-					id={'StaxNSnax'}
+					id={'project-title-root'}
 					m={'auto'}
 					spacing={{ base: 1, md: 4 }}
 					px={{ base: 1, md: 4, lg: 8 }}
@@ -137,12 +138,14 @@ export default function ProjectCard({
 					</Text>
 				</Stack>
 				<Flex
+					id={'project-gallery-root'}
 					px={{ base: 1, sm: 2, lg: 8 }}
 					my={{ base: 4, sm: 8, lg: 4 }}
 				>
 					<ModalCarosel imageList={images} />
 				</Flex>
 				<Stack
+					id={'project-details-root'}
 					spacing={4}
 					divider={
 						<StackDivider
@@ -164,10 +167,12 @@ export default function ProjectCard({
 				</Stack>
 			</SimpleGrid>
 			<Container
+				id={'project-features-root'}
 				maxW={'6xl'}
 				my={'auto'}
 			>
 				<SimpleGrid
+					id={'features-grid-root'}
 					columns={{ base: 1, md: 2, lg: 4 }}
 					spacing={10}
 				>

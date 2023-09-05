@@ -40,6 +40,7 @@ export default function CaptionCarousel(props: { imageList: ListImage[] }) {
 
 	return (
 		<Box
+			id={'Carousel-root'}
 			position={'relative'}
 			height={'600px'}
 			width={'full'}

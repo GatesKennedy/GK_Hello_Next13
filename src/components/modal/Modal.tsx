@@ -11,6 +11,7 @@ import {
 	Container,
 	SimpleGrid,
 	Square,
+	Flex,
 } from '@chakra-ui/react';
 import Image from 'next/image';
 import { ListImage } from '@/data/workPageData';
@@ -21,31 +22,45 @@ function ModalCarosel(props: { imageList: ListImage[] }) {
 	return (
 		<>
 			<Container
+				id={'Modal-cont-root'}
 				maxW={'6xl'}
 				my={'auto'}
 			>
-				<SimpleGrid
-					columns={{ base: 2, lg: 2 }}
-					spacing={4}
+				<Flex
+					flexWrap={'wrap'}
+					gridGap={6}
+					justify={'center'}
 				>
 					{props.imageList.map((image, index) => (
-						<Square key={index}>
+						<Square
+							key={index}
+							maxW={160}
+							maxH={160}
+						>
 							<Image
+								style={{
+									objectFit: 'cover',
+									width: 160,
+									height: 160,
+								}}
 								alt={`project image ${index + 1}`}
 								src={image.src}
 								onClick={onOpen}
 							/>
 						</Square>
 					))}
-				</SimpleGrid>
+				</Flex>
 			</Container>
 			<Modal
+				id={'model-root'}
 				isOpen={isOpen}
 				onClose={onClose}
 			>
 				<ModalOverlay />
-				<ModalContent>
+				<ModalContent id={'modelContent-root'}>
+					{/* TODO: pass project title */}
 					<ModalHeader>Modal Title</ModalHeader>
+
 					<ModalCloseButton />
 					<ModalBody>
 						<CaptionCarousel imageList={props.imageList} />

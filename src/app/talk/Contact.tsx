@@ -20,6 +20,7 @@ import { BsPerson } from 'react-icons/bs';
 import { MdOutlineEmail } from 'react-icons/md';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { useState } from 'react';
+
 export type FormValues = {
 	name: string;
 	email: string;
@@ -29,15 +30,15 @@ export type FormValues = {
 export default function ContactForm() {
 	const [formViz, setFormViz] = useState(true);
 	const [spinnerViz, setSpinnerViz] = useState(false);
+	const bgThick: string = useColorModeValue(
+		'whiteAlpha.700',
+		'blackAlpha.200',
+	);
 	const {
 		register,
 		handleSubmit,
 		formState: { errors },
 	} = useForm<FormValues>();
-	const bgThick: string = useColorModeValue(
-		'whiteAlpha.700',
-		'blackAlpha.200',
-	);
 
 	const sendEmail: SubmitHandler<FormValues> = async (data) => {
 		setSpinnerViz(true);
