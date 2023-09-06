@@ -19,6 +19,7 @@ import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
 import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
 import ModalCarosel from '../modal/Modal';
 import { TimeProps, ProjectProps } from '@/data/workPageData';
+import Link from 'next/link';
 
 const TimeAttribute = ({ start, end }: TimeProps) => {
 	return (
@@ -106,14 +107,20 @@ export default function ProjectCard({
 	attributes,
 	images,
 	features,
+	href,
 }: ProjectProps) {
+	const featuresBGColor = useColorModeValue(
+		'blackAlpha.300',
+		'blackAlpha.400',
+	);
 	return (
 		<Container
 			id={'projectCard-root'}
 			maxW={'full'}
-			py={12}
-			bgColor={useColorModeValue('whiteAlpha.600', 'blackAlpha.600')}
+			py={8}
+			bgColor={useColorModeValue('blackAlpha.200', 'blackAlpha.600')}
 			borderRadius={'xl'}
+			// mb={8}
 		>
 			<SimpleGrid
 				id={'projectCard-grid-root'}
@@ -136,6 +143,24 @@ export default function ProjectCard({
 					>
 						{description}
 					</Text>
+					{href ? (
+						<HStack>
+							<Text fontStyle={'oblique'}>Link: </Text>
+							<Link
+								href={href}
+								target={'_blank'}
+							>
+								<Text
+									fontWeight={'bold'}
+									color={'blue.400'}
+								>
+									{title}
+								</Text>
+							</Link>
+						</HStack>
+					) : (
+						''
+					)}
 				</Stack>
 				<Flex
 					id={'project-gallery-root'}
@@ -180,6 +205,7 @@ export default function ProjectCard({
 						<HStack
 							key={index}
 							align={'top'}
+							// bgColor={featuresBGColor}
 						>
 							<Box
 								color={'green.400'}

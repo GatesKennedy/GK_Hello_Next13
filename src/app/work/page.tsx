@@ -1,7 +1,14 @@
 'use client';
 
 import React from 'react';
-import { Box, Text, Container, Heading, Stack } from '@chakra-ui/react';
+import {
+	Box,
+	Text,
+	Container,
+	Heading,
+	Stack,
+	Divider,
+} from '@chakra-ui/react';
 import { projectsData } from '@/data/workPageData';
 import ProjectCard from '@/components/cards/ProjectCard';
 
@@ -11,6 +18,7 @@ const WorkPage = () => {
 			maxW={'8xl'}
 			mx={'auto'}
 			mb={'152px'}
+			pb={'76px'}
 		>
 			<Stack
 				spacing={4}
@@ -36,6 +44,7 @@ const WorkPage = () => {
 						images={project.images}
 						attributes={project.attributes}
 						features={project.features}
+						href={project.href}
 					/>
 				))}
 			</Stack>
