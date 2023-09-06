@@ -54,6 +54,7 @@ export enum TAG {
 	GO='GoLang',
 	GRAPH_QL='GraphQL',
 
+	HASURA='Hasura',
 	HEROKU='Heroku',
 	HTML='HTML',
 	HTTPS='HTTPS',
@@ -83,6 +84,7 @@ export enum TAG {
 	POSTGRES='PostgreSQL',
 	POSTMAN='Postman',
 	PRISMA='PrismaORM',
+	PUPPETEER='Puppeteer',
 	PWA='Progressive Web App',
 	PYTHON='Python',
 
