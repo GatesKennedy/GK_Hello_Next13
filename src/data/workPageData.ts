@@ -41,6 +41,7 @@ export interface ProjectProps {
 	attributes: ProjectAttributeProps;
 	features: Feature[];
 	images: ListImage[];
+	href: string | null
 }
 
 //	Projects Data
@@ -62,6 +63,7 @@ export const projectsData: ProjectProps[] = [
 			{title: 'Light/Dark Mode', desc:'Having a Light/Dark mode option instantly makes your website \"super cool\" and modern UI libraries make it straight forward to implement.'},
 			{title: 'Auto Engagement', desc:'Upon submission of this form, nodemailer uses my SMTP server to send you and I an email to begin a conversation.'},
 		],
+		href: null
 	},
 	{
 		title: 'Mimir Dashboard',
@@ -86,6 +88,7 @@ export const projectsData: ProjectProps[] = [
 			{title: 'Domain Specific Userbase', desc:'Each instance of the mimir dashboard whitelists users of specific Google Suite domains integrating an entire team safely'},
 			{title: 'OpenDental Integration', desc:'The associated Nintu server instance regularly queries and stores vital bussiness metrics from the OpenDental API to expose behaviors over time.'}
 		],
+		href: null
 	},
 	{
 		title: 'Dental Risk',
@@ -108,6 +111,7 @@ export const projectsData: ProjectProps[] = [
 			{title: 'Content Management', desc:'The list of questions and the resulting information exposed to the user can be customized by the instance admin.'},
 			{title: 'SaaS Deployments', desc: 'Instances of Dental Risk can be independently deployed for seperate offices with custom styling and content.'}
 		],
+		href: null
 	},
 	{
 		title: 'Modern Suite for RMH',
@@ -128,5 +132,6 @@ export const projectsData: ProjectProps[] = [
 			{title: 'Quick Tasks', desc:'Quick Tasks have redefined efficiency in Modern Suite task execution. Akin to making a call to someone on speed dial, Quick Tasks are rapid singular-action commands that simply get the job done quicker!'},
 			{title: 'Data Consistency', desc:'Real-time bidirectional synchronization to RMH, ensuring data at RMH Central matches the stores while \'Zamboni Data Cleanup\' cleans up and resyncs Item, PO, and Transfer based on a designated date'},
 		],
+		href: 'https://www.newestech.com/modern-suite-software/'
 	},
 ];
