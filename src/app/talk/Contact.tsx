@@ -13,6 +13,7 @@ import {
 	Spinner,
 	Stack,
 	Textarea,
+	Text,
 	useColorModeValue,
 	VStack,
 } from '@chakra-ui/react';
@@ -81,6 +82,11 @@ export default function ContactForm() {
 					>
 						{formViz ? 'Email Me' : 'Talk Soon...'}
 					</Heading>
+					{formViz ? (
+						''
+					) : (
+						<Text fontSize={'md'}>{`( Check your email )`}</Text>
+					)}
 
 					<Stack
 						id={'form-stack'}

@@ -121,7 +121,7 @@ export const projectsData: ProjectProps[] = [
 		attributes: {
 			time: { start: "Feb '21", end: "April '22" },
 			status: STATUS_TYPE.CLOSED,
-			tags: [ TAG.TS, TAG.NODE, TAG.DOT_NET, TAG.SQL_SERVER, TAG.SEQUELIZE, TAG.GIT_LAB, TAG.PM2, TAG.ATLASSIAN, TAG.LINUX, TAG.VIM ],
+			tags: [ TAG.TS, TAG.NODE, TAG.DOT_NET, TAG.SQL_SERVER, TAG.SEQUELIZE, TAG.GIT_LAB, TAG.PM2, TAG.ATLASSIAN, TAG.LINUX, TAG.VIM, TAG.PYTHON ].sort(),
 		},
 		features: [
 			{title: 'New West Technologies', desc:'From New West Technologies, a device-agnostic software extension to Retail Managment Hero that\'s accessible via web browser on internal store network'},
