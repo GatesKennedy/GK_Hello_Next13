@@ -14,7 +14,7 @@ import dentalRisk_validation from '../../public/dentalRisk_validation.webp'
 import dentalRisk_review from '../../public/dentalRisk_review.webp'
 import modernSuite_devices from '../../public/modernSuite_devices.png'
 import modernSuite_QuickTasks from '../../public/modernSuite_POSQuickTasks.png'
-import modernSuite_MSGraphic from '../../public/modernSuite_Graphic.jpeg'
+import modernSuite_MSGraphic from '../../public/modernSuite_graphic.jpeg'
 import modernSuite_ZamboniArch from '../../public/modernSuite_zamboniSyncArchitecture.jpeg'
 
 export interface ListImage {
@@ -67,7 +67,7 @@ export const projectsData: ProjectProps[] = [
 	},
 	{
 		title: 'Mimir Dashboard',
-		description: 'Business dasbhoard for dental practices',
+		description: 'Business dashboard for dental practices',
 		images: [
 			{
 				title: 'Argos Software Architecture',
