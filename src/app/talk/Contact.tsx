@@ -41,8 +41,9 @@ export default function ContactForm() {
 		formState: { errors },
 	} = useForm<FormValues>();
 
-	const sendEmail: SubmitHandler<FormValues> = async (data) => {
+	const sendEmail: SubmitHandler<FormValues> = async (data: FormValues) => {
 		setSpinnerViz(true);
+
 		const apiResponse = await fetch('api/email', {
 			method: 'POST',
 			body: JSON.stringify(data),
@@ -54,6 +55,7 @@ export default function ContactForm() {
 		} else {
 			console.log('\nSEND FAILURE\n');
 		}
+
 		setSpinnerViz(false);
 	};
 

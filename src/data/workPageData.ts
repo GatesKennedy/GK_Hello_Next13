@@ -115,7 +115,7 @@ export const projectsData: ProjectProps[] = [
 	},
 	{
 		title: 'Modern Suite for RMH',
-		description: 'Developed by New West Technologies, Modern Suite is a device-agnostic software extension to Retail Managment Hero that\'s accessible via web browser on internal store network',
+		description: 'Developed by New West Technologies, Modern Suite is a device-agnostic software extension to Retail Managment Hero that\'s accessible via any device with a web browser and local network connection.',
 		images: [
 			{ title: 'Modern Suite', desc: 'by New West Technologies', src: modernSuite_MSGraphic },
 			{ title: 'Quick Tasks', desc: 'POS Quick Task lead to happier employees', src: modernSuite_QuickTasks },
