@@ -1,18 +1,19 @@
-import { ReactNode } from 'react';
+import React, { ReactNode } from 'react';
+import Link from 'next/link';
 import { chakra, useColorModeValue, VisuallyHidden } from '@chakra-ui/react';
 
-interface SocialButtonProps {
-	children: ReactNode;
-	label: string;
+interface DemoButtonProps {
 	href: string;
+	label: string;
 }
-
-const SocialButton = ({ children, label, href }: SocialButtonProps) => {
+const DemoButton = ({ label, href }: DemoButtonProps) => {
 	return (
 		<chakra.button
 			aria-label={label}
-			bg={useColorModeValue('blackAlpha.200', 'whiteAlpha.200')}
-			rounded={'full'}
+			px={{ base: 4, md: 8 }}
+			bg={useColorModeValue('blue.400', 'blue.600')}
+			fontWeight={'bold'}
+			rounded={'md'}
 			w={12}
 			h={12}
 			cursor={'pointer'}
@@ -25,15 +26,14 @@ const SocialButton = ({ children, label, href }: SocialButtonProps) => {
 			transition={'background 0.3s ease'}
 			_hover={{
 				bg: 'blue.500',
-				color: useColorModeValue('white', 'gray.700'),
+				color: useColorModeValue('white', 'white'),
 				transform: 'translateY(-2px)',
 				boxShadow: 'lg',
 			}}
 		>
-			<VisuallyHidden>{label}</VisuallyHidden>
-			{children}
+			{label}
 		</chakra.button>
 	);
 };
 
-export default SocialButton;
+export default DemoButton;

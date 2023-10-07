@@ -20,6 +20,8 @@ import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
 import ModalCarosel from '../modal/Modal';
 import { TimeProps, ProjectProps } from '@/data/workPageData';
 import Link from 'next/link';
+import NavButton from '../buttons/NavButton';
+import DemoButton from '../buttons/DemoButton';
 
 const TimeAttribute = ({ start, end }: TimeProps) => {
 	return (
@@ -144,20 +146,10 @@ export default function ProjectCard({
 						{description}
 					</Text>
 					{href ? (
-						<HStack>
-							<Text fontStyle={'oblique'}>Link: </Text>
-							<Link
-								href={href}
-								target={'_blank'}
-							>
-								<Text
-									fontWeight={'bold'}
-									color={'blue.400'}
-								>
-									{title}
-								</Text>
-							</Link>
-						</HStack>
+						<DemoButton
+							href={href}
+							label={'Demo'}
+						/>
 					) : (
 						''
 					)}
