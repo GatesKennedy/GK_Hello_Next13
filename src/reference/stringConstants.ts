@@ -48,6 +48,7 @@ export enum TAG {
 
 	ESLINT = 'ESLint',
 	EXPRESS = 'Express.js (TS)',
+	FASTIFY = 'Fastify',
 
 	GIT = 'Git',
 	GIT_HUB = 'GitHub',

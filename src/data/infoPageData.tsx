@@ -56,9 +56,10 @@ export const skillColumns: SkillSectionProps[] = [
 		items: [
 			TAG.NODE,
 			TAG.EXPRESS,
-			TAG.REST,
+			TAG.FASTIFY,
 			TAG.NODE_POSTGRES,
 			TAG.PRISMA,
+			TAG.REST,
 			TAG.GRAPH_QL,
 			TAG.AWS_LAMBDA,
 			TAG.LLAMA,
