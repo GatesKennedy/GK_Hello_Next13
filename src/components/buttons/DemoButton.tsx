@@ -10,11 +10,11 @@ const DemoButton = ({ label, href }: DemoButtonProps) => {
 	return (
 		<chakra.button
 			aria-label={label}
-			px={{ base: 4, md: 8 }}
+			px={{ base: 4, md: 4 }}
 			bg={useColorModeValue('blue.400', 'blue.600')}
 			fontWeight={'bold'}
 			rounded={'md'}
-			w={12}
+			w={'30%'}
 			h={12}
 			cursor={'pointer'}
 			as={'a'}

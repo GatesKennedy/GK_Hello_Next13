@@ -44,7 +44,9 @@ const WorkPage = () => {
 						images={project.images}
 						attributes={project.attributes}
 						features={project.features}
-						href={project.href}
+						linkDemo={project.linkDemo}
+						linkRepo={project.linkRepo}
+						linkMore={project.linkMore}
 					/>
 				))}
 			</Stack>

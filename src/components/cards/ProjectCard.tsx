@@ -109,7 +109,9 @@ export default function ProjectCard({
 	attributes,
 	images,
 	features,
-	href,
+	linkDemo,
+	linkRepo,
+	linkMore,
 }: ProjectProps) {
 	const featuresBGColor = useColorModeValue(
 		'blackAlpha.300',
@@ -145,10 +147,26 @@ export default function ProjectCard({
 					>
 						{description}
 					</Text>
-					{href ? (
+					{linkDemo ? (
 						<DemoButton
-							href={href}
-							label={'Demo'}
+							href={linkDemo.href}
+							label={linkDemo.title}
+						/>
+					) : (
+						''
+					)}
+					{linkRepo ? (
+						<DemoButton
+							href={linkRepo.href}
+							label={linkRepo.title}
+						/>
+					) : (
+						''
+					)}
+					{linkMore ? (
+						<DemoButton
+							href={linkMore.href}
+							label={linkMore.title}
 						/>
 					) : (
 						''

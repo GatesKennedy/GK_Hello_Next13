@@ -41,11 +41,72 @@ export interface ProjectProps {
 	attributes: ProjectAttributeProps;
 	features: Feature[];
 	images: ListImage[];
-	href: string | null;
+	linkDemo: { title: string; href: string } | null;
+	linkRepo: { title: string; href: string } | null;
+	linkMore: { title: string; href: string } | null;
 }
 
 //	Projects Data
 export const projectsData: ProjectProps[] = [
+	{
+		title: 'Load Testing: Fastify REST API',
+		description:
+			'Using Node.js with Fastify and Grafana K6 to optimize API throughput',
+		images: [
+			{
+				title: 'Stress Tests',
+				desc: 'Stress Test Results',
+				src: modernSuite_MSGraphic,
+			},
+			{
+				title: 'Spike Tests',
+				desc: 'Spike Test Results',
+				src: modernSuite_QuickTasks,
+			},
+			{
+				title: 'Soak Tests',
+				desc: 'Event structure for Corona Día de Muertos activations.',
+				src: modernSuite_QuickTasks,
+			},
+			{
+				title: 'Soak Tests',
+				desc: 'Event structure for Corona Día de Muertos activations.',
+				src: modernSuite_QuickTasks,
+			},
+		],
+		attributes: {
+			time: { start: "Feb '21", end: "April '22" },
+			status: STATUS_TYPE.CLOSED,
+			tags: [TAG.NODE, TAG.FASTIFY, TAG.K6, TAG.POSTMAN].sort(),
+		},
+		features: [
+			{
+				title: 'Stress Testing',
+				desc: 'Sustained heavy load...',
+			},
+			{
+				title: 'Spike Testing',
+				desc: 'Short maximum peak load...',
+			},
+			{
+				title: 'Smoke Testing',
+				desc: 'Light load for a short time...',
+			},
+			{
+				title: 'Breakpoint Testing',
+				desc: 'Ramp the request load well beyond normal operation to determine where failures exist.',
+			},
+		],
+		linkDemo: {
+			title: 'API Repo',
+			href: 'https://github.com/GatesKennedy/SEED-FastifyAPI',
+		},
+		linkRepo: {
+			title: 'K6 Repo',
+			href: 'https://github.com/GatesKennedy/SEED-FastifyAPI',
+		},
+		linkMore: null,
+	},
 	{
 		title: 'G_K Hello',
 		description:
@@ -70,7 +131,9 @@ export const projectsData: ProjectProps[] = [
 				desc: 'Upon submission of this form, nodemailer uses my SMTP server to send you and I an email to begin a conversation.',
 			},
 		],
-		href: null,
+		linkDemo: null,
+		linkRepo: null,
+		linkMore: null,
 	},
 	{
 		title: 'Mimir Dashboard',
@@ -125,7 +188,9 @@ export const projectsData: ProjectProps[] = [
 				desc: 'The associated Nintu server instance regularly queries and stores vital bussiness metrics from the OpenDental API to expose behaviors over time.',
 			},
 		],
-		href: null,
+		linkDemo: null,
+		linkRepo: null,
+		linkMore: null,
 	},
 	{
 		title: 'Dental Risk',
@@ -181,7 +246,9 @@ export const projectsData: ProjectProps[] = [
 				desc: 'Instances of Dental Risk can be independently deployed for seperate offices with custom styling and content.',
 			},
 		],
-		href: STRINGS.INTAKE_DEMO,
+		linkDemo: { title: 'Demo', href: STRINGS.INTAKE_DEMO },
+		linkRepo: null,
+		linkMore: null,
 	},
 	{
 		title: 'Modern Suite for RMH',
@@ -240,6 +307,66 @@ export const projectsData: ProjectProps[] = [
 				desc: "Real-time bidirectional synchronization to RMH, ensuring data at RMH Central matches the stores while 'Zamboni Data Cleanup' cleans up and resyncs Item, PO, and Transfer based on a designated date",
 			},
 		],
-		href: 'https://www.newestech.com/modern-suite-software/',
+		linkDemo: null,
+		linkRepo: null,
+		linkMore: {
+			title: 'More',
+			href: 'https://www.newestech.com/modern-suite-software/',
+		},
+	},
+	{
+		title: 'Escape Collective',
+		description: 'Escape Collective is....',
+		images: [
+			{
+				title: 'Nike Office Dome',
+				desc: 'A creative space for meeting and working at Nike headquarters.',
+				src: modernSuite_MSGraphic,
+			},
+			{
+				title: 'Corona Skull Dome',
+				desc: 'Event structure for Corona Día de Muertos activations.',
+				src: modernSuite_QuickTasks,
+			},
+			{
+				title: 'Portland Design Week',
+				desc: 'Portland Design Week activation.',
+				src: modernSuite_devices,
+			},
+			{
+				title: 'Summit Outside',
+				desc: 'Summit Outside lodging in Ogden, Utah.',
+				src: modernSuite_ZamboniArch,
+			},
+		],
+		attributes: {
+			time: { start: "Feb '21", end: "April '22" },
+			status: STATUS_TYPE.CLOSED,
+			tags: [TAG.PYTHON].sort(),
+		},
+		features: [
+			{
+				title: 'Structural Design',
+				desc: 'Nike Dome...',
+			},
+			{
+				title: 'Project Managment',
+				desc: 'Years of mananagement...',
+			},
+			{
+				title: 'Project Managment',
+				desc: 'Years of mananagement...',
+			},
+			{
+				title: 'Installation Lead',
+				desc: 'Leading teams of people to construct and install large structures',
+			},
+		],
+		linkDemo: null,
+		linkRepo: null,
+		linkMore: {
+			title: 'More',
+			href: 'https://esccollective.com/',
+		},
 	},
 ];

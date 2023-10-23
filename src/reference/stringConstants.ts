@@ -63,6 +63,7 @@ export enum TAG {
 
 	JIRA = 'Jira',
 	JWT = 'JSON Web Tokens',
+	K6 = 'Grafana K6',
 	LINUX = 'Linux (Red Hat)',
 	LLAMA = 'LLaMA 2',
 
