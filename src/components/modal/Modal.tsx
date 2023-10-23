@@ -59,7 +59,7 @@ function ModalCarosel(props: { imageList: ListImage[] }) {
 				<ModalOverlay />
 				<ModalContent id={'modelContent-root'}>
 					{/* TODO: pass project title */}
-					<ModalHeader>Modal Title</ModalHeader>
+					{/* <ModalHeader>Modal Title</ModalHeader> */}
 
 					<ModalCloseButton />
 					<ModalBody>
