@@ -4,6 +4,11 @@ export enum STRINGS {
 	LINKEDIN_CONOR = 'https://linkedin.com/in/conorgateskennedy',
 	SPOTIFY_ONO = 'https://open.spotify.com/user/ohnodamn',
 	INTAKE_DEMO = 'https://intakedemo.gateskennedy.com',
+	RMH_LINK = 'https://www.newestech.com/modern-suite-software/',
+	ESC_LINK = 'https://esccollective.com/',
+	FASTIFY_REPO = 'https://github.com/GatesKennedy/SEED-FastifyAPI',
+	K6_REPO = 'https://github.com/GatesKennedy/SEED-FastifyAPI',
+	GK_HELLO_REPO = 'https://github.com/GatesKennedy/GK_Hello_Next13',
 }
 
 export enum ATTRIBUTE_TITLE {
@@ -76,7 +81,7 @@ export enum TAG {
 	NEXTAUTH = 'NextAuth.js (TS)',
 	NGINX = 'NGINX',
 	NGROK = 'NGROK',
-	NODE = 'Node.js (TS)',
+	NODE = 'Node.js',
 	NODEMAILER = 'Nodemailer',
 	NODE_POSTGRES = 'Node-Postgres',
 	NIVO = 'Nivo Charts',

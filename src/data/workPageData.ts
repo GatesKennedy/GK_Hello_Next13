@@ -16,6 +16,13 @@ import modernSuite_devices from '../../public/modernSuite_devices.png';
 import modernSuite_QuickTasks from '../../public/modernSuite_POSQuickTasks.png';
 import modernSuite_MSGraphic from '../../public/modernSuite_Graphic.jpeg';
 import modernSuite_ZamboniArch from '../../public/modernSuite_zamboniSyncArchitecture.jpeg';
+import k6_stress from '../../public/k6-stress-test_1.webp';
+import k6_load from '../../public/k6-average-load.webp';
+import k6_spike from '../../public/k6-spike-test_1.webp';
+import k6_break from '../../public/k6-breakpoint-test.webp';
+import esc_skull from '../../public/esc_coronaskull.webp';
+import esc_nike from '../../public/esc_nikedome.webp';
+import esc_nikeInterior from '../../public/esc_nikedome_interior.webp';
 
 export interface ListImage {
 	title: string;
@@ -55,28 +62,28 @@ export const projectsData: ProjectProps[] = [
 		images: [
 			{
 				title: 'Stress Tests',
-				desc: 'Stress Test Results',
-				src: modernSuite_MSGraphic,
+				desc: 'Medium duration exposure to high load.',
+				src: k6_stress,
 			},
 			{
 				title: 'Spike Tests',
-				desc: 'Spike Test Results',
-				src: modernSuite_QuickTasks,
+				desc: 'Short exposure to maximum load',
+				src: k6_spike,
+			},
+			{
+				title: 'Breakpoint Tests',
+				desc: 'Determine which conditions cause failure.',
+				src: k6_break,
 			},
 			{
 				title: 'Soak Tests',
-				desc: 'Event structure for Corona Día de Muertos activations.',
-				src: modernSuite_QuickTasks,
-			},
-			{
-				title: 'Soak Tests',
-				desc: 'Event structure for Corona Día de Muertos activations.',
-				src: modernSuite_QuickTasks,
+				desc: 'Expose system to long period of an average load.',
+				src: k6_load,
 			},
 		],
 		attributes: {
 			time: { start: "Feb '21", end: "April '22" },
-			status: STATUS_TYPE.CLOSED,
+			status: STATUS_TYPE.IN_PROGRESS,
 			tags: [TAG.NODE, TAG.FASTIFY, TAG.K6, TAG.POSTMAN].sort(),
 		},
 		features: [
@@ -89,8 +96,8 @@ export const projectsData: ProjectProps[] = [
 				desc: 'Short maximum peak load...',
 			},
 			{
-				title: 'Smoke Testing',
-				desc: 'Light load for a short time...',
+				title: 'Soak Testing',
+				desc: 'Average load for a long time can help identify memory leaks',
 			},
 			{
 				title: 'Breakpoint Testing',
@@ -99,11 +106,11 @@ export const projectsData: ProjectProps[] = [
 		],
 		linkDemo: {
 			title: 'API Repo',
-			href: 'https://github.com/GatesKennedy/SEED-FastifyAPI',
+			href: STRINGS.FASTIFY_REPO,
 		},
 		linkRepo: {
 			title: 'K6 Repo',
-			href: 'https://github.com/GatesKennedy/SEED-FastifyAPI',
+			href: STRINGS.K6_REPO,
 		},
 		linkMore: null,
 	},
@@ -118,7 +125,7 @@ export const projectsData: ProjectProps[] = [
 		],
 		attributes: {
 			time: { start: "August '23", end: "August '23" },
-			status: STATUS_TYPE.IN_PROGRESS,
+			status: STATUS_TYPE.OPEN,
 			tags: [TAG.TS, TAG.NEXT, TAG.NODEMAILER, TAG.CHAKRA],
 		},
 		features: [
@@ -132,7 +139,10 @@ export const projectsData: ProjectProps[] = [
 			},
 		],
 		linkDemo: null,
-		linkRepo: null,
+		linkRepo: {
+			title: 'Github',
+			href: STRINGS.GK_HELLO_REPO,
+		},
 		linkMore: null,
 	},
 	{
@@ -311,32 +321,23 @@ export const projectsData: ProjectProps[] = [
 		linkRepo: null,
 		linkMore: {
 			title: 'More',
-			href: 'https://www.newestech.com/modern-suite-software/',
+			href: STRINGS.RMH_LINK,
 		},
 	},
 	{
 		title: 'Escape Collective',
-		description: 'Escape Collective is....',
+		description:
+			'Escape Collective is a team of designers, artists, engineers, builders, and sewers. Friends before business partners, their mission is to promote escapism through creative practice driven by curiosity and adventure.',
 		images: [
 			{
 				title: 'Nike Office Dome',
 				desc: 'A creative space for meeting and working at Nike headquarters.',
-				src: modernSuite_MSGraphic,
+				src: esc_nikeInterior,
 			},
 			{
 				title: 'Corona Skull Dome',
 				desc: 'Event structure for Corona Día de Muertos activations.',
-				src: modernSuite_QuickTasks,
-			},
-			{
-				title: 'Portland Design Week',
-				desc: 'Portland Design Week activation.',
-				src: modernSuite_devices,
-			},
-			{
-				title: 'Summit Outside',
-				desc: 'Summit Outside lodging in Ogden, Utah.',
-				src: modernSuite_ZamboniArch,
+				src: esc_skull,
 			},
 		],
 		attributes: {
@@ -366,7 +367,7 @@ export const projectsData: ProjectProps[] = [
 		linkRepo: null,
 		linkMore: {
 			title: 'More',
-			href: 'https://esccollective.com/',
+			href: STRINGS.ESC_LINK,
 		},
 	},
 ];
