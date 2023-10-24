@@ -82,7 +82,7 @@ export const projectsData: ProjectProps[] = [
 			},
 		],
 		attributes: {
-			time: { start: "Feb '21", end: "April '22" },
+			time: { start: "Oct '23", end: "Oct '23" },
 			status: STATUS_TYPE.IN_PROGRESS,
 			tags: [TAG.NODE, TAG.FASTIFY, TAG.K6, TAG.POSTMAN].sort(),
 		},
@@ -124,7 +124,7 @@ export const projectsData: ProjectProps[] = [
 			// { title: 'Hello', desc: 'Light Mode', src: hello_light },
 		],
 		attributes: {
-			time: { start: "August '23", end: "August '23" },
+			time: { start: "August '23", end: 'Current' },
 			status: STATUS_TYPE.OPEN,
 			tags: [TAG.TS, TAG.NEXT, TAG.NODEMAILER, TAG.CHAKRA],
 		},
@@ -341,7 +341,7 @@ export const projectsData: ProjectProps[] = [
 			},
 		],
 		attributes: {
-			time: { start: "Feb '21", end: "April '22" },
+			time: { start: "Jun '12", end: "Fall '18" },
 			status: STATUS_TYPE.CLOSED,
 			tags: [TAG.PYTHON].sort(),
 		},
