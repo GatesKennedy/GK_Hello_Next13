@@ -146,8 +146,8 @@ export const projectsData: ProjectProps[] = [
 		linkMore: null,
 	},
 	{
-		title: 'Mimir Dashboard',
-		description: 'Business dashboard for dental practices',
+		title: "TDB Dashboard (formerly 'Mimir')",
+		description: 'Business dashboard for Texas Dental & Braces',
 		images: [
 			{
 				title: 'Argos Software Architecture',
