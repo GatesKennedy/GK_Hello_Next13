@@ -10,7 +10,7 @@ import {
 	FcSupport,
 } from 'react-icons/fc';
 import { Icon } from '@chakra-ui/react';
-import { TAG } from '@/reference/stringConstants';
+import { TOOL } from '@/reference/stringConstants';
 import { AttributeProps } from '@/components/cards/AttributeCard';
 import { SkillSectionProps } from '@/components/cards/InfoColumns';
 
@@ -27,19 +27,19 @@ export const skillColumns: SkillSectionProps[] = [
 			/>
 		),
 		items: [
-			TAG.REACT,
-			TAG.NEXT,
-			TAG.HTML,
-			TAG.CSS,
-			TAG.MUI,
-			TAG.CHAKRA,
-			TAG.AXIOS,
-			TAG.CHART_JS,
-			TAG.NIVO,
-			TAG.REACTHOOKFORM,
-			TAG.NEXTAUTH,
-			TAG.REDUX,
-			TAG.SASS,
+			TOOL.HTML_CSS,
+			TOOL.REACT,
+			TOOL.NEXT,
+			TOOL.DATA_VIS,
+			TOOL.REACTHOOKFORM,
+			TOOL.STYLED_COMP,
+			TOOL.MUI,
+			TOOL.CHAKRA,
+			TOOL.AXIOS,
+			// TOOL.CHART_JS,
+			// TOOL.NIVO,
+			// TOOL.NEXTAUTH,
+			TOOL.REDUX,
 		],
 	},
 	// Server
@@ -54,19 +54,21 @@ export const skillColumns: SkillSectionProps[] = [
 			/>
 		),
 		items: [
-			TAG.NODE,
-			TAG.EXPRESS,
-			TAG.FASTIFY,
-			TAG.NODE_POSTGRES,
-			TAG.PRISMA,
-			TAG.REST,
-			TAG.GRAPH_QL,
-			TAG.AWS_LAMBDA,
-			TAG.LLAMA,
-			TAG.SEQUELIZE,
-			TAG.CORS,
-			TAG.NODEMAILER,
-			TAG.POSTMAN,
+			TOOL.NODE,
+			TOOL.EXPRESS,
+			TOOL.FAST_API,
+			TOOL.FASTIFY,
+			TOOL.REST,
+			TOOL.GRAPH_QL,
+			TOOL.AWS_EC2,
+			TOOL.AWS_LAMBDA,
+			TOOL.NODE_POSTGRES,
+			TOOL.PRISMA,
+			// TOOL.SEQUELIZE,
+			// TOOL.LLAMA,
+			// TOOL.CORS,
+			// TOOL.NODEMAILER,
+			TOOL.POSTMAN,
 		],
 	},
 	// Data
@@ -81,20 +83,22 @@ export const skillColumns: SkillSectionProps[] = [
 			/>
 		),
 		items: [
-			TAG.POSTGRES,
-			TAG.REDIS,
-			TAG.MY_SQL,
-			TAG.SQL_SERVER,
-			TAG.MONGO,
-			TAG.AWS_S3,
-			TAG.AWS_RDS,
-			// TAG.REDIS,
+			TOOL.POSTGRES,
+			TOOL.AWS_S3,
+			TOOL.MONGO,
+			TOOL.MY_SQL,
+			TOOL.SQL_SERVER,
+			// TOOL.REDIS,
+			TOOL.AWS_RDS,
+			TOOL.AWS_DYNAMO,
+			TOOL.DB_DESIGN,
+			TOOL.DB_MIGRATE,
 		],
 	},
-	// Util
+	// Dev Ops
 	{
-		title: 'Utility',
-		text: 'Other Tools',
+		title: 'DevOps',
+		text: 'Project Mgmt',
 		icon: (
 			<Icon
 				as={FcSupport}
@@ -103,23 +107,48 @@ export const skillColumns: SkillSectionProps[] = [
 			/>
 		),
 		items: [
-			TAG.GIT,
-			TAG.DOCKER,
-			TAG.K6,
-			TAG.PM2,
-			TAG.ATLASSIAN,
-			TAG.AWS,
-			TAG.VIM,
-			// TAG.BASH,
-			// TAG.HTTPS,
-			TAG.NGROK,
-			// TAG.SMTP,
-			TAG.PYTHON,
-			TAG.OPENSSL,
-			TAG.LINUX,
-			// TAG.DOCKER_COMPOSE,
-			TAG.WEB_SOCKETS,
-			TAG.ZSH,
+			TOOL.GIT,
+			TOOL.GIT_LAB,
+			TOOL.DOCKER_HUB,
+			TOOL.DOCKER_COMPOSE,
+			// TOOL.JENKINS,
+			TOOL.ATLASSIAN,
+			TOOL.GREEN_GEEKS,
+			TOOL.AWS_ROUTE,
+			TOOL.AWS_PIPE,
+			TOOL.HEROKU_PIPE,
+			TOOL.K6,
+			TOOL.AGILE,
+			TOOL.SCRUM,
+			// TOOL.MOCHA,
+		],
+	},
+	// Util
+	{
+		title: 'Utility',
+		text: 'Other Tools...',
+		icon: (
+			<Icon
+				as={FcSupport}
+				w={10}
+				h={10}
+			/>
+		),
+		items: [
+			TOOL.VIM,
+			TOOL.ZSH,
+			TOOL.BASH,
+			TOOL.YAML,
+			TOOL.TMUX,
+			TOOL.LINUX,
+			TOOL.PYTHON,
+			TOOL.CONDA,
+			TOOL.NGROK,
+			TOOL.PM2,
+			TOOL.OPENSSL,
+			TOOL.SSH,
+			TOOL.SMTP,
+			TOOL.WEB_SOCKETS,
 		],
 	},
 ];

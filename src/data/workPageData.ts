@@ -1,4 +1,4 @@
-import { STATUS_TYPE, STRINGS, TAG } from '@/reference/stringConstants';
+import { STATUS_TYPE, STRINGS, TOOL } from '@/reference/stringConstants';
 import { StaticImageData } from 'next/image';
 
 import info_headShot from '../../public/HeadShot-square.png';
@@ -40,7 +40,7 @@ export interface TimeProps {
 export interface ProjectAttributeProps {
 	time: TimeProps;
 	status: STATUS_TYPE;
-	tags: TAG[];
+	tags: TOOL[];
 }
 export interface ProjectProps {
 	title: string;
@@ -84,7 +84,7 @@ export const projectsData: ProjectProps[] = [
 		attributes: {
 			time: { start: "Oct '23", end: "Oct '23" },
 			status: STATUS_TYPE.IN_PROGRESS,
-			tags: [TAG.NODE, TAG.FASTIFY, TAG.K6, TAG.POSTMAN].sort(),
+			tags: [TOOL.NODE, TOOL.FASTIFY, TOOL.K6, TOOL.POSTMAN].sort(),
 		},
 		features: [
 			{
@@ -126,7 +126,7 @@ export const projectsData: ProjectProps[] = [
 		attributes: {
 			time: { start: "August '23", end: 'Current' },
 			status: STATUS_TYPE.OPEN,
-			tags: [TAG.TS, TAG.NEXT, TAG.NODEMAILER, TAG.CHAKRA],
+			tags: [TOOL.TS, TOOL.NEXT, TOOL.NODEMAILER, TOOL.CHAKRA],
 		},
 		features: [
 			{
@@ -159,17 +159,17 @@ export const projectsData: ProjectProps[] = [
 			time: { start: "August '22", end: "June '23" },
 			status: STATUS_TYPE.CLOSED,
 			tags: [
-				TAG.TS,
-				TAG.NEXT,
-				TAG.NODE,
-				TAG.POSTGRES,
-				TAG.MUI,
-				TAG.AWS_LAMBDA,
-				TAG.PRISMA,
-				TAG.CHART_JS,
-				TAG.NIVO,
-				TAG.NEXTAUTH,
-				TAG.PUPPETEER,
+				TOOL.TS,
+				TOOL.NEXT,
+				TOOL.NODE,
+				TOOL.POSTGRES,
+				TOOL.MUI,
+				TOOL.AWS_LAMBDA,
+				TOOL.PRISMA,
+				TOOL.CHART_JS,
+				TOOL.NIVO,
+				TOOL.NEXTAUTH,
+				TOOL.PUPPETEER,
 			],
 		},
 		features: [
@@ -227,15 +227,15 @@ export const projectsData: ProjectProps[] = [
 			time: { start: "April '23", end: "May '23" },
 			status: STATUS_TYPE.CLOSED,
 			tags: [
-				TAG.TS,
-				TAG.NEXT,
-				TAG.CHAKRA,
-				TAG.REACTHOOKFORM,
-				TAG.NODEMAILER,
-				TAG.POSTGRES,
-				TAG.GRAPH_QL,
-				TAG.HASURA,
-				TAG.DOCKER,
+				TOOL.TS,
+				TOOL.NEXT,
+				TOOL.CHAKRA,
+				TOOL.REACTHOOKFORM,
+				TOOL.NODEMAILER,
+				TOOL.POSTGRES,
+				TOOL.GRAPH_QL,
+				TOOL.HASURA,
+				TOOL.DOCKER,
 			].sort(),
 		},
 		features: [
@@ -290,17 +290,17 @@ export const projectsData: ProjectProps[] = [
 			time: { start: "Feb '21", end: "April '22" },
 			status: STATUS_TYPE.CLOSED,
 			tags: [
-				TAG.TS,
-				TAG.NODE,
-				TAG.DOT_NET,
-				TAG.SQL_SERVER,
-				TAG.SEQUELIZE,
-				TAG.GIT_LAB,
-				TAG.PM2,
-				TAG.ATLASSIAN,
-				TAG.LINUX,
-				TAG.VIM,
-				TAG.PYTHON,
+				TOOL.TS,
+				TOOL.NODE,
+				TOOL.DOT_NET,
+				TOOL.SQL_SERVER,
+				TOOL.SEQUELIZE,
+				TOOL.GIT_LAB,
+				TOOL.PM2,
+				TOOL.ATLASSIAN,
+				TOOL.LINUX,
+				TOOL.VIM,
+				TOOL.PYTHON,
 			].sort(),
 		},
 		features: [
@@ -343,7 +343,7 @@ export const projectsData: ProjectProps[] = [
 		attributes: {
 			time: { start: "Jun '12", end: "Fall '18" },
 			status: STATUS_TYPE.CLOSED,
-			tags: [TAG.PYTHON].sort(),
+			tags: [TOOL.PYTHON].sort(),
 		},
 		features: [
 			{
