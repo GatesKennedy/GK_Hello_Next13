@@ -57,7 +57,7 @@ export enum TOOL {
 	DB_DESIGN = 'DB Design',
 	DB_MIGRATE = 'DB Migrations',
 	DJANGO = 'Django',
-	DOCKER = 'Docker',
+	DOCKER = 'Docker Containers',
 	DOCKER_HUB = 'Docker Hub',
 	DOCKER_COMPOSE = 'Docker-Compose',
 	DOT_NET = '.NET',

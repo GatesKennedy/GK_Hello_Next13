@@ -16,7 +16,7 @@ import {
 	VStack,
 } from '@chakra-ui/react';
 import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
-import { STATUS_TYPE, TAG } from '../../reference/stringConstants';
+import { STATUS_TYPE, TOOL } from '../../reference/stringConstants';
 import ModalCarosel from '../modal/Modal';
 import { TimeProps, ProjectProps } from '@/data/workPageData';
 import Link from 'next/link';
@@ -73,7 +73,7 @@ const StatusAttribute = (props: { status: STATUS_TYPE }) => {
 		</Stack>
 	);
 };
-const TagAttribute = (props: { tags: TAG[] }) => {
+const TagAttribute = (props: { tags: TOOL[] }) => {
 	return (
 		<Stack
 			direction={'row'}
