@@ -29,6 +29,7 @@ export enum TOOL {
 	AGILE = 'Agile Methodology',
 	AGILE_SCRUM = 'Agile & Scrum',
 	ATLASSIAN = 'Jira & Confluence',
+	AUTOGEN = 'AutoGen AI Agents',
 	AWS = 'AWS',
 	AWS_CLI = 'AWS CLI',
 	AWS_DYNAMO = 'AWS DynamoDB',
@@ -45,7 +46,7 @@ export enum TOOL {
 	C_SHARP = 'C#',
 	CHAKRA = 'Chakra UI',
 	CHART_JS = 'Chart.js',
-	CONDA = 'Conda',
+	CONDA = 'Conda / Mamba',
 	CONFLUENCE = 'Confluence',
 	CORS = 'CORS',
 	CSS = 'CSS',
@@ -78,6 +79,7 @@ export enum TOOL {
 	HTML = 'HTML',
 	HTML_CSS = 'HTML & CSS',
 	HTTPS = 'HTTPS',
+	HUGGING = 'Hugging Face',
 
 	JENKINS = 'Jenkins',
 	JIRA = 'Jira',
@@ -85,6 +87,7 @@ export enum TOOL {
 	K6 = 'Grafana K6',
 	LINUX = 'Linux OS',
 	LLAMA = 'LLaMA LLM',
+	LocalLLMs = 'Local LLMs',
 
 	MUI = 'Material UI',
 	MONGO = 'MongoDB',
@@ -99,9 +102,12 @@ export enum TOOL {
 	NODEMAILER = 'Nodemailer',
 	NODE_POSTGRES = 'Node-Postgres',
 	NIVO = 'Nivo Charts',
+	NUMPY = 'NumPy',
 
 	OPENSSL = 'OpenSSL',
+	OAUTH = 'OAuth 2.0',
 
+	PANDAS = 'Pandas',
 	PM2 = 'PM2',
 	POSTGRES = 'PostgreSQL',
 	POSTMAN = 'Postman',
@@ -109,7 +115,8 @@ export enum TOOL {
 	PRISMA = 'Prisma ORM',
 	PUPPETEER = 'Puppeteer',
 	PWA = 'Progressive Web App',
-	PYTHON = 'Python',
+	PYTHON = 'Python 3',
+	PYDANTIC = 'Pydantic',
 
 	REACT = 'ReactJS (TS)',
 	REACTHOOKFORM = 'React Hook Form',
@@ -118,6 +125,7 @@ export enum TOOL {
 	REST = 'RESTful API',
 	RAILWAY = 'Railway',
 
+	SAML = 'SAML',
 	SASS = 'SASS',
 	SCRUM = 'Scrum Methodology',
 	SEQUELIZE = 'Sequelize ORM',
@@ -126,6 +134,7 @@ export enum TOOL {
 	SSL = 'Secure Socket Layer (SSL)',
 	STYLED_COMP = 'Styled Components',
 	SQL_SERVER = 'SQL Server',
+	SQL_ALCH = 'SQLAlchemy',
 	SMTP = 'SMTP',
 
 	TEAM_CITY = 'TeamCity',

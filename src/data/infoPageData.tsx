@@ -8,6 +8,8 @@ import {
 	FcMultipleDevices,
 	FcParallelTasks,
 	FcSupport,
+	FcDataSheet,
+	FcSerialTasks,
 } from 'react-icons/fc';
 import { Icon } from '@chakra-ui/react';
 import { TOOL } from '@/reference/stringConstants';
@@ -31,15 +33,16 @@ export const skillColumns: SkillSectionProps[] = [
 			TOOL.REACT,
 			TOOL.NEXT,
 			TOOL.DATA_VIS,
-			TOOL.REACTHOOKFORM,
+			// TOOL.REACTHOOKFORM,
 			TOOL.STYLED_COMP,
 			TOOL.MUI,
 			TOOL.CHAKRA,
-			TOOL.AXIOS,
-			// TOOL.CHART_JS,
-			// TOOL.NIVO,
-			// TOOL.NEXTAUTH,
 			TOOL.REDUX,
+			TOOL.AXIOS,
+			TOOL.JWT,
+			TOOL.OAUTH,
+			// TOOL.SAML,
+			// TOOL.WEB_SOCKETS,
 		],
 	},
 	// Server
@@ -73,8 +76,8 @@ export const skillColumns: SkillSectionProps[] = [
 	},
 	// Data
 	{
-		title: 'Data',
-		text: 'Data Storage Tools',
+		title: 'Storage',
+		text: 'Database Tools',
 		icon: (
 			<Icon
 				as={FcDataConfiguration}
@@ -83,6 +86,7 @@ export const skillColumns: SkillSectionProps[] = [
 			/>
 		),
 		items: [
+			TOOL.DB_DESIGN,
 			TOOL.POSTGRES,
 			TOOL.AWS_S3,
 			TOOL.MONGO,
@@ -91,7 +95,6 @@ export const skillColumns: SkillSectionProps[] = [
 			// TOOL.REDIS,
 			TOOL.AWS_RDS,
 			TOOL.AWS_DYNAMO,
-			TOOL.DB_DESIGN,
 			TOOL.DB_MIGRATE,
 		],
 	},
@@ -101,26 +104,49 @@ export const skillColumns: SkillSectionProps[] = [
 		text: 'Project Mgmt',
 		icon: (
 			<Icon
-				as={FcSupport}
+				as={FcSerialTasks}
 				w={10}
 				h={10}
 			/>
 		),
 		items: [
 			TOOL.GIT,
-			TOOL.GIT_LAB,
+			TOOL.ATLASSIAN,
+			// TOOL.GIT_LAB,
 			TOOL.DOCKER_HUB,
 			TOOL.DOCKER_COMPOSE,
 			// TOOL.JENKINS,
-			TOOL.ATLASSIAN,
+			TOOL.AGILE,
 			TOOL.GREEN_GEEKS,
 			TOOL.AWS_ROUTE,
 			TOOL.AWS_PIPE,
 			TOOL.HEROKU_PIPE,
 			TOOL.K6,
-			TOOL.AGILE,
-			TOOL.SCRUM,
+			// TOOL.SCRUM,
 			// TOOL.MOCHA,
+		],
+	},
+	// Data
+	{
+		title: 'Data & AI',
+		text: 'Data Analytics...',
+		icon: (
+			<Icon
+				as={FcDataSheet}
+				w={10}
+				h={10}
+			/>
+		),
+		items: [
+			TOOL.PYTHON,
+			TOOL.PANDAS,
+			TOOL.NUMPY,
+			TOOL.PYDANTIC,
+			TOOL.CONDA,
+			TOOL.SQL_ALCH,
+			TOOL.LocalLLMs,
+			TOOL.HUGGING,
+			TOOL.AUTOGEN,
 		],
 	},
 	// Util
@@ -135,20 +161,18 @@ export const skillColumns: SkillSectionProps[] = [
 			/>
 		),
 		items: [
+			TOOL.LINUX,
 			TOOL.VIM,
 			TOOL.ZSH,
 			TOOL.BASH,
-			TOOL.YAML,
 			TOOL.TMUX,
-			TOOL.LINUX,
-			TOOL.PYTHON,
-			TOOL.CONDA,
-			TOOL.NGROK,
+			TOOL.YAML,
 			TOOL.PM2,
+			TOOL.NGROK,
 			TOOL.OPENSSL,
 			TOOL.SSH,
-			TOOL.SMTP,
-			TOOL.WEB_SOCKETS,
+			// TOOL.SMTP,
+			// TOOL.WEB_SOCKETS,
 		],
 	},
 ];
