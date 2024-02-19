@@ -56,6 +56,107 @@ export interface ProjectProps {
 //	Projects Data
 export const projectsData: ProjectProps[] = [
 	{
+		title: 'Internal Business Reporting: Server Migration',
+		description: 'Migrating AWS Lambda reporting to a dedicated server',
+		images: [],
+		attributes: {
+			time: { start: "Dec '23", end: "Feb '24" },
+			status: STATUS_TYPE.CLOSED,
+			tags: [
+				TOOL.FAST_API,
+				TOOL.PANDAS,
+				TOOL.SQL_ALCH,
+				TOOL.MATPLOTLIB,
+			].sort(),
+		},
+		features: [
+			{
+				title: 'Code Migration',
+				desc: 'The app was able to streamline the data input process with a centralized UI.',
+			},
+			{
+				title: 'Automated Requests and Reports',
+				desc: 'Requests are regularly made to multiple data sources and stored to data warehouse for processing. Reports and performance insights are generated as spreadsheets or pdfs and emailed to managers regularly',
+			},
+			{
+				title: 'API Creation',
+				desc: 'Data warehouse is accesible via RESTful API for irregular report access and custom data visualization',
+			},
+			{
+				title: 'Interfacing Data Warehouse',
+				desc: 'Raw data, processed data and generated reports are stored to a pre-existing data warehouse.',
+			},
+		],
+		linkDemo: null,
+		// {
+		// 	title: 'API Repo',
+		// 	href: STRINGS.FASTIFY_REPO,
+		// },
+		linkRepo: null,
+		//  {
+		// 	title: 'K6 Repo',
+		// 	href: STRINGS.K6_REPO,
+		// },
+		linkMore: null,
+	},
+	{
+		title: 'Office Operations Auditing Software',
+		description: 'A web UI that reduced time-spent by 40%.',
+		images: [
+			// {
+			// 	title: 'Data Input UI',
+			// 	desc: 'The app was able to streamline the data input process with a centralized UI.',
+			// 	src: k6_stress,
+			// },
+			// {
+			// 	title: 'Automated Reports',
+			// 	desc: 'Results and feedback for each office are generated as pdfs and emailed to managers automatically',
+			// 	src: k6_spike,
+			// },
+			// {
+			// 	title: 'Interfacing Data Warehouse',
+			// 	desc: 'Raw data, processed data and generated reports are stored to a pre-existing data warehouse.',
+			// 	src: k6_break,
+			// },
+		],
+		attributes: {
+			time: { start: "Oct '23", end: "Nov '23" },
+			status: STATUS_TYPE.CLOSED,
+			tags: [
+				TOOL.FAST_API,
+				TOOL.HTMX,
+				TOOL.JINJA,
+				TOOL.PANDAS,
+				TOOL.SQL_ALCH,
+			].sort(),
+		},
+		features: [
+			{
+				title: 'Data Input UI',
+				desc: 'The app was able to streamline the data input process with a centralized UI.',
+			},
+			{
+				title: 'Automated Reports',
+				desc: 'Results and feedback for each office are generated as pdfs and emailed to managers automatically',
+			},
+			{
+				title: 'Interfacing Data Warehouse',
+				desc: 'Raw data, processed data and generated reports are stored to a pre-existing data warehouse.',
+			},
+		],
+		linkDemo: null,
+		// {
+		// 	title: 'API Repo',
+		// 	href: STRINGS.FASTIFY_REPO,
+		// },
+		linkRepo: null,
+		//  {
+		// 	title: 'K6 Repo',
+		// 	href: STRINGS.K6_REPO,
+		// },
+		linkMore: null,
+	},
+	{
 		title: 'Load Testing: Fastify REST API',
 		description:
 			'Using Node.js with Fastify and Grafana K6 to optimize API throughput',

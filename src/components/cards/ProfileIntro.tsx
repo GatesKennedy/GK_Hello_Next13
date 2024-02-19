@@ -83,9 +83,9 @@ export default function ProfileIntro() {
 						color={useColorModeValue('gray.700', 'gray.300')}
 						fontSize={'lg'}
 					>
-						Full-stack Web Developer comfortable building
-						data-driven web applications and interested in solving
-						challenging problems.
+						Full-stack Data Engineer comfortable building
+						data-driven web applications that aggregate, organize
+						and simplify data trends for intuitive consumption.
 					</Text>
 					<Stack
 						spacing={{ base: 2, lg: 3 }}

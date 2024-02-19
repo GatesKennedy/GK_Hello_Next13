@@ -17,6 +17,82 @@ import { AttributeProps } from '@/components/cards/AttributeCard';
 import { SkillSectionProps } from '@/components/cards/InfoColumns';
 
 export const skillColumns: SkillSectionProps[] = [
+	// Server
+	{
+		title: 'Server',
+		text: 'Server-side Tools',
+		icon: (
+			<Icon
+				as={FcParallelTasks}
+				w={10}
+				h={10}
+			/>
+		),
+		items: [
+			TOOL.NODE,
+			TOOL.EXPRESS,
+			TOOL.FAST_API,
+			TOOL.FASTIFY,
+			TOOL.REST,
+			TOOL.GRAPH_QL,
+			TOOL.AWS_EC2,
+			// TOOL.AWS_LAMBDA,
+			TOOL.NODE_POSTGRES,
+			TOOL.PRISMA,
+			// TOOL.SEQUELIZE,
+			// TOOL.CORS,
+			// TOOL.NODEMAILER,
+			TOOL.POSTMAN,
+		],
+	},
+	// Data
+	{
+		title: 'Data & AI',
+		text: 'Data Analytics...',
+		icon: (
+			<Icon
+				as={FcDataSheet}
+				w={10}
+				h={10}
+			/>
+		),
+		items: [
+			TOOL.PYTHON,
+			TOOL.PANDAS,
+			TOOL.NUMPY,
+			TOOL.PYDANTIC,
+			TOOL.MATPLOTLIB,
+			TOOL.SQL_ALCH,
+			TOOL.CONDA,
+			TOOL.LocalLLMs,
+			TOOL.HUGGING,
+			TOOL.AUTOGEN,
+		],
+	},
+	// Storage
+	{
+		title: 'Storage',
+		text: 'Database Tools',
+		icon: (
+			<Icon
+				as={FcDataConfiguration}
+				w={10}
+				h={10}
+			/>
+		),
+		items: [
+			TOOL.DB_DESIGN,
+			TOOL.POSTGRES,
+			TOOL.AWS_S3,
+			TOOL.MONGO,
+			TOOL.MY_SQL,
+			TOOL.SQL_SERVER,
+			TOOL.REDIS,
+			TOOL.AWS_RDS,
+			// TOOL.AWS_DYNAMO,
+			TOOL.DB_MIGRATE,
+		],
+	},
 	// Client
 	{
 		title: 'Client',
@@ -39,63 +115,10 @@ export const skillColumns: SkillSectionProps[] = [
 			TOOL.CHAKRA,
 			TOOL.REDUX,
 			TOOL.AXIOS,
-			TOOL.JWT,
+			// TOOL.JWT,
 			TOOL.OAUTH,
 			// TOOL.SAML,
 			// TOOL.WEB_SOCKETS,
-		],
-	},
-	// Server
-	{
-		title: 'Server',
-		text: 'Server-side Tools',
-		icon: (
-			<Icon
-				as={FcParallelTasks}
-				w={10}
-				h={10}
-			/>
-		),
-		items: [
-			TOOL.NODE,
-			TOOL.EXPRESS,
-			TOOL.FAST_API,
-			TOOL.FASTIFY,
-			TOOL.REST,
-			TOOL.GRAPH_QL,
-			TOOL.AWS_EC2,
-			TOOL.AWS_LAMBDA,
-			TOOL.NODE_POSTGRES,
-			TOOL.PRISMA,
-			// TOOL.SEQUELIZE,
-			// TOOL.LLAMA,
-			// TOOL.CORS,
-			// TOOL.NODEMAILER,
-			TOOL.POSTMAN,
-		],
-	},
-	// Data
-	{
-		title: 'Storage',
-		text: 'Database Tools',
-		icon: (
-			<Icon
-				as={FcDataConfiguration}
-				w={10}
-				h={10}
-			/>
-		),
-		items: [
-			TOOL.DB_DESIGN,
-			TOOL.POSTGRES,
-			TOOL.AWS_S3,
-			TOOL.MONGO,
-			TOOL.MY_SQL,
-			TOOL.SQL_SERVER,
-			// TOOL.REDIS,
-			TOOL.AWS_RDS,
-			TOOL.AWS_DYNAMO,
-			TOOL.DB_MIGRATE,
 		],
 	},
 	// Dev Ops
@@ -126,29 +149,7 @@ export const skillColumns: SkillSectionProps[] = [
 			// TOOL.MOCHA,
 		],
 	},
-	// Data
-	{
-		title: 'Data & AI',
-		text: 'Data Analytics...',
-		icon: (
-			<Icon
-				as={FcDataSheet}
-				w={10}
-				h={10}
-			/>
-		),
-		items: [
-			TOOL.PYTHON,
-			TOOL.PANDAS,
-			TOOL.NUMPY,
-			TOOL.PYDANTIC,
-			TOOL.CONDA,
-			TOOL.SQL_ALCH,
-			TOOL.LocalLLMs,
-			TOOL.HUGGING,
-			TOOL.AUTOGEN,
-		],
-	},
+
 	// Util
 	{
 		title: 'Utility',
