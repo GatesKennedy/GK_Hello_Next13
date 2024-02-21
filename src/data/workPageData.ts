@@ -56,6 +56,52 @@ export interface ProjectProps {
 //	Projects Data
 export const projectsData: ProjectProps[] = [
 	{
+		title: 'Tritone Analytics ',
+		description: 'Migrating AWS Lambda reporting to a dedicated server',
+		images: [],
+		attributes: {
+			time: { start: "Dec '23", end: "Feb '24" },
+			status: STATUS_TYPE.CLOSED,
+			tags: [
+				TOOL.FAST_API,
+				TOOL.PANDAS,
+				TOOL.SQL_ALCH,
+				TOOL.MATPLOTLIB,
+				TOOL.SMTP_LIB,
+				TOOL.PYDANTIC,
+			].sort(),
+		},
+		features: [
+			{
+				title: 'Code Migration',
+				desc: 'Platform migration from AWS lambda functions (python) to a self-hosted python server (FastAPI) and Postgres database',
+			},
+			{
+				title: 'Automated Requests and Reports',
+				desc: 'Replicated original functionality to regularly query Open Dental and build internal reports for owners, managers and team leads.',
+			},
+			{
+				title: 'Interfacing Data Warehouse',
+				desc: 'Raw data, processed data and generated reports are stored to a local data warehousing solution.',
+			},
+			{
+				title: 'API Creation',
+				desc: 'Added API functionality for dashboard integration. Data warehouse is accesible via RESTful API for irregular report access and custom data visualization',
+			},
+		],
+		linkDemo: null,
+		// {
+		// 	title: 'API Repo',
+		// 	href: STRINGS.FASTIFY_REPO,
+		// },
+		linkRepo: null,
+		//  {
+		// 	title: 'K6 Repo',
+		// 	href: STRINGS.K6_REPO,
+		// },
+		linkMore: null,
+	},
+	{
 		title: 'Internal Business Reporting: Server Migration',
 		description: 'Migrating AWS Lambda reporting to a dedicated server',
 		images: [],
@@ -67,24 +113,26 @@ export const projectsData: ProjectProps[] = [
 				TOOL.PANDAS,
 				TOOL.SQL_ALCH,
 				TOOL.MATPLOTLIB,
+				TOOL.SMTP_LIB,
+				TOOL.PYDANTIC,
 			].sort(),
 		},
 		features: [
 			{
 				title: 'Code Migration',
-				desc: 'The app was able to streamline the data input process with a centralized UI.',
+				desc: 'Platform migration from AWS lambda functions (python) to a self-hosted python server (FastAPI) and Postgres database',
 			},
 			{
 				title: 'Automated Requests and Reports',
-				desc: 'Requests are regularly made to multiple data sources and stored to data warehouse for processing. Reports and performance insights are generated as spreadsheets or pdfs and emailed to managers regularly',
-			},
-			{
-				title: 'API Creation',
-				desc: 'Data warehouse is accesible via RESTful API for irregular report access and custom data visualization',
+				desc: 'Replicated original functionality to regularly query Open Dental and build internal reports for owners, managers and team leads.',
 			},
 			{
 				title: 'Interfacing Data Warehouse',
-				desc: 'Raw data, processed data and generated reports are stored to a pre-existing data warehouse.',
+				desc: 'Raw data, processed data and generated reports are stored to a local data warehousing solution.',
+			},
+			{
+				title: 'API Creation',
+				desc: 'Added API functionality for dashboard integration. Data warehouse is accesible via RESTful API for irregular report access and custom data visualization',
 			},
 		],
 		linkDemo: null,
@@ -128,6 +176,7 @@ export const projectsData: ProjectProps[] = [
 				TOOL.JINJA,
 				TOOL.PANDAS,
 				TOOL.SQL_ALCH,
+				TOOL.PYDANTIC,
 			].sort(),
 		},
 		features: [
@@ -159,7 +208,7 @@ export const projectsData: ProjectProps[] = [
 	{
 		title: 'Load Testing: Fastify REST API',
 		description:
-			'Using Node.js with Fastify and Grafana K6 to optimize API throughput',
+			'A personal learning project using Node.js with Fastify and Grafana K6 to optimize API throughput',
 		images: [
 			{
 				title: 'Stress Tests',

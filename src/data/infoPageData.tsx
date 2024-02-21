@@ -17,6 +17,34 @@ import { AttributeProps } from '@/components/cards/AttributeCard';
 import { SkillSectionProps } from '@/components/cards/InfoColumns';
 
 export const skillColumns: SkillSectionProps[] = [
+	// Client
+	{
+		title: 'Client',
+		text: 'Client-side Tools',
+		icon: (
+			<Icon
+				as={FcMultipleDevices}
+				w={10}
+				h={10}
+			/>
+		),
+		items: [
+			TOOL.HTML_CSS,
+			TOOL.REACT,
+			TOOL.NEXT,
+			TOOL.DATA_VIS,
+			// TOOL.REACTHOOKFORM,
+			TOOL.STYLED_COMP,
+			TOOL.MUI,
+			TOOL.CHAKRA,
+			TOOL.REDUX,
+			TOOL.AXIOS,
+			// TOOL.JWT,
+			TOOL.OAUTH,
+			// TOOL.SAML,
+			// TOOL.WEB_SOCKETS,
+		],
+	},
 	// Server
 	{
 		title: 'Server',
@@ -39,6 +67,7 @@ export const skillColumns: SkillSectionProps[] = [
 			// TOOL.AWS_LAMBDA,
 			TOOL.NODE_POSTGRES,
 			TOOL.PRISMA,
+			TOOL.UVICORN,
 			// TOOL.SEQUELIZE,
 			// TOOL.CORS,
 			// TOOL.NODEMAILER,
@@ -91,34 +120,6 @@ export const skillColumns: SkillSectionProps[] = [
 			TOOL.AWS_RDS,
 			// TOOL.AWS_DYNAMO,
 			TOOL.DB_MIGRATE,
-		],
-	},
-	// Client
-	{
-		title: 'Client',
-		text: 'Client-side Tools',
-		icon: (
-			<Icon
-				as={FcMultipleDevices}
-				w={10}
-				h={10}
-			/>
-		),
-		items: [
-			TOOL.HTML_CSS,
-			TOOL.REACT,
-			TOOL.NEXT,
-			TOOL.DATA_VIS,
-			// TOOL.REACTHOOKFORM,
-			TOOL.STYLED_COMP,
-			TOOL.MUI,
-			TOOL.CHAKRA,
-			TOOL.REDUX,
-			TOOL.AXIOS,
-			// TOOL.JWT,
-			TOOL.OAUTH,
-			// TOOL.SAML,
-			// TOOL.WEB_SOCKETS,
 		],
 	},
 	// Dev Ops

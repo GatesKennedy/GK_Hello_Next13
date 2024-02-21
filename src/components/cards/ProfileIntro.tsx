@@ -83,7 +83,7 @@ export default function ProfileIntro() {
 						color={useColorModeValue('gray.700', 'gray.300')}
 						fontSize={'lg'}
 					>
-						Full-stack Data Engineer comfortable building
+						Full-stack Application Developer comfortable building
 						data-driven web applications that aggregate, organize
 						and simplify data trends for intuitive consumption.
 					</Text>
