@@ -73,6 +73,7 @@ export enum TOOL {
 	GO = 'GoLang',
 	GRAPH_QL = 'GraphQL API',
 	GREEN_GEEKS = 'GreenGeeks',
+	GRIPTAPE_AI = 'Griptape AI',
 
 	HASURA = 'Hasura',
 	HEROKU_PIPE = 'Heroku Pipelines',
@@ -93,6 +94,7 @@ export enum TOOL {
 
 	MATPLOTLIB = 'Matplotlib / Seaborn',
 	MUI = 'Material UI',
+	MINIO = 'MinIO',
 	MONGO = 'MongoDB',
 	MOCHA = 'MochaJS',
 	MY_SQL = 'MySQL',
@@ -107,6 +109,7 @@ export enum TOOL {
 	NIVO = 'Nivo Charts',
 	NUMPY = 'NumPy',
 
+	OPENCV = 'OpenCV',
 	OPENSSL = 'OpenSSL',
 	OAUTH = 'OAuth 2.0',
 
@@ -118,10 +121,12 @@ export enum TOOL {
 	PRISMA = 'Prisma ORM',
 	PUPPETEER = 'Puppeteer',
 	PWA = 'Progressive Web App',
-	PYTHON = 'Python 3',
 	PYDANTIC = 'Pydantic',
+	PYTHON = 'Python',
+	PYTORCH = 'PyTorch',
 
 	REACT = 'ReactJS (TS)',
+	REACT_NATIVE = 'React Native (TS)',
 	REACTHOOKFORM = 'React Hook Form',
 	REDIS = 'Redis',
 	REDUX = 'Redux',
