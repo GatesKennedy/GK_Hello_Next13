@@ -27,36 +27,91 @@ import esc_nikeInterior from '../../public/images/projects/esc_nikedome_interior
 //	Projects Data
 export const projectsData: ProjectProps[] = [
 	{
-		title: 'Tritone Analytics ',
-		description: 'Migrating AWS Lambda reporting to a dedicated server',
+		title: 'DROP (patent pending)',
+		description:
+			'Sole contributor to novel inventory solution using computer vision for desktop and mobile.',
 		images: [],
 		attributes: {
-			time: { start: "Dec '23", end: "Feb '24" },
+			time: { start: "May '24", end: "Dec '24" },
 			status: STATUS_TYPE.CLOSED,
 			tags: [
+				TOOL.PYTHON,
+				TOOL.PYTORCH,
 				TOOL.FAST_API,
-				TOOL.PANDAS,
-				TOOL.SQL_ALCH,
 				TOOL.MATPLOTLIB,
-				TOOL.SMTP_LIB,
 				TOOL.PYDANTIC,
+				TOOL.MINIO,
+				TOOL.OPENCV,
+				TOOL.REACT_NATIVE,
+				TOOL.POSTGRES,
+				TOOL.NUMPY,
 			].sort(),
 		},
 		features: [
 			{
-				title: 'Code Migration',
+				title: 'Computer Vision',
+				desc: 'OpenCV used for object recognition and related metric derivation.',
+			},
+			{
+				title: 'Desktop & Mobile',
+				desc: 'Cross-platform support for desktop and mobile devices.',
+			},
+			{
+				title: 'Data Warehouse & API',
+				desc: 'MinIO for object storage. Postgres for user data and licensing records.',
+			},
+			{
+				title: 'Machine Learning',
+				desc: 'PyTorch model training for enhanced object recognition',
+			},
+		],
+		linkDemo: null,
+		// {
+		// 	title: 'API Repo',
+		// 	href: STRINGS.FASTIFY_REPO,
+		// },
+		linkRepo: null,
+		//  {
+		// 	title: 'K6 Repo',
+		// 	href: STRINGS.K6_REPO,
+		// },
+		linkMore: null,
+	},
+	{
+		title: 'Tritone Analytics',
+		description:
+			'Automated auditing of financial records across an arbitrary number of resources and document formats.',
+		images: [],
+		attributes: {
+			time: { start: "Dec '23", end: 'Current' },
+			status: STATUS_TYPE.OPEN,
+			tags: [
+				TOOL.PANDAS,
+				TOOL.FAST_API,
+				TOOL.SQL_ALCH,
+				TOOL.MATPLOTLIB,
+				TOOL.NUMPY,
+				TOOL.PYDANTIC,
+				TOOL.POSTGRES,
+				TOOL.MINIO,
+				TOOL.GRIPTAPE_AI,
+			].sort(),
+		},
+		features: [
+			{
+				title: 'ETL Pipeline',
 				desc: 'Platform migration from AWS lambda functions (python) to a self-hosted python server (FastAPI) and Postgres database',
 			},
 			{
-				title: 'Automated Requests and Reports',
+				title: 'Data Analytics',
 				desc: 'Replicated original functionality to regularly query Open Dental and build internal reports for owners, managers and team leads.',
 			},
 			{
-				title: 'Interfacing Data Warehouse',
-				desc: 'Raw data, processed data and generated reports are stored to a local data warehousing solution.',
+				title: 'Data Warehousing',
+				desc: 'MinIO for object storage of original documents. Postgres for parsed records, user data and generated metrics.',
 			},
 			{
-				title: 'API Creation',
+				title: 'API Design',
 				desc: 'Added API functionality for dashboard integration. Data warehouse is accesible via RESTful API for irregular report access and custom data visualization',
 			},
 		],
