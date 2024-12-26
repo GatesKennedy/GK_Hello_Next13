@@ -1,6 +1,5 @@
 'use client';
 
-import { ReactElement } from 'react';
 import {
 	Box,
 	SimpleGrid,
@@ -14,40 +13,27 @@ import {
 	HStack,
 	Center,
 } from '@chakra-ui/react';
-
-export interface SkillSectionProps {
-	icon: ReactElement;
-	title: string;
-	text: string;
-	items: string[];
-}
+import { SkillSectionProps } from '../../types';
 
 const SkillSection = ({ title, text, icon, items }: SkillSectionProps) => {
 	return (
 		<Box
 			maxW={{ base: 'full', md: '275px' }}
 			w={'full'}
-			borderWidth='1px'
-			borderRadius='lg'
-			overflow='hidden'
+			borderWidth="1px"
+			borderRadius="lg"
+			overflow="hidden"
 			bg={useColorModeValue('whiteAlpha.700', 'blackAlpha.900')}
 			p={5}
 		>
-			<Stack
-				align={'start'}
-				spacing={2}
-				w={'full'}
-			>
+			<Stack align={'start'} spacing={2} w={'full'}>
 				<Center w={'full'}>
 					<HStack
 						align={'center'}
 						justify={'center'}
 						w={'full'}
 						m={'auto'}
-						bg={useColorModeValue(
-							'blackAlpha.100',
-							'whiteAlpha.100',
-						)}
+						bg={useColorModeValue('blackAlpha.100', 'whiteAlpha.100')}
 						borderRadius={'lg'}
 					>
 						<Flex
@@ -84,10 +70,7 @@ const SkillSection = ({ title, text, icon, items }: SkillSectionProps) => {
 				</Text>
 				{items.map((item, index) => {
 					return (
-						<Text
-							key={index}
-							px={{ base: 8, md: 8, lg: 2 }}
-						>
+						<Text key={index} px={{ base: 8, md: 8, lg: 2 }}>
 							{item}
 						</Text>
 					);
@@ -116,10 +99,7 @@ export default function InfoColumns(props: {
 				textAlign={'center'}
 				py={4}
 			>
-				<Heading
-					fontSize={{ base: '2xl', sm: '4xl' }}
-					fontWeight={'bold'}
-				>
+				<Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
 					Tool Belt
 				</Heading>
 				<Text
@@ -137,10 +117,7 @@ export default function InfoColumns(props: {
 				</Text>
 			</Stack>
 
-			<Container
-				maxW={'5xl'}
-				py={8}
-			>
+			<Container maxW={'5xl'} py={8}>
 				<SimpleGrid
 					justifyContent={'center'}
 					columns={{ base: 1, md: 2, lg: 3 }}

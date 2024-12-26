@@ -1,57 +1,28 @@
-import { STATUS_TYPE, STRINGS, TOOL } from '@/reference/stringConstants';
-import { StaticImageData } from 'next/image';
+import { STATUS_TYPE, STRINGS, TOOL } from '@/constants/stringConstants';
+import { ProjectProps } from '../types';
 
-import info_headShot from '../../public/HeadShot-square.png';
-import mimir_arch from '../../public/mimir_arch.png';
-import hello_info from '../../public/hello_info-min.png';
-// import hello_talk from '../../public/hello_talk-min.png'
-import hello_talk from '../../public/hello_talk.webp';
-import hello_light from '../../public/hello_light.webp';
-import hello_dark from '../../public/hello_dark.webp';
-import hello_talkDemo from '../../public/hello_talk_demo.gif';
-import dentalRisk_demo from '../../public/DentalRisk_demo.gif';
-import dentalRisk_validation from '../../public/dentalRisk_validation.webp';
-import dentalRisk_review from '../../public/dentalRisk_review.webp';
-import modernSuite_devices from '../../public/modernSuite_devices.png';
-import modernSuite_QuickTasks from '../../public/modernSuite_POSQuickTasks.png';
-import modernSuite_MSGraphic from '../../public/modernSuite_Graphic.jpeg';
-import modernSuite_ZamboniArch from '../../public/modernSuite_zamboniSyncArchitecture.jpeg';
-import k6_stress from '../../public/k6-stress-test_1.webp';
-import k6_load from '../../public/k6-average-load.webp';
-import k6_spike from '../../public/k6-spike-test_1.webp';
-import k6_break from '../../public/k6-breakpoint-test.webp';
-import esc_skull from '../../public/esc_coronaskull.webp';
-import esc_nike from '../../public/esc_nikedome.webp';
-import esc_nikeInterior from '../../public/esc_nikedome_interior.webp';
-
-export interface ListImage {
-	title: string;
-	desc: string;
-	src: StaticImageData;
-}
-export interface Feature {
-	title: string;
-	desc: string;
-}
-export interface TimeProps {
-	start: string;
-	end: string;
-}
-export interface ProjectAttributeProps {
-	time: TimeProps;
-	status: STATUS_TYPE;
-	tags: TOOL[];
-}
-export interface ProjectProps {
-	title: string;
-	description: string;
-	attributes: ProjectAttributeProps;
-	features: Feature[];
-	images: ListImage[];
-	linkDemo: { title: string; href: string } | null;
-	linkRepo: { title: string; href: string } | null;
-	linkMore: { title: string; href: string } | null;
-}
+import info_headShot from '../../public/images/projects/HeadShot-square.png';
+import mimir_arch from '../../public/images/projects/mimir_arch.png';
+import hello_info from '../../public/images/projects/hello_info-min.png';
+// import hello_talk from '../../public/images/projects/hello_talk-min.png'
+import hello_talk from '../../public/images/projects/hello_talk.webp';
+import hello_light from '../../public/images/projects/hello_light.webp';
+import hello_dark from '../../public/images/projects/hello_dark.webp';
+import hello_talkDemo from '../../public/images/projects/hello_talk_demo.gif';
+import dentalRisk_demo from '../../public/images/projects/DentalRisk_demo.gif';
+import dentalRisk_validation from '../../public/images/projects/dentalRisk_validation.webp';
+import dentalRisk_review from '../../public/images/projects/dentalRisk_review.webp';
+import modernSuite_devices from '../../public/images/projects/modernSuite_devices.png';
+import modernSuite_QuickTasks from '../../public/images/projects/modernSuite_POSQuickTasks.png';
+import modernSuite_MSGraphic from '../../public/images/projects/modernSuite_Graphic.jpeg';
+import modernSuite_ZamboniArch from '../../public/images/projects/modernSuite_zamboniSyncArchitecture.jpeg';
+import k6_stress from '../../public/images/projects/k6-stress-test_1.webp';
+import k6_load from '../../public/images/projects/k6-average-load.webp';
+import k6_spike from '../../public/images/projects/k6-spike-test_1.webp';
+import k6_break from '../../public/images/projects/k6-breakpoint-test.webp';
+import esc_skull from '../../public/images/projects/esc_coronaskull.webp';
+import esc_nike from '../../public/images/projects/esc_nikedome.webp';
+import esc_nikeInterior from '../../public/images/projects/esc_nikedome_interior.webp';
 
 //	Projects Data
 export const projectsData: ProjectProps[] = [

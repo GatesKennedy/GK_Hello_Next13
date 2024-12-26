@@ -12,22 +12,15 @@ import {
 	FcSerialTasks,
 } from 'react-icons/fc';
 import { Icon } from '@chakra-ui/react';
-import { TOOL } from '@/reference/stringConstants';
-import { AttributeProps } from '@/components/cards/AttributeCard';
-import { SkillSectionProps } from '@/components/cards/InfoColumns';
+import { TOOL } from '@/constants/stringConstants';
+import { AttributeProps, SkillSectionProps } from '../types';
 
 export const skillColumns: SkillSectionProps[] = [
 	// Client
 	{
 		title: 'Client',
 		text: 'Client-side Tools',
-		icon: (
-			<Icon
-				as={FcMultipleDevices}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcMultipleDevices} w={10} h={10} />,
 		items: [
 			TOOL.HTML_CSS,
 			TOOL.REACT,
@@ -49,13 +42,7 @@ export const skillColumns: SkillSectionProps[] = [
 	{
 		title: 'Server',
 		text: 'Server-side Tools',
-		icon: (
-			<Icon
-				as={FcParallelTasks}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcParallelTasks} w={10} h={10} />,
 		items: [
 			TOOL.NODE,
 			TOOL.EXPRESS,
@@ -78,13 +65,7 @@ export const skillColumns: SkillSectionProps[] = [
 	{
 		title: 'Data & AI',
 		text: 'Data Analytics...',
-		icon: (
-			<Icon
-				as={FcDataSheet}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcDataSheet} w={10} h={10} />,
 		items: [
 			TOOL.PYTHON,
 			TOOL.PANDAS,
@@ -102,13 +83,7 @@ export const skillColumns: SkillSectionProps[] = [
 	{
 		title: 'Storage',
 		text: 'Database Tools',
-		icon: (
-			<Icon
-				as={FcDataConfiguration}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcDataConfiguration} w={10} h={10} />,
 		items: [
 			TOOL.DB_DESIGN,
 			TOOL.POSTGRES,
@@ -126,13 +101,7 @@ export const skillColumns: SkillSectionProps[] = [
 	{
 		title: 'DevOps',
 		text: 'Project Mgmt',
-		icon: (
-			<Icon
-				as={FcSerialTasks}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcSerialTasks} w={10} h={10} />,
 		items: [
 			TOOL.GIT,
 			TOOL.ATLASSIAN,
@@ -155,13 +124,7 @@ export const skillColumns: SkillSectionProps[] = [
 	{
 		title: 'Utility',
 		text: 'Other Tools...',
-		icon: (
-			<Icon
-				as={FcSupport}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcSupport} w={10} h={10} />,
 		items: [
 			TOOL.LINUX,
 			TOOL.VIM,
@@ -182,64 +145,34 @@ export const skillColumns: SkillSectionProps[] = [
 export const attributeData: AttributeProps[] = [
 	{
 		heading: 'Exceedingly Curious',
-		icon: (
-			<Icon
-				as={FcBinoculars}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcBinoculars} w={10} h={10} />,
 		description:
 			'Fundamentally passionate about learning and understanding systems of all kinds; digital, mechanical, societal, etc.',
 		href: '/work',
 	},
 	{
 		heading: 'B.S Mechanical Engineering',
-		icon: (
-			<Icon
-				as={FcGraduationCap}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcGraduationCap} w={10} h={10} />,
 		description: 'Washington State University from 2006 to 2011.',
 		href: '/work',
 	},
 	{
 		heading: 'Project Managment',
-		icon: (
-			<Icon
-				as={FcCollaboration}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcCollaboration} w={10} h={10} />,
 		description:
 			'As a co-founder of an design and fabrication company for large events. I have experience leading teams through structural fabrication and installations.',
 		href: '/work',
 	},
 	{
 		heading: 'Creativity',
-		icon: (
-			<Icon
-				as={FcCloseUpMode}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcCloseUpMode} w={10} h={10} />,
 		description:
 			"Look at the design of this website. Isn't it Unique? I made this look like this because I too am unique and cool. Hire me.",
 		href: '/work',
 	},
 	{
 		heading: 'Full-Stack',
-		icon: (
-			<Icon
-				as={FcMindMap}
-				w={10}
-				h={10}
-			/>
-		),
+		icon: <Icon as={FcMindMap} w={10} h={10} />,
 		description:
 			'I know lots of things about building web application software and my knowledge is for sale in the form of monthly payments!',
 		href: '/work',

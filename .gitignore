@@ -131,3 +131,9 @@ dist
 
 *.DS_Store
 .vscode/
+
+#=======
+# G_K
+
+xxx*.*
+xxx*/

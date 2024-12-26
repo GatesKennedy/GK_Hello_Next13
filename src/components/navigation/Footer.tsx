@@ -5,7 +5,7 @@ import { FaLinkedin, FaGithub, FaSpotify } from 'react-icons/fa';
 import { MdMail } from 'react-icons/md';
 import SocialButton from '../buttons/SocialButton';
 import CopyButton from '../buttons/CopyButton';
-import { STRINGS } from '../../reference/stringConstants';
+import { STRINGS } from '../../constants/stringConstants';
 
 export default function SmallWithSocial() {
 	return (
@@ -29,32 +29,17 @@ export default function SmallWithSocial() {
 				align={{ base: 'center', md: 'center' }}
 			>
 				{/* <Text>© 2023 Gates Kennedy. All rights reserved</Text> */}
-				<Stack
-					direction={'row'}
-					spacing={6}
-				>
-					<CopyButton
-						label={'Email'}
-						copyText={STRINGS.EMAIL_CONOR}
-					>
+				<Stack direction={'row'} spacing={6}>
+					<CopyButton label={'Email'} copyText={STRINGS.EMAIL_CONOR}>
 						<MdMail size={24} />
 					</CopyButton>
-					<SocialButton
-						label={'LinkedIn'}
-						href={STRINGS.LINKEDIN_CONOR}
-					>
+					<SocialButton label={'LinkedIn'} href={STRINGS.LINKEDIN_CONOR}>
 						<FaLinkedin size={24} />
 					</SocialButton>
-					<SocialButton
-						label={'GitHub'}
-						href={STRINGS.GITHUB_GK}
-					>
+					<SocialButton label={'GitHub'} href={STRINGS.GITHUB_GK}>
 						<FaGithub size={24} />
 					</SocialButton>
-					<SocialButton
-						label={'Spotify'}
-						href={STRINGS.SPOTIFY_ONO}
-					>
+					<SocialButton label={'Spotify'} href={STRINGS.SPOTIFY_ONO}>
 						<FaSpotify size={24} />
 					</SocialButton>
 				</Stack>

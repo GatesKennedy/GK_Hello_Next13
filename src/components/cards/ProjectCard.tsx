@@ -16,19 +16,15 @@ import {
 	VStack,
 } from '@chakra-ui/react';
 import { MdComputer, MdDescription, MdSchedule } from 'react-icons/md';
-import { STATUS_TYPE, TOOL } from '../../reference/stringConstants';
+
+import { STATUS_TYPE, TOOL } from '../../constants/stringConstants';
 import ModalCarosel from '../modal/Modal';
-import { TimeProps, ProjectProps } from '@/data/workPageData';
-import Link from 'next/link';
-import NavButton from '../buttons/NavButton';
 import DemoButton from '../buttons/DemoButton';
+import { ProjectProps, TimeProps } from '../../types';
 
 const TimeAttribute = ({ start, end }: TimeProps) => {
 	return (
-		<Stack
-			direction={'row'}
-			align={'center'}
-		>
+		<Stack direction={'row'} align={'center'}>
 			<Flex
 				w={8}
 				h={8}
@@ -37,12 +33,7 @@ const TimeAttribute = ({ start, end }: TimeProps) => {
 				rounded={'full'}
 				bg={useColorModeValue('blue.100', 'blue.900')}
 			>
-				<Icon
-					as={MdSchedule}
-					color={'blue.500'}
-					w={5}
-					h={5}
-				/>
+				<Icon as={MdSchedule} color={'blue.500'} w={5} h={5} />
 			</Flex>
 			<Text fontWeight={600}>{`${start} - ${end}`}</Text>
 		</Stack>
@@ -50,10 +41,7 @@ const TimeAttribute = ({ start, end }: TimeProps) => {
 };
 const StatusAttribute = (props: { status: STATUS_TYPE }) => {
 	return (
-		<Stack
-			direction={'row'}
-			align={'center'}
-		>
+		<Stack direction={'row'} align={'center'}>
 			<Flex
 				w={8}
 				h={8}
@@ -62,12 +50,7 @@ const StatusAttribute = (props: { status: STATUS_TYPE }) => {
 				rounded={'full'}
 				bg={useColorModeValue('purple.100', 'purple.900')}
 			>
-				<Icon
-					as={MdDescription}
-					color={'purple.500'}
-					w={5}
-					h={5}
-				/>
+				<Icon as={MdDescription} color={'purple.500'} w={5} h={5} />
 			</Flex>
 			<Text fontWeight={600}>{props.status.toString()}</Text>
 		</Stack>
@@ -75,10 +58,7 @@ const StatusAttribute = (props: { status: STATUS_TYPE }) => {
 };
 const TagAttribute = (props: { tags: TOOL[] }) => {
 	return (
-		<Stack
-			direction={'row'}
-			align={'center'}
-		>
+		<Stack direction={'row'} align={'center'}>
 			<Flex
 				w={8}
 				h={8}
@@ -87,12 +67,7 @@ const TagAttribute = (props: { tags: TOOL[] }) => {
 				rounded={'full'}
 				bg={useColorModeValue('green.100', 'green.900')}
 			>
-				<Icon
-					as={MdComputer}
-					color={'green.500'}
-					w={5}
-					h={5}
-				/>
+				<Icon as={MdComputer} color={'green.500'} w={5} h={5} />
 			</Flex>
 			<Box fontWeight={600}>
 				{props.tags.map((tag, index) => {
@@ -113,10 +88,7 @@ export default function ProjectCard({
 	linkRepo,
 	linkMore,
 }: ProjectProps) {
-	const featuresBGColor = useColorModeValue(
-		'blackAlpha.300',
-		'blackAlpha.400',
-	);
+	const featuresBGColor = useColorModeValue('blackAlpha.300', 'blackAlpha.400');
 	return (
 		<Container
 			id={'projectCard-root'}
@@ -148,26 +120,17 @@ export default function ProjectCard({
 						{description}
 					</Text>
 					{linkDemo ? (
-						<DemoButton
-							href={linkDemo.href}
-							label={linkDemo.title}
-						/>
+						<DemoButton href={linkDemo.href} label={linkDemo.title} />
 					) : (
 						''
 					)}
 					{linkRepo ? (
-						<DemoButton
-							href={linkRepo.href}
-							label={linkRepo.title}
-						/>
+						<DemoButton href={linkRepo.href} label={linkRepo.title} />
 					) : (
 						''
 					)}
 					{linkMore ? (
-						<DemoButton
-							href={linkMore.href}
-							label={linkMore.title}
-						/>
+						<DemoButton href={linkMore.href} label={linkMore.title} />
 					) : (
 						''
 					)}
@@ -184,10 +147,7 @@ export default function ProjectCard({
 					spacing={4}
 					divider={
 						<StackDivider
-							borderColor={useColorModeValue(
-								'gray.100',
-								'gray.700',
-							)}
+							borderColor={useColorModeValue('gray.100', 'gray.700')}
 						/>
 					}
 				>
@@ -195,17 +155,11 @@ export default function ProjectCard({
 						start={attributes.time.start}
 						end={attributes.time.end}
 					/>
-					<StatusAttribute
-						status={attributes.status as STATUS_TYPE}
-					/>
+					<StatusAttribute status={attributes.status as STATUS_TYPE} />
 					<TagAttribute tags={attributes.tags} />
 				</Stack>
 			</SimpleGrid>
-			<Container
-				id={'project-features-root'}
-				maxW={'6xl'}
-				my={'auto'}
-			>
+			<Container id={'project-features-root'} maxW={'6xl'} my={'auto'}>
 				<SimpleGrid
 					id={'features-grid-root'}
 					columns={{ base: 1, md: 2, lg: 4 }}
@@ -217,10 +171,7 @@ export default function ProjectCard({
 							align={'top'}
 							// bgColor={featuresBGColor}
 						>
-							<Box
-								color={'green.400'}
-								px={2}
-							>
+							<Box color={'green.400'} px={2}>
 								<Icon as={CheckIcon} />
 							</Box>
 							<VStack align={'start'}>

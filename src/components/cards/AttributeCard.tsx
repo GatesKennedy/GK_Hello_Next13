@@ -9,14 +9,7 @@ import {
 } from '@chakra-ui/react';
 
 import Link from 'next/link';
-import { ReactElement } from 'react';
-
-export interface AttributeProps {
-	heading: string;
-	description: string;
-	icon: ReactElement;
-	href: string;
-}
+import { AttributeProps } from '../../types';
 
 const AttributeCard = ({
 	heading,
@@ -28,19 +21,13 @@ const AttributeCard = ({
 		<Box
 			maxW={{ base: 'full', md: '275px' }}
 			w={'full'}
-			borderWidth='1px'
-			borderRadius='lg'
-			overflow='hidden'
-			bg={useColorModeValue(
-				'RGBA(255, 255, 255, 0.98)',
-				'blackAlpha.900',
-			)}
+			borderWidth="1px"
+			borderRadius="lg"
+			overflow="hidden"
+			bg={useColorModeValue('RGBA(255, 255, 255, 0.98)', 'blackAlpha.900')}
 			p={5}
 		>
-			<Stack
-				align={'start'}
-				spacing={2}
-			>
+			<Stack align={'start'} spacing={2}>
 				<Flex
 					w={16}
 					h={16}
@@ -53,19 +40,12 @@ const AttributeCard = ({
 					{icon}
 				</Flex>
 				<Box mt={2}>
-					<Heading size='md'>{heading}</Heading>
-					<Text
-						mt={1}
-						fontSize={'sm'}
-					>
+					<Heading size="md">{heading}</Heading>
+					<Text mt={1} fontSize={'sm'}>
 						{description}
 					</Text>
 				</Box>
-				<Button
-					variant={'link'}
-					colorScheme={'blue'}
-					size={'sm'}
-				>
+				<Button variant={'link'} colorScheme={'blue'} size={'sm'}>
 					<Link href={href}>Learn more</Link>
 				</Button>
 			</Stack>

@@ -8,7 +8,8 @@ import {
 	Text,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import AttributeCard, { AttributeProps } from '../cards/AttributeCard';
+import { AttributeProps } from '../../types';
+import AttributeCard from '../cards/AttributeCard';
 
 export default function CardWrapper(props: {
 	attributeData: AttributeProps[];
@@ -27,10 +28,7 @@ export default function CardWrapper(props: {
 				textAlign={'center'}
 				py={4}
 			>
-				<Heading
-					fontSize={{ base: '2xl', sm: '4xl' }}
-					fontWeight={'bold'}
-				>
+				<Heading fontSize={{ base: '2xl', sm: '4xl' }} fontWeight={'bold'}>
 					Soft Skills
 				</Heading>
 				<Text
@@ -48,15 +46,8 @@ export default function CardWrapper(props: {
 				</Text>
 			</Stack>
 
-			<Container
-				maxW={'5xl'}
-				pb={8}
-			>
-				<Flex
-					flexWrap='wrap'
-					gridGap={6}
-					justify='center'
-				>
+			<Container maxW={'5xl'} pb={8}>
+				<Flex flexWrap="wrap" gridGap={6} justify="center">
 					{props.attributeData.map((card, index) => (
 						<AttributeCard
 							key={index}

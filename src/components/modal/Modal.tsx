@@ -14,29 +14,17 @@ import {
 	Flex,
 } from '@chakra-ui/react';
 import Image from 'next/image';
-import { ListImage } from '@/data/workPageData';
-import CaptionCarousel from '../collections/Carosel';
+import CaptionCarousel from '../collections/Carousel';
+import { ListImage } from '../../types';
 
 function ModalCarosel(props: { imageList: ListImage[] }) {
 	const { isOpen, onOpen, onClose } = useDisclosure();
 	return (
 		<>
-			<Container
-				id={'Modal-cont-root'}
-				maxW={'6xl'}
-				my={'auto'}
-			>
-				<Flex
-					flexWrap={'wrap'}
-					gridGap={6}
-					justify={'center'}
-				>
+			<Container id={'Modal-cont-root'} maxW={'6xl'} my={'auto'}>
+				<Flex flexWrap={'wrap'} gridGap={6} justify={'center'}>
 					{props.imageList.map((image, index) => (
-						<Square
-							key={index}
-							maxW={160}
-							maxH={160}
-						>
+						<Square key={index} maxW={160} maxH={160}>
 							<Image
 								style={{
 									objectFit: 'cover',
@@ -51,11 +39,7 @@ function ModalCarosel(props: { imageList: ListImage[] }) {
 					))}
 				</Flex>
 			</Container>
-			<Modal
-				id={'model-root'}
-				isOpen={isOpen}
-				onClose={onClose}
-			>
+			<Modal id={'model-root'} isOpen={isOpen} onClose={onClose}>
 				<ModalOverlay />
 				<ModalContent id={'modelContent-root'}>
 					{/* TODO: pass project title */}
@@ -67,11 +51,7 @@ function ModalCarosel(props: { imageList: ListImage[] }) {
 					</ModalBody>
 
 					<ModalFooter>
-						<Button
-							colorScheme='blue'
-							mr={3}
-							onClick={onClose}
-						>
+						<Button colorScheme="blue" mr={3} onClick={onClose}>
 							Close
 						</Button>
 						{/* <Button variant='ghost'>Secondary Action</Button> */}

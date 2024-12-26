@@ -7,7 +7,7 @@ import {
 	useColorMode,
 	useColorModeValue,
 } from '@chakra-ui/react';
-import { ASSETS } from '../reference/layoutValues';
+import { ASSETS } from '../constants/layoutValues';
 
 import { attributeData, skillColumns } from '@/data/infoPageData';
 import ProfileIntro from '@/components/cards/ProfileIntro';
@@ -22,30 +22,22 @@ export default function Home() {
 		<Box
 			width={'full'}
 			overflow={'clip'}
-			backgroundPosition='center'
-			backgroundRepeat='no-repeat'
-			backgroundSize='cover'
+			backgroundPosition="center"
+			backgroundRepeat="no-repeat"
+			backgroundSize="cover"
 			backgroundImage={`url(${ASSETS.lightHillsRolling.href})`}
 		>
 			<Box
 				backdropFilter={colorMode === 'light' ? 'invert(36%)' : ''}
-				position='relative'
+				position="relative"
 				width={'full'}
 				mb={'64px'}
 				pb={'84px'}
-				backgroundColor={useColorModeValue(
-					'whiteAlpha.200',
-					'blackAlpha.200',
-				)}
+				backgroundColor={useColorModeValue('whiteAlpha.200', 'blackAlpha.200')}
 				opacity={'0.9'}
 				zIndex={1}
 			>
-				<Flex
-					direction={'row'}
-					align={'center'}
-					justify={'center'}
-					zIndex={2}
-				>
+				<Flex direction={'row'} align={'center'} justify={'center'} zIndex={2}>
 					<VStack
 						width={{ base: 'full', lg: '60vw' }}
 						align={'center'}
