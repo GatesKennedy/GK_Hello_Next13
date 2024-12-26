@@ -83,7 +83,7 @@ export const projectsData: ProjectProps[] = [
 			'Automated auditing of financial records across an arbitrary number of resources and document formats.',
 		images: [],
 		attributes: {
-			time: { start: "Dec '23", end: 'Current' },
+			time: { start: "Nov '23", end: 'Current' },
 			status: STATUS_TYPE.OPEN,
 			tags: [
 				TOOL.PANDAS,
@@ -127,110 +127,110 @@ export const projectsData: ProjectProps[] = [
 		// },
 		linkMore: null,
 	},
-	{
-		title: 'Internal Business Reporting: Server Migration',
-		description: 'Migrating AWS Lambda reporting to a dedicated server',
-		images: [],
-		attributes: {
-			time: { start: "Dec '23", end: "Feb '24" },
-			status: STATUS_TYPE.CLOSED,
-			tags: [
-				TOOL.FAST_API,
-				TOOL.PANDAS,
-				TOOL.SQL_ALCH,
-				TOOL.MATPLOTLIB,
-				TOOL.SMTP_LIB,
-				TOOL.PYDANTIC,
-			].sort(),
-		},
-		features: [
-			{
-				title: 'Code Migration',
-				desc: 'Platform migration from AWS lambda functions (python) to a self-hosted python server (FastAPI) and Postgres database',
-			},
-			{
-				title: 'Automated Requests and Reports',
-				desc: 'Replicated original functionality to regularly query Open Dental and build internal reports for owners, managers and team leads.',
-			},
-			{
-				title: 'Interfacing Data Warehouse',
-				desc: 'Raw data, processed data and generated reports are stored to a local data warehousing solution.',
-			},
-			{
-				title: 'API Creation',
-				desc: 'Added API functionality for dashboard integration. Data warehouse is accesible via RESTful API for irregular report access and custom data visualization',
-			},
-		],
-		linkDemo: null,
-		// {
-		// 	title: 'API Repo',
-		// 	href: STRINGS.FASTIFY_REPO,
-		// },
-		linkRepo: null,
-		//  {
-		// 	title: 'K6 Repo',
-		// 	href: STRINGS.K6_REPO,
-		// },
-		linkMore: null,
-	},
-	{
-		title: 'Office Operations Auditing Software',
-		description: 'A web UI that reduced time-spent by 40%.',
-		images: [
-			// {
-			// 	title: 'Data Input UI',
-			// 	desc: 'The app was able to streamline the data input process with a centralized UI.',
-			// 	src: k6_stress,
-			// },
-			// {
-			// 	title: 'Automated Reports',
-			// 	desc: 'Results and feedback for each office are generated as pdfs and emailed to managers automatically',
-			// 	src: k6_spike,
-			// },
-			// {
-			// 	title: 'Interfacing Data Warehouse',
-			// 	desc: 'Raw data, processed data and generated reports are stored to a pre-existing data warehouse.',
-			// 	src: k6_break,
-			// },
-		],
-		attributes: {
-			time: { start: "Oct '23", end: "Nov '23" },
-			status: STATUS_TYPE.CLOSED,
-			tags: [
-				TOOL.FAST_API,
-				TOOL.HTMX,
-				TOOL.JINJA,
-				TOOL.PANDAS,
-				TOOL.SQL_ALCH,
-				TOOL.PYDANTIC,
-			].sort(),
-		},
-		features: [
-			{
-				title: 'Data Input UI',
-				desc: 'The app was able to streamline the data input process with a centralized UI.',
-			},
-			{
-				title: 'Automated Reports',
-				desc: 'Results and feedback for each office are generated as pdfs and emailed to managers automatically',
-			},
-			{
-				title: 'Interfacing Data Warehouse',
-				desc: 'Raw data, processed data and generated reports are stored to a pre-existing data warehouse.',
-			},
-		],
-		linkDemo: null,
-		// {
-		// 	title: 'API Repo',
-		// 	href: STRINGS.FASTIFY_REPO,
-		// },
-		linkRepo: null,
-		//  {
-		// 	title: 'K6 Repo',
-		// 	href: STRINGS.K6_REPO,
-		// },
-		linkMore: null,
-	},
+	// {
+	// 	title: 'Internal Business Reporting: Server Migration',
+	// 	description: 'Migrating AWS Lambda reporting to a dedicated server',
+	// 	images: [],
+	// 	attributes: {
+	// 		time: { start: "Dec '23", end: "Feb '24" },
+	// 		status: STATUS_TYPE.CLOSED,
+	// 		tags: [
+	// 			TOOL.FAST_API,
+	// 			TOOL.PANDAS,
+	// 			TOOL.SQL_ALCH,
+	// 			TOOL.MATPLOTLIB,
+	// 			TOOL.SMTP_LIB,
+	// 			TOOL.PYDANTIC,
+	// 		].sort(),
+	// 	},
+	// 	features: [
+	// 		{
+	// 			title: 'Code Migration',
+	// 			desc: 'Platform migration from AWS lambda functions (python) to a self-hosted python server (FastAPI) and Postgres database',
+	// 		},
+	// 		{
+	// 			title: 'Automated Requests and Reports',
+	// 			desc: 'Replicated original functionality to regularly query Open Dental and build internal reports for owners, managers and team leads.',
+	// 		},
+	// 		{
+	// 			title: 'Interfacing Data Warehouse',
+	// 			desc: 'Raw data, processed data and generated reports are stored to a local data warehousing solution.',
+	// 		},
+	// 		{
+	// 			title: 'API Creation',
+	// 			desc: 'Added API functionality for dashboard integration. Data warehouse is accesible via RESTful API for irregular report access and custom data visualization',
+	// 		},
+	// 	],
+	// 	linkDemo: null,
+	// 	// {
+	// 	// 	title: 'API Repo',
+	// 	// 	href: STRINGS.FASTIFY_REPO,
+	// 	// },
+	// 	linkRepo: null,
+	// 	//  {
+	// 	// 	title: 'K6 Repo',
+	// 	// 	href: STRINGS.K6_REPO,
+	// 	// },
+	// 	linkMore: null,
+	// },
+	// {
+	// 	title: 'Office Operations Auditing Software',
+	// 	description: 'A web UI that reduced time-spent by 40%.',
+	// 	images: [
+	// 		// {
+	// 		// 	title: 'Data Input UI',
+	// 		// 	desc: 'The app was able to streamline the data input process with a centralized UI.',
+	// 		// 	src: k6_stress,
+	// 		// },
+	// 		// {
+	// 		// 	title: 'Automated Reports',
+	// 		// 	desc: 'Results and feedback for each office are generated as pdfs and emailed to managers automatically',
+	// 		// 	src: k6_spike,
+	// 		// },
+	// 		// {
+	// 		// 	title: 'Interfacing Data Warehouse',
+	// 		// 	desc: 'Raw data, processed data and generated reports are stored to a pre-existing data warehouse.',
+	// 		// 	src: k6_break,
+	// 		// },
+	// 	],
+	// 	attributes: {
+	// 		time: { start: "Oct '23", end: "Nov '23" },
+	// 		status: STATUS_TYPE.CLOSED,
+	// 		tags: [
+	// 			TOOL.FAST_API,
+	// 			TOOL.HTMX,
+	// 			TOOL.JINJA,
+	// 			TOOL.PANDAS,
+	// 			TOOL.SQL_ALCH,
+	// 			TOOL.PYDANTIC,
+	// 		].sort(),
+	// 	},
+	// 	features: [
+	// 		{
+	// 			title: 'Data Input UI',
+	// 			desc: 'The app was able to streamline the data input process with a centralized UI.',
+	// 		},
+	// 		{
+	// 			title: 'Automated Reports',
+	// 			desc: 'Results and feedback for each office are generated as pdfs and emailed to managers automatically',
+	// 		},
+	// 		{
+	// 			title: 'Interfacing Data Warehouse',
+	// 			desc: 'Raw data, processed data and generated reports are stored to a pre-existing data warehouse.',
+	// 		},
+	// 	],
+	// 	linkDemo: null,
+	// 	// {
+	// 	// 	title: 'API Repo',
+	// 	// 	href: STRINGS.FASTIFY_REPO,
+	// 	// },
+	// 	linkRepo: null,
+	// 	//  {
+	// 	// 	title: 'K6 Repo',
+	// 	// 	href: STRINGS.K6_REPO,
+	// 	// },
+	// 	linkMore: null,
+	// },
 	{
 		title: 'Load Testing: Fastify REST API',
 		description:
@@ -259,7 +259,7 @@ export const projectsData: ProjectProps[] = [
 		],
 		attributes: {
 			time: { start: "Oct '23", end: "Oct '23" },
-			status: STATUS_TYPE.IN_PROGRESS,
+			status: STATUS_TYPE.CLOSED,
 			tags: [TOOL.NODE, TOOL.FASTIFY, TOOL.K6, TOOL.POSTMAN].sort(),
 		},
 		features: [
@@ -322,7 +322,7 @@ export const projectsData: ProjectProps[] = [
 		linkMore: null,
 	},
 	{
-		title: "TDB Dashboard (formerly 'Mimir')",
+		title: 'TDB Dashboard',
 		description: 'Business dashboard for Texas Dental & Braces',
 		images: [
 			{
@@ -409,8 +409,6 @@ export const projectsData: ProjectProps[] = [
 				TOOL.REACTHOOKFORM,
 				TOOL.NODEMAILER,
 				TOOL.POSTGRES,
-				TOOL.GRAPH_QL,
-				TOOL.HASURA,
 				TOOL.DOCKER,
 			].sort(),
 		},
@@ -427,10 +425,10 @@ export const projectsData: ProjectProps[] = [
 				title: 'Content Management',
 				desc: 'The list of questions and the resulting information exposed to the user can be customized by the instance admin.',
 			},
-			{
-				title: 'SaaS Deployments',
-				desc: 'Instances of Dental Risk can be independently deployed for seperate offices with custom styling and content.',
-			},
+			// {
+			// 	title: 'SaaS Deployments',
+			// 	desc: 'Instances of Dental Risk can be independently deployed for seperate offices with custom styling and content.',
+			// },
 		],
 		linkDemo: { title: 'Demo', href: STRINGS.INTAKE_DEMO },
 		linkRepo: null,
